@@ -10,6 +10,14 @@
 		96EDF267209F90B2009496FA /* Stylobate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EDF25D209F90B2009496FA /* Stylobate.framework */; };
 		96EDF26C209F90B2009496FA /* StylobateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF26B209F90B2009496FA /* StylobateTests.swift */; };
 		96EDF26E209F90B2009496FA /* Stylobate.h in Headers */ = {isa = PBXBuildFile; fileRef = 96EDF260209F90B2009496FA /* Stylobate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96EDF27A209F9498009496FA /* CollectionAndTableDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF277209F9497009496FA /* CollectionAndTableDisplay.swift */; };
+		96EDF27B209F9498009496FA /* CollectionAndTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF278209F9497009496FA /* CollectionAndTableModel.swift */; };
+		96EDF280209F94DB009496FA /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF27D209F94DA009496FA /* Display.swift */; };
+		96EDF281209F94DB009496FA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF27E209F94DA009496FA /* Model.swift */; };
+		96EDF282209F94DB009496FA /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF27F209F94DB009496FA /* Controller.swift */; };
+		96EDF284209F9512009496FA /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF283209F9512009496FA /* UIViewController+Alerts.swift */; };
+		96EDF287209F953F009496FA /* ControllerTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF285209F953E009496FA /* ControllerTestBase.swift */; };
+		96EDF288209F953F009496FA /* CollectionAndTableViewControllerTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF286209F953E009496FA /* CollectionAndTableViewControllerTestBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +37,14 @@
 		96EDF266209F90B2009496FA /* StylobateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StylobateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EDF26B209F90B2009496FA /* StylobateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylobateTests.swift; sourceTree = "<group>"; };
 		96EDF26D209F90B2009496FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96EDF277209F9497009496FA /* CollectionAndTableDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAndTableDisplay.swift; sourceTree = "<group>"; };
+		96EDF278209F9497009496FA /* CollectionAndTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAndTableModel.swift; sourceTree = "<group>"; };
+		96EDF27D209F94DA009496FA /* Display.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
+		96EDF27E209F94DA009496FA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		96EDF27F209F94DB009496FA /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		96EDF283209F9512009496FA /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
+		96EDF285209F953E009496FA /* ControllerTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerTestBase.swift; sourceTree = "<group>"; };
+		96EDF286209F953E009496FA /* CollectionAndTableViewControllerTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAndTableViewControllerTestBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +87,14 @@
 		96EDF25F209F90B2009496FA /* Stylobate */ = {
 			isa = PBXGroup;
 			children = (
-				96EDF260209F90B2009496FA /* Stylobate.h */,
+				96EDF277209F9497009496FA /* CollectionAndTableDisplay.swift */,
+				96EDF278209F9497009496FA /* CollectionAndTableModel.swift */,
+				96EDF27F209F94DB009496FA /* Controller.swift */,
+				96EDF27D209F94DA009496FA /* Display.swift */,
 				96EDF261209F90B2009496FA /* Info.plist */,
+				96EDF27E209F94DA009496FA /* Model.swift */,
+				96EDF260209F90B2009496FA /* Stylobate.h */,
+				96EDF283209F9512009496FA /* UIViewController+Alerts.swift */,
 			);
 			path = Stylobate;
 			sourceTree = "<group>";
@@ -80,8 +102,10 @@
 		96EDF26A209F90B2009496FA /* StylobateTests */ = {
 			isa = PBXGroup;
 			children = (
-				96EDF26B209F90B2009496FA /* StylobateTests.swift */,
+				96EDF286209F953E009496FA /* CollectionAndTableViewControllerTestBase.swift */,
+				96EDF285209F953E009496FA /* ControllerTestBase.swift */,
 				96EDF26D209F90B2009496FA /* Info.plist */,
+				96EDF26B209F90B2009496FA /* StylobateTests.swift */,
 			);
 			path = StylobateTests;
 			sourceTree = "<group>";
@@ -148,6 +172,7 @@
 				TargetAttributes = {
 					96EDF25C209F90B2009496FA = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					96EDF265209F90B2009496FA = {
 						CreatedOnToolsVersion = 9.3;
@@ -194,6 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EDF281209F94DB009496FA /* Model.swift in Sources */,
+				96EDF284209F9512009496FA /* UIViewController+Alerts.swift in Sources */,
+				96EDF27B209F9498009496FA /* CollectionAndTableModel.swift in Sources */,
+				96EDF282209F94DB009496FA /* Controller.swift in Sources */,
+				96EDF280209F94DB009496FA /* Display.swift in Sources */,
+				96EDF27A209F9498009496FA /* CollectionAndTableDisplay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EDF288209F953F009496FA /* CollectionAndTableViewControllerTestBase.swift in Sources */,
+				96EDF287209F953F009496FA /* ControllerTestBase.swift in Sources */,
 				96EDF26C209F90B2009496FA /* StylobateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +372,7 @@
 		96EDF272209F90B2009496FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.poikile.Stylobate;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +399,7 @@
 		96EDF273209F90B2009496FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +425,7 @@
 		96EDF275209F90B2009496FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
 				INFOPLIST_FILE = StylobateTests/Info.plist;
@@ -407,6 +444,7 @@
 		96EDF276209F90B2009496FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
 				INFOPLIST_FILE = StylobateTests/Info.plist;
