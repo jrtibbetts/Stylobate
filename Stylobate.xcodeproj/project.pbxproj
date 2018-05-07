@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		96EDF267209F90B2009496FA /* Stylobate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EDF25D209F90B2009496FA /* Stylobate.framework */; };
-		96EDF26C209F90B2009496FA /* StylobateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF26B209F90B2009496FA /* StylobateTests.swift */; };
 		96EDF26E209F90B2009496FA /* Stylobate.h in Headers */ = {isa = PBXBuildFile; fileRef = 96EDF260209F90B2009496FA /* Stylobate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96EDF27A209F9498009496FA /* CollectionAndTableDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF277209F9497009496FA /* CollectionAndTableDisplay.swift */; };
 		96EDF27B209F9498009496FA /* CollectionAndTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF278209F9497009496FA /* CollectionAndTableModel.swift */; };
@@ -18,6 +17,8 @@
 		96EDF284209F9512009496FA /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF283209F9512009496FA /* UIViewController+Alerts.swift */; };
 		96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF28D209FCC4E009496FA /* MissingCell.swift */; };
 		96EDF29020A019A5009496FA /* CollectionAndTableModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF28F20A019A5009496FA /* CollectionAndTableModelTests.swift */; };
+		96EDF29420A0BC6B009496FA /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF29320A0BC6B009496FA /* UIView+Autolayout.swift */; };
+		96EDF29520A0C248009496FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96EDF29120A0A530009496FA /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 		96EDF260209F90B2009496FA /* Stylobate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stylobate.h; sourceTree = "<group>"; };
 		96EDF261209F90B2009496FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96EDF266209F90B2009496FA /* StylobateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StylobateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96EDF26B209F90B2009496FA /* StylobateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylobateTests.swift; sourceTree = "<group>"; };
 		96EDF26D209F90B2009496FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96EDF277209F9497009496FA /* CollectionAndTableDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAndTableDisplay.swift; sourceTree = "<group>"; };
 		96EDF278209F9497009496FA /* CollectionAndTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAndTableModel.swift; sourceTree = "<group>"; };
@@ -45,6 +45,8 @@
 		96EDF283209F9512009496FA /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		96EDF28D209FCC4E009496FA /* MissingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingCell.swift; sourceTree = "<group>"; };
 		96EDF28F20A019A5009496FA /* CollectionAndTableModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndTableModelTests.swift; sourceTree = "<group>"; };
+		96EDF29120A0A530009496FA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		96EDF29320A0BC6B009496FA /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				96EDF28D209FCC4E009496FA /* MissingCell.swift */,
 				96EDF27E209F94DA009496FA /* Model.swift */,
 				96EDF260209F90B2009496FA /* Stylobate.h */,
+				96EDF29320A0BC6B009496FA /* UIView+Autolayout.swift */,
 				96EDF283209F9512009496FA /* UIViewController+Alerts.swift */,
 			);
 			path = Stylobate;
@@ -103,9 +106,9 @@
 		96EDF26A209F90B2009496FA /* StylobateTests */ = {
 			isa = PBXGroup;
 			children = (
-				96EDF26D209F90B2009496FA /* Info.plist */,
-				96EDF26B209F90B2009496FA /* StylobateTests.swift */,
 				96EDF28F20A019A5009496FA /* CollectionAndTableModelTests.swift */,
+				96EDF26D209F90B2009496FA /* Info.plist */,
+				96EDF29120A0A530009496FA /* Main.storyboard */,
 			);
 			path = StylobateTests;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EDF29520A0C248009496FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +228,7 @@
 				96EDF27B209F9498009496FA /* CollectionAndTableModel.swift in Sources */,
 				96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */,
 				96EDF282209F94DB009496FA /* Controller.swift in Sources */,
+				96EDF29420A0BC6B009496FA /* UIView+Autolayout.swift in Sources */,
 				96EDF280209F94DB009496FA /* Display.swift in Sources */,
 				96EDF27A209F9498009496FA /* CollectionAndTableDisplay.swift in Sources */,
 			);
@@ -234,7 +239,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				96EDF29020A019A5009496FA /* CollectionAndTableModelTests.swift in Sources */,
-				96EDF26C209F90B2009496FA /* StylobateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
