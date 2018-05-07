@@ -16,8 +16,8 @@
 		96EDF281209F94DB009496FA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF27E209F94DA009496FA /* Model.swift */; };
 		96EDF282209F94DB009496FA /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF27F209F94DB009496FA /* Controller.swift */; };
 		96EDF284209F9512009496FA /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF283209F9512009496FA /* UIViewController+Alerts.swift */; };
-		96EDF287209F953F009496FA /* ControllerTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF285209F953E009496FA /* ControllerTestBase.swift */; };
-		96EDF288209F953F009496FA /* CollectionAndTableViewControllerTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF286209F953E009496FA /* CollectionAndTableViewControllerTestBase.swift */; };
+		96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF28D209FCC4E009496FA /* MissingCell.swift */; };
+		96EDF29020A019A5009496FA /* CollectionAndTableModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF28F20A019A5009496FA /* CollectionAndTableModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +43,8 @@
 		96EDF27E209F94DA009496FA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		96EDF27F209F94DB009496FA /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		96EDF283209F9512009496FA /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
-		96EDF285209F953E009496FA /* ControllerTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerTestBase.swift; sourceTree = "<group>"; };
-		96EDF286209F953E009496FA /* CollectionAndTableViewControllerTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAndTableViewControllerTestBase.swift; sourceTree = "<group>"; };
+		96EDF28D209FCC4E009496FA /* MissingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingCell.swift; sourceTree = "<group>"; };
+		96EDF28F20A019A5009496FA /* CollectionAndTableModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndTableModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +92,7 @@
 				96EDF27F209F94DB009496FA /* Controller.swift */,
 				96EDF27D209F94DA009496FA /* Display.swift */,
 				96EDF261209F90B2009496FA /* Info.plist */,
+				96EDF28D209FCC4E009496FA /* MissingCell.swift */,
 				96EDF27E209F94DA009496FA /* Model.swift */,
 				96EDF260209F90B2009496FA /* Stylobate.h */,
 				96EDF283209F9512009496FA /* UIViewController+Alerts.swift */,
@@ -102,10 +103,9 @@
 		96EDF26A209F90B2009496FA /* StylobateTests */ = {
 			isa = PBXGroup;
 			children = (
-				96EDF286209F953E009496FA /* CollectionAndTableViewControllerTestBase.swift */,
-				96EDF285209F953E009496FA /* ControllerTestBase.swift */,
 				96EDF26D209F90B2009496FA /* Info.plist */,
 				96EDF26B209F90B2009496FA /* StylobateTests.swift */,
+				96EDF28F20A019A5009496FA /* CollectionAndTableModelTests.swift */,
 			);
 			path = StylobateTests;
 			sourceTree = "<group>";
@@ -222,6 +222,7 @@
 				96EDF281209F94DB009496FA /* Model.swift in Sources */,
 				96EDF284209F9512009496FA /* UIViewController+Alerts.swift in Sources */,
 				96EDF27B209F9498009496FA /* CollectionAndTableModel.swift in Sources */,
+				96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */,
 				96EDF282209F94DB009496FA /* Controller.swift in Sources */,
 				96EDF280209F94DB009496FA /* Display.swift in Sources */,
 				96EDF27A209F9498009496FA /* CollectionAndTableDisplay.swift in Sources */,
@@ -232,8 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96EDF288209F953F009496FA /* CollectionAndTableViewControllerTestBase.swift in Sources */,
-				96EDF287209F953F009496FA /* ControllerTestBase.swift in Sources */,
+				96EDF29020A019A5009496FA /* CollectionAndTableModelTests.swift in Sources */,
 				96EDF26C209F90B2009496FA /* StylobateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

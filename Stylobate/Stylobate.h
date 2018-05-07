@@ -1,10 +1,4 @@
-//
-//  Stylobate.h
-//  Stylobate
-//
-//  Created by Jason R Tibbetts on 5/6/18.
 //  Copyright © 2018 Poikile Creations. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 

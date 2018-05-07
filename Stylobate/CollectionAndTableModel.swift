@@ -23,7 +23,7 @@ UITableViewDataSource, UITableViewDelegate {
     
     open func collectionView(_ collectionView: UICollectionView,
                              cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        return MissingCollectionViewCell(frame: CGRect())
     }
     
     open func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -43,7 +43,7 @@ UITableViewDataSource, UITableViewDelegate {
 
     open func tableView(_ tableView: UITableView,
                         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        return MissingTableViewCell()
     }
 
     open func tableView(_ tableView: UITableView,
