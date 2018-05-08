@@ -7,7 +7,7 @@ import UIKit
 open class Display: UIView {
 
     /// The containing view controller's navigation item.
-    @IBOutlet weak var navigationItem: UINavigationItem?
+    @IBOutlet open weak var navigationItem: UINavigationItem?
 
     /// The view model. Subclasses of `Display` will probably use a subclass of
     /// `Model`, in which case it's useful for the display to have a
