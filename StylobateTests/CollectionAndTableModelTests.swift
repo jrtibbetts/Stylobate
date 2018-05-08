@@ -12,13 +12,6 @@ class CollectionAndTableModelTests: XCTestCase {
         assertCollectionIsEmptyAndReturnsMissingCell(collectionView: collectionView, model: model)
     }
 
-    func testCollectionViewFromStoryboardHasNoRowsOrSections() {
-        let model = viewControllerFromStoryboard.model as! CollectionAndTableModel
-        let display = viewControllerFromStoryboard.display as! CollectionAndTableDisplay
-        let collectionView = display.collectionView!
-        assertCollectionIsEmptyAndReturnsMissingCell(collectionView: collectionView, model: model)
-    }
-
     func testTableViewCreatedProgrammaticallyHasNoRowsOrSections() {
         let model = CollectionAndTableModel()
         let tableView = UITableView(frame: CGRect())
@@ -31,6 +24,15 @@ class CollectionAndTableModelTests: XCTestCase {
         let tableView = display.tableView!
         assertTableIsEmptyAndReturnsMissingCell(tableView: tableView, model: model)
     }
+
+    func testCollectionViewFromStoryboardHasNoRowsOrSections() {
+        let model = viewControllerFromStoryboard.model as! CollectionAndTableModel
+        let display = viewControllerFromStoryboard.display as! CollectionAndTableDisplay
+        let collectionView = display.collectionView!
+        assertCollectionIsEmptyAndReturnsMissingCell(collectionView: collectionView, model: model)
+    }
+
+    // MARK: Test Fixtures
 
     func assertCollectionIsEmptyAndReturnsMissingCell(collectionView: UICollectionView,
                                                       model: CollectionAndTableModel) {
@@ -50,6 +52,8 @@ class CollectionAndTableModelTests: XCTestCase {
         XCTAssertEqual(model.tableView(tableView, numberOfRowsInSection: 0), 0)
         XCTAssertNil(model.tableView(tableView, titleForHeaderInSection: 0))
     }
+
+    // MARK: Utility functions
 
     var viewControllerFromStoryboard: Controller {
         let bundle = Bundle(for: type(of: self))
