@@ -4,4 +4,5 @@ os: osx
 osx_image: xcode9.3.1
 xcode_project: Stylobate.xcodeproj
 xcode_scheme: Stylobate
-
+script:
+      - xcodebuild clean build test -sdk iphonesimulator -project Stylobate.xcodeproj -scheme Stylobate CODE_SIGNING_REQUIRED=NO
