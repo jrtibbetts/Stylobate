@@ -9,6 +9,7 @@ public extension UIView {
     /// extend past any of the superview's margins.
     public func centerInSuperview() {
         if let superview = superview {
+            translatesAutoresizingMaskIntoConstraints = false
             centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
             centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
             let marginsGuide = superview.layoutMarginsGuide

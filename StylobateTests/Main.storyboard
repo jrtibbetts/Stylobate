@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Controller-->
+        <!--Outletted Controller-->
         <scene sceneID="A3u-Ra-IbP">
             <objects>
-                <viewController id="DDP-nm-cdK" customClass="Controller" customModule="Stylobate" sceneMemberID="viewController">
+                <viewController id="DDP-nm-cdK" customClass="OutlettedController" customModule="Stylobate" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fP7-tY-8Nt" customClass="CollectionAndTableDisplay" customModule="Stylobate">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,8 +75,8 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="display" destination="fP7-tY-8Nt" id="9Yt-89-EYa"/>
-                        <outlet property="model" destination="1Kc-r6-Jlc" id="hqj-lO-MMQ"/>
+                        <outlet property="display" destination="fP7-tY-8Nt" id="1Lo-x6-HDq"/>
+                        <outlet property="model" destination="1Kc-r6-Jlc" id="G3h-Ih-B6L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kk-BH-PiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
