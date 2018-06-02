@@ -2,7 +2,7 @@ install: carthage update --platform iOS
 language: swift
 os: osx
 osx_image: xcode9.3
-xcode_project: Stylobate.xcodeproj
-xcode_scheme: Stylobate
 script:
-      - xcodebuild clean build test -sdk iphonesimulator -project Stylobate.xcodeproj -scheme Stylobate CODE_SIGNING_REQUIRED=NO
+  xcodebuild -scheme Stylobate -project Stylobate.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' test
+after_success:
+  bash <(curl -s https://codecov.io/bash)
