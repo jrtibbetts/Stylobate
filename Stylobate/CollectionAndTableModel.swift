@@ -12,13 +12,12 @@ import UIKit
 /// this class directly, should be used by model subclasses to determine how
 /// many sections and items in each section there are.
 open class CollectionAndTableModel: NSObject, Model,
-    UICollectionViewDataSource, UICollectionViewDelegate,
-UITableViewDataSource, UITableViewDelegate {
-
+UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate {
+    
     override public init() {
         super.init()
     }
-
+    
     // MARK: UICollectionViewDataSource
     
     open func collectionView(_ collectionView: UICollectionView,
@@ -36,16 +35,16 @@ UITableViewDataSource, UITableViewDelegate {
     }
     
     // MARK: UITableViewDataSource
-
+    
     open func numberOfSections(in tableView: UITableView) -> Int {
         return numberOfSections()
     }
-
+    
     open func tableView(_ tableView: UITableView,
                         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return MissingTableViewCell()
     }
-
+    
     open func tableView(_ tableView: UITableView,
                         numberOfRowsInSection section: Int) -> Int {
         return numberOfItems(inSection: section)
@@ -57,11 +56,11 @@ UITableViewDataSource, UITableViewDelegate {
     }
     
     // MARK: Other functions to be overridden by subclasses
-
+    
     open func headerTitle(forSection section: Int) -> String? {
         return nil
     }
-
+    
     open func numberOfItems(inSection section: Int) -> Int {
         return 0
     }
@@ -69,5 +68,5 @@ UITableViewDataSource, UITableViewDelegate {
     open func numberOfSections() -> Int {
         return 0
     }
-
+    
 }

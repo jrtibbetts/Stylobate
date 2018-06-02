@@ -52,6 +52,9 @@ extension MissingCell {
 
 }
 
+/// A collection cell that can be returned by
+/// `UICollectionViewDataSource(_:,cellForItemAt:)` when the index path and/or
+/// identifier aren't valid.
 @IBDesignable open class MissingCollectionViewCell: UICollectionViewCell, MissingCell {
 
     public lazy var textLabel: UILabel? = {

@@ -56,8 +56,7 @@ class CollectionAndTableModelTests: XCTestCase {
     // MARK: Utility functions
 
     var viewControllerFromStoryboard: Controller {
-        let bundle = Bundle(for: type(of: self))
-        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: type(of: self)))
         let viewController = storyboard.instantiateInitialViewController()
         _ = viewController?.view  // force viewDidLoad() to be called
         

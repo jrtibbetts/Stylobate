@@ -26,11 +26,11 @@ open class OutlettedController: UIViewController, Controller {
         super.viewDidLoad()
 
         if model == nil {
-            assertionFailure("The model can't be nil when viewDidLoad() is called.")
+            NSLog("The model can't be nil when viewDidLoad() is called.")
         }
 
         if display == nil {
-            assertionFailure("The display can't be nil when viewDidLoad() is called.")
+            NSLog("The display can't be nil when viewDidLoad() is called.")
         }
 
         display?.model = model
