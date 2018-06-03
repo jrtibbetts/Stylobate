@@ -19,15 +19,21 @@ class CollectionAndTableModelTests: XCTestCase {
     }
 
     func testTableViewFromStoryboardHasNoRowsOrSections() {
-        let model = viewControllerFromStoryboard.model as! CollectionAndTableModel
-        let display = viewControllerFromStoryboard.display as! CollectionAndTableDisplay
+        let viewController = TestUtil.goodOutlettedViewController
+        _ = viewController.view  // call viewDidLoad()
+        let controller = viewController as! Controller
+        let model = controller.model as! CollectionAndTableModel
+        let display = controller.display as! CollectionAndTableDisplay
         let tableView = display.tableView!
         assertTableIsEmptyAndReturnsMissingCell(tableView: tableView, model: model)
     }
 
     func testCollectionViewFromStoryboardHasNoRowsOrSections() {
-        let model = viewControllerFromStoryboard.model as! CollectionAndTableModel
-        let display = viewControllerFromStoryboard.display as! CollectionAndTableDisplay
+        let viewController = TestUtil.goodOutlettedViewController
+        _ = viewController.view  // call viewDidLoad()
+        let controller = viewController as! Controller
+        let model = controller.model as! CollectionAndTableModel
+        let display = controller.display as! CollectionAndTableDisplay
         let collectionView = display.collectionView!
         assertCollectionIsEmptyAndReturnsMissingCell(collectionView: collectionView, model: model)
     }
@@ -51,16 +57,6 @@ class CollectionAndTableModelTests: XCTestCase {
         XCTAssertEqual(model.numberOfSections(in: tableView), 0)
         XCTAssertEqual(model.tableView(tableView, numberOfRowsInSection: 0), 0)
         XCTAssertNil(model.tableView(tableView, titleForHeaderInSection: 0))
-    }
-
-    // MARK: Utility functions
-
-    var viewControllerFromStoryboard: Controller {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: type(of: self)))
-        let viewController = storyboard.instantiateInitialViewController()
-        _ = viewController?.view  // force viewDidLoad() to be called
-        
-        return viewController as! Controller
     }
 
 }

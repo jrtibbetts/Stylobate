@@ -5,10 +5,8 @@ import XCTest
 
 class ControllerTests: XCTestCase {
 
-    let testStoryboard = UIStoryboard(name: "Main", bundle: Bundle(for: ControllerTests.self))
-
     func testBadControllerFailsAssertion() {
-        let controller = testStoryboard.instantiateViewController(withIdentifier: "badOutlettedController") as! OutlettedController
+        let controller = TestUtil.badOutlettedViewController as! OutlettedController
         _ = controller.view
 
         XCTAssertNil(controller.model, "controller model")
@@ -16,7 +14,7 @@ class ControllerTests: XCTestCase {
     }
 
     func testGoodControllerHasValidModelAndDisplay() {
-        let controller = testStoryboard.instantiateViewController(withIdentifier: "goodOutlettedController") as! OutlettedController
+        let controller = TestUtil.goodOutlettedViewController as! OutlettedController
         _ = controller.view
 
         XCTAssertNotNil(controller.model, "controller model")

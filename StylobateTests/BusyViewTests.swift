@@ -9,6 +9,8 @@ class BusyViewTests: XCTestCase {
         return CGRect(x: 0.0, y: 0.0, width: 400.0, height: 700.0)
     }
 
+    // MARK: SpinnerBusyView Tests
+
     func testDefaultSpinnerBusyViewAddsLargeWhiteStyleSpinner() {
         let view = DefaultSpinnerBusyView(frame: busyViewFrame)
         XCTAssertNil(view.spinner)
@@ -87,11 +89,91 @@ class BusyViewTests: XCTestCase {
         wait(for: [stopExpectation], timeout: 2.0)
     }
 
+    // MARK: ProgressBusyView Tests
+
+    func testDefaultProgressBusyViewAddsLargeWhiteStyleSpinner() {
+        let view = DefaultProgressBusyView(frame: busyViewFrame)
+        XCTAssertNil(view.progressView)
+
+        let startExpectation = expectation(description: "ProgressBusyView start")
+
+        view.startActivity {
+            XCTAssertNotNil(view.progressView)
+            XCTAssertEqual(view.progressView!.superview, view)
+            XCTAssertEqual(view.progressView!.progressViewStyle, UIProgressViewStyle.default)
+            self.assertPointsEqual(view.progressView!.center, view.center, accuracy: 0.3)
+
+            self.assertProgressViewStarted(view.progressView!)
+            startExpectation.fulfill()
+        }
+
+        wait(for: [startExpectation], timeout: 2.0)
+
+        let stopExpectation = expectation(description: "ProgressBusyView stop")
+
+        view.stopActivity() {
+            self.assertProgressViewStopped(view.progressView!)
+            stopExpectation.fulfill()
+        }
+
+        wait(for: [stopExpectation], timeout: 2.0)
+    }
+
+    func testProgressBusyViewWithUnaddedSpinnerAddsSpinner() {
+        let view = UnaddedCustomProgressBusyView(frame: busyViewFrame)
+        XCTAssertNotNil(view.progressView)
+        XCTAssertNil(view.progressView?.superview)
+
+        let startExpectation = expectation(description: "ProgressBusyView start")
+
+        view.startActivity() {
+            XCTAssertEqual(view.progressView!.superview, view)
+            self.assertPointsEqual(view.progressView!.center, view.center, accuracy: 0.3)
+            self.assertProgressViewStarted(view.progressView!)
+            startExpectation.fulfill()
+        }
+
+        wait(for: [startExpectation], timeout: 2.0)
+
+        let stopExpectation = expectation(description: "ProgressBusyView stop")
+
+        view.stopActivity() {
+            self.assertProgressViewStopped(view.progressView!)
+            stopExpectation.fulfill()
+        }
+
+        wait(for: [stopExpectation], timeout: 2.0)
+    }
+
+    func testProgressBusyViewWithSpinnerAlreadyAddedOk() {
+        let view = AddedCustomProgressBusyView(frame: busyViewFrame)
+        XCTAssertNotNil(view.progressView)
+        XCTAssertEqual(view.progressView!.superview, view)
+
+        let startExpectation = expectation(description: "ProgressBusyView start")
+
+        view.startActivity() {
+            self.assertProgressViewStarted(view.progressView!)
+            startExpectation.fulfill()
+        }
+
+        wait(for: [startExpectation], timeout: 2.0)
+
+        let stopExpectation = expectation(description: "ProgressBusyView stop")
+
+        view.stopActivity() {
+            self.assertProgressViewStopped(view.progressView!)
+            stopExpectation.fulfill()
+        }
+
+        wait(for: [stopExpectation], timeout: 2.0)
+    }
+
     // MARK: Test Fixtures
 
     func assertPointsEqual(_ p1: CGPoint, _ p2: CGPoint, accuracy: CGFloat, message: String = "") {
-        XCTAssertEqual(p1.x, p2.x, accuracy: 0.3, "points \(p1) and \(p2)'s x values")
-        XCTAssertEqual(p1.y, p2.y, accuracy: 0.3, "points \(p1) and \(p2)'s y values")
+        XCTAssertEqual(p1.x, p2.x, accuracy: 1.0, "points \(p1) and \(p2)'s x values")
+        XCTAssertEqual(p1.y, p2.y, accuracy: 1.0, "points \(p1) and \(p2)'s y values")
     }
 
     func assertSpinnerStarted(spinner: UIActivityIndicatorView) {
@@ -102,6 +184,14 @@ class BusyViewTests: XCTestCase {
     func assertSpinnerStopped(spinner: UIActivityIndicatorView) {
         XCTAssertFalse(spinner.isAnimating)
         XCTAssertTrue(spinner.isHidden)
+    }
+
+    func assertProgressViewStarted(_ progressView: UIProgressView) {
+        XCTAssertFalse(progressView.isHidden)
+    }
+
+    func assertProgressViewStopped(_ progressView: UIProgressView) {
+        XCTAssertTrue(progressView.isHidden)
     }
 
     // MARK: Dummy Implementations
@@ -120,17 +210,36 @@ class BusyViewTests: XCTestCase {
 
     class AddedCustomSpinnerBusyView: UIView, SpinnerBusyView {
 
-        var spinner: UIActivityIndicatorView?
+        lazy var spinner: UIActivityIndicatorView? = {
+            let spinnerView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            addSubview(spinnerView)
 
-        override init(frame: CGRect) {
-            super.init(frame: frame)
-            spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-            addSubview(spinner!)
-        }
+            return spinnerView
+        }()
 
-        required init?(coder aDecoder: NSCoder) {
-            super.init(coder: aDecoder)
-        }
+    }
+
+    class DefaultProgressBusyView: UIView, ProgressBusyView {
+
+        var progressView: UIProgressView?
+
+    }
+
+    class UnaddedCustomProgressBusyView: UIView, ProgressBusyView {
+
+        var progressView: UIProgressView? = UIProgressView(progressViewStyle: .bar)
+
+    }
+
+    class AddedCustomProgressBusyView: UIView, ProgressBusyView {
+
+        lazy var progressView: UIProgressView? = {
+            let progress = UIProgressView(progressViewStyle: .bar)
+            addSubview(progress)
+
+            return progress
+        }()
+
     }
 
 }
