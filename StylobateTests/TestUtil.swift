@@ -11,11 +11,13 @@ class TestUtil {
     static let goodViewController: UIViewController
         = storyboard.instantiateViewController(withIdentifier: "goodOutlettedController")
 
-    static let goodController = goodViewController as! OutlettedController
-
     static let badViewController: UIViewController
         = storyboard.instantiateViewController(withIdentifier: "badOutlettedController")
 
+    // swiftlint:disable force_cast
+    static let goodController = goodViewController as! OutlettedController
+
     static let badController = badViewController as! OutlettedController
+    // swiftlint:enable force_cast
 
 }
