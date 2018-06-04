@@ -8,12 +8,14 @@ class TestUtil {
     static let storyboard = UIStoryboard(name: "Test",
                                          bundle: Bundle(for: TestUtil.self))
 
-    static let goodOutlettedViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: "goodOutlettedController")
+    static let goodViewController: UIViewController
+        = storyboard.instantiateViewController(withIdentifier: "goodOutlettedController")
 
-    static let goodOutlettedController = goodOutlettedViewController as! OutlettedController
+    static let goodController = goodViewController as! OutlettedController
 
-    static let badOutlettedViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: "badOutlettedController")
+    static let badViewController: UIViewController
+        = storyboard.instantiateViewController(withIdentifier: "badOutlettedController")
 
-    static let badOutlettedController = badOutlettedViewController as! OutlettedController
+    static let badController = badViewController as! OutlettedController
 
 }

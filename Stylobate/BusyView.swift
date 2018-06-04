@@ -4,7 +4,7 @@ import UIKit
 
 public protocol BusyView: class {
 
-    typealias ActivityCompletion = () -> ()
+    typealias ActivityCompletion = () -> Void
 
     func startActivity(completion: ActivityCompletion?)
 
@@ -79,4 +79,3 @@ public extension SpinnerBusyView where Self: UIView {
     }
 
 }
-

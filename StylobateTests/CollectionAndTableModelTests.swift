@@ -19,7 +19,7 @@ class CollectionAndTableModelTests: XCTestCase {
     }
 
     func testTableViewFromStoryboardHasNoRowsOrSections() {
-        let viewController = TestUtil.goodOutlettedViewController
+        let viewController = TestUtil.goodViewController
         _ = viewController.view  // call viewDidLoad()
         let controller = viewController as! Controller
         let model = controller.model as! CollectionAndTableModel
@@ -29,7 +29,7 @@ class CollectionAndTableModelTests: XCTestCase {
     }
 
     func testCollectionViewFromStoryboardHasNoRowsOrSections() {
-        let viewController = TestUtil.goodOutlettedViewController
+        let viewController = TestUtil.goodViewController
         _ = viewController.view  // call viewDidLoad()
         let controller = viewController as! Controller
         let model = controller.model as! CollectionAndTableModel
