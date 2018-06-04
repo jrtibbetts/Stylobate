@@ -26,6 +26,9 @@ class CollectionAndTableModelTests: XCTestCase {
         let display = controller.display as! CollectionAndTableDisplay
         let tableView = display.tableView!
         assertTableIsEmptyAndReturnsMissingCell(tableView: tableView, model: model)
+
+        display.refresh()
+        assertTableIsEmptyAndReturnsMissingCell(tableView: tableView, model: model)
     }
 
     func testCollectionViewFromStoryboardHasNoRowsOrSections() {

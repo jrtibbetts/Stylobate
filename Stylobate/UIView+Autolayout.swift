@@ -12,10 +12,11 @@ public extension UIView {
             translatesAutoresizingMaskIntoConstraints = false
 
             let marginsGuide = superview.layoutMarginsGuide
-            NSLayoutConstraint.constraints(withVisualFormat: "[leadingMargin]-[view]-[trailingMargin]",
+            let views = ["leading": marginsGuide, "trailing": marginsGuide, "view": self]
+            NSLayoutConstraint.constraints(withVisualFormat: "[leading]-[view]-[trailing]",
                 options: NSLayoutFormatOptions.alignAllCenterY,
                 metrics: nil,
-                views: ["leadingMargin": marginsGuide, "trailingMargin": marginsGuide, "view": self]).forEach { (constraint) in
+                views: views).forEach { (constraint) in
                     constraint.isActive = true
             }
             centerXAnchor.constraint(equalTo: marginsGuide.centerXAnchor).isActive = true

@@ -47,10 +47,6 @@ extension MissingCell {
     /// Initialize the cell by deserializing it.
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    }
-
-    open override func awakeFromNib() {
-        super.awakeFromNib()
         initializeUI()
     }
 
@@ -77,10 +73,6 @@ extension MissingCell {
 
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    }
-
-    open override func awakeFromNib() {
-        super.awakeFromNib()
         initializeUI()
     }
 
