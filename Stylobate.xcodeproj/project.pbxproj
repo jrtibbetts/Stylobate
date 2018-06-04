@@ -125,11 +125,11 @@
 				96EDF28F20A019A5009496FA /* CollectionAndTableModelTests.swift */,
 				9680994820C21F9C004C6A8A /* ControllerTests.swift */,
 				96EDF26D209F90B2009496FA /* Info.plist */,
+				9680995220C4D3A8004C6A8A /* MissingCellTests.swift */,
+				9680995020C4D2D4004C6A8A /* MissingCellTests.xib */,
 				96EDF29120A0A530009496FA /* Test.storyboard */,
 				9680994E20C37960004C6A8A /* TestUtil.swift */,
 				9680994A20C370B2004C6A8A /* UIViewController+AlertsTests.swift */,
-				9680995020C4D2D4004C6A8A /* MissingCellTests.xib */,
-				9680995220C4D3A8004C6A8A /* MissingCellTests.swift */,
 			);
 			path = StylobateTests;
 			sourceTree = "<group>";
