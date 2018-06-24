@@ -5,14 +5,6 @@ import XCTest
 
 class ControllerTests: XCTestCase {
 
-    func testBadControllerFailsAssertion() {
-        let controller = TestUtil.badViewController as! OutlettedController
-        _ = controller.view
-
-        XCTAssertNil(controller.model, "controller model")
-        XCTAssertNil(controller.display, "controller display")
-    }
-
     func testGoodControllerHasValidModelAndDisplay() {
         let controller = TestUtil.goodViewController as! OutlettedController
         _ = controller.view
