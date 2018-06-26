@@ -17,6 +17,7 @@
 		96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */; };
 		96E8CCCF20E1DBDF001C5381 /* OutlettedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8CCCE20E1DBDF001C5381 /* OutlettedController.swift */; };
 		96E8CCD820E1DCDF001C5381 /* FormattedLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */; };
+		96E8CCDC20E1E787001C5381 /* FormattedLabelTests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E8CCDB20E1E787001C5381 /* FormattedLabelTests.storyboard */; };
 		96EDF267209F90B2009496FA /* Stylobate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EDF25D209F90B2009496FA /* Stylobate.framework */; };
 		96EDF26E209F90B2009496FA /* Stylobate.h in Headers */ = {isa = PBXBuildFile; fileRef = 96EDF260209F90B2009496FA /* Stylobate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96EDF27A209F9498009496FA /* CollectionAndTableDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF277209F9497009496FA /* CollectionAndTableDisplay.swift */; };
@@ -52,6 +53,7 @@
 		96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedLabel.swift; sourceTree = "<group>"; };
 		96E8CCCE20E1DBDF001C5381 /* OutlettedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlettedController.swift; sourceTree = "<group>"; };
 		96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedLabelTests.swift; sourceTree = "<group>"; };
+		96E8CCDB20E1E787001C5381 /* FormattedLabelTests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FormattedLabelTests.storyboard; sourceTree = "<group>"; };
 		96EDF25D209F90B2009496FA /* Stylobate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stylobate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EDF260209F90B2009496FA /* Stylobate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stylobate.h; sourceTree = "<group>"; };
 		96EDF261209F90B2009496FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -147,9 +149,10 @@
 			isa = PBXGroup;
 			children = (
 				96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */,
+				96E8CCDB20E1E787001C5381 /* FormattedLabelTests.storyboard */,
+				96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */,
 				9680995220C4D3A8004C6A8A /* MissingCellTests.swift */,
 				9680995020C4D2D4004C6A8A /* MissingCellTests.xib */,
-				96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9680995120C4D2D4004C6A8A /* MissingCellTests.xib in Resources */,
+				96E8CCDC20E1E787001C5381 /* FormattedLabelTests.storyboard in Resources */,
 				96EDF29520A0C248009496FA /* Test.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

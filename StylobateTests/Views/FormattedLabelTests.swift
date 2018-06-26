@@ -16,7 +16,7 @@ class FormattedLabelTests: XCTestCase {
         XCTAssertEqual(label.text, newText)
     }
 
-    func testSetTextWithEmptyFormatIgnoredNewText() {
+    func testSetTextWithEmptyFormatIgnoresFormat() {
         let label = FormattedLabel(frame: CGRect())
         label.text = ""
         let superview = UIView(frame: CGRect())
@@ -24,19 +24,18 @@ class FormattedLabelTests: XCTestCase {
 
         let newText = "FAGABEFE"
         label.text = newText
-        XCTAssertEqual(label.text, "")
+        XCTAssertEqual(label.text, newText)
     }
 
-    func testSetTextWithFormatContainingNoFormattingCharactersIgnoredNewText() {
+    func testSetTextWithFormatContainingNoFormattingCharactersIgnoresFormat() {
         let label = FormattedLabel(frame: CGRect())
-        let formatText = "This initial text has no formatting characters"
-        label.text = formatText
+        label.text = "This initial text has no formatting characters"
         let superview = UIView(frame: CGRect())
         superview.addSubview(label)
 
         let newText = "FAGABEFE"
         label.text = newText
-        XCTAssertEqual(label.text, formatText)
+        XCTAssertEqual(label.text, newText)
     }
 
     func testSetTextWithFormatOk() {
@@ -60,5 +59,24 @@ class FormattedLabelTests: XCTestCase {
         label.attributedText = attributedText
         XCTAssertEqual(label.attributedText, attributedText)
     }
+
+    func testSetTextWithFormatInStoryboardOk() {
+        let storyboard = UIStoryboard(name: "FormattedLabelTests",
+                                      bundle: Bundle(for: FormattedLabelTests.self))
+        let viewController = storyboard.instantiateInitialViewController()!
+        let view = viewController.view as! FormattedLabelTestsView
+        let label = view.labelWithFormat!
+
+        let newText = "FAGABEFE"
+        label.text = newText
+        XCTAssertEqual(label.text, "Formatted as 'FAGABEFE'.")
+    }
+}
+
+class FormattedLabelTestsView: UIView {
+
+    @IBOutlet weak var labelWithFormat: FormattedLabel!
+
+    @IBOutlet weak var labelWithoutFormat: FormattedLabel!
 
 }
