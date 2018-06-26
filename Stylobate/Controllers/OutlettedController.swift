@@ -2,17 +2,6 @@
 
 import UIKit
 
-/// A `UIViewController` that has outlets to a `Model` and a `Display`, and
-/// connects them when the view is loaded.
-public protocol Controller: class {
-
-    /// The `Model` object.
-    var model: Model? { get set }
-
-    /// The `Display` object that controls the UI.
-    var display: Display? { get set }
-
-}
 
 /// A `Controller` that implements its `model` and `display` as `weak`
 /// `IBOutlet`s. It requires the model and display to be non-`nil` before
@@ -26,7 +15,7 @@ open class OutlettedController: UIViewController, Controller {
     /// The UI component.
     @IBOutlet open weak var display: Display?
 
-    // MARK: UIViewController
+    // MARK: - UIViewController Functions
 
     open override func viewDidLoad() {
         super.viewDidLoad()

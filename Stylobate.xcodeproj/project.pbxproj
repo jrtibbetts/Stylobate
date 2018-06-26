@@ -14,6 +14,9 @@
 		9680994F20C37960004C6A8A /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680994E20C37960004C6A8A /* TestUtil.swift */; };
 		9680995120C4D2D4004C6A8A /* MissingCellTests.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9680995020C4D2D4004C6A8A /* MissingCellTests.xib */; };
 		9680995320C4D3A8004C6A8A /* MissingCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680995220C4D3A8004C6A8A /* MissingCellTests.swift */; };
+		96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */; };
+		96E8CCCF20E1DBDF001C5381 /* OutlettedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8CCCE20E1DBDF001C5381 /* OutlettedController.swift */; };
+		96E8CCD820E1DCDF001C5381 /* FormattedLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */; };
 		96EDF267209F90B2009496FA /* Stylobate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EDF25D209F90B2009496FA /* Stylobate.framework */; };
 		96EDF26E209F90B2009496FA /* Stylobate.h in Headers */ = {isa = PBXBuildFile; fileRef = 96EDF260209F90B2009496FA /* Stylobate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96EDF27A209F9498009496FA /* CollectionAndTableDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF277209F9497009496FA /* CollectionAndTableDisplay.swift */; };
@@ -46,6 +49,9 @@
 		9680994E20C37960004C6A8A /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 		9680995020C4D2D4004C6A8A /* MissingCellTests.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MissingCellTests.xib; sourceTree = "<group>"; };
 		9680995220C4D3A8004C6A8A /* MissingCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingCellTests.swift; sourceTree = "<group>"; };
+		96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedLabel.swift; sourceTree = "<group>"; };
+		96E8CCCE20E1DBDF001C5381 /* OutlettedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlettedController.swift; sourceTree = "<group>"; };
+		96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedLabelTests.swift; sourceTree = "<group>"; };
 		96EDF25D209F90B2009496FA /* Stylobate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stylobate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EDF260209F90B2009496FA /* Stylobate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stylobate.h; sourceTree = "<group>"; };
 		96EDF261209F90B2009496FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +88,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96E8CCCC20E1DB86001C5381 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				96EDF29320A0BC6B009496FA /* UIView+Autolayout.swift */,
+				96EDF283209F9512009496FA /* UIViewController+Alerts.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96E8CCCD20E1DB92001C5381 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9680994A20C370B2004C6A8A /* UIViewController+AlertsTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96E8CCD120E1DC36001C5381 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96EDF278209F9497009496FA /* CollectionAndTableModel.swift */,
+				96EDF27E209F94DA009496FA /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96E8CCD220E1DC53001C5381 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96EDF27F209F94DB009496FA /* Controller.swift */,
+				96E8CCCE20E1DBDF001C5381 /* OutlettedController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		96E8CCD320E1DC5E001C5381 /* Views & Displays */ = {
+			isa = PBXGroup;
+			children = (
+				96106C9C20C0E5D400DA5308 /* BusyView.swift */,
+				96EDF277209F9497009496FA /* CollectionAndTableDisplay.swift */,
+				96EDF27D209F94DA009496FA /* Display.swift */,
+				96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */,
+				96EDF28D209FCC4E009496FA /* MissingCell.swift */,
+			);
+			path = "Views & Displays";
+			sourceTree = "<group>";
+		};
+		96E8CCD420E1DC8F001C5381 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9680994820C21F9C004C6A8A /* ControllerTests.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		96E8CCD520E1DCA7001C5381 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */,
+				9680995220C4D3A8004C6A8A /* MissingCellTests.swift */,
+				9680995020C4D2D4004C6A8A /* MissingCellTests.xib */,
+				96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96E8CCD620E1DCB1001C5381 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96EDF28F20A019A5009496FA /* CollectionAndTableModelTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		96EDF253209F90B2009496FA = {
 			isa = PBXGroup;
 			children = (
@@ -103,17 +183,12 @@
 		96EDF25F209F90B2009496FA /* Stylobate */ = {
 			isa = PBXGroup;
 			children = (
-				96106C9C20C0E5D400DA5308 /* BusyView.swift */,
-				96EDF277209F9497009496FA /* CollectionAndTableDisplay.swift */,
-				96EDF278209F9497009496FA /* CollectionAndTableModel.swift */,
-				96EDF27F209F94DB009496FA /* Controller.swift */,
-				96EDF27D209F94DA009496FA /* Display.swift */,
+				96E8CCD220E1DC53001C5381 /* Controllers */,
+				96E8CCCC20E1DB86001C5381 /* Extensions */,
 				96EDF261209F90B2009496FA /* Info.plist */,
-				96EDF28D209FCC4E009496FA /* MissingCell.swift */,
-				96EDF27E209F94DA009496FA /* Model.swift */,
+				96E8CCD120E1DC36001C5381 /* Models */,
 				96EDF260209F90B2009496FA /* Stylobate.h */,
-				96EDF29320A0BC6B009496FA /* UIView+Autolayout.swift */,
-				96EDF283209F9512009496FA /* UIViewController+Alerts.swift */,
+				96E8CCD320E1DC5E001C5381 /* Views & Displays */,
 			);
 			path = Stylobate;
 			sourceTree = "<group>";
@@ -121,15 +196,13 @@
 		96EDF26A209F90B2009496FA /* StylobateTests */ = {
 			isa = PBXGroup;
 			children = (
-				96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */,
-				96EDF28F20A019A5009496FA /* CollectionAndTableModelTests.swift */,
-				9680994820C21F9C004C6A8A /* ControllerTests.swift */,
+				96E8CCD420E1DC8F001C5381 /* Controllers */,
+				96E8CCCD20E1DB92001C5381 /* Extensions */,
 				96EDF26D209F90B2009496FA /* Info.plist */,
-				9680995220C4D3A8004C6A8A /* MissingCellTests.swift */,
-				9680995020C4D2D4004C6A8A /* MissingCellTests.xib */,
+				96E8CCD620E1DCB1001C5381 /* Models */,
 				96EDF29120A0A530009496FA /* Test.storyboard */,
 				9680994E20C37960004C6A8A /* TestUtil.swift */,
-				9680994A20C370B2004C6A8A /* UIViewController+AlertsTests.swift */,
+				96E8CCD520E1DCA7001C5381 /* Views */,
 			);
 			path = StylobateTests;
 			sourceTree = "<group>";
@@ -250,10 +323,12 @@
 				96EDF27B209F9498009496FA /* CollectionAndTableModel.swift in Sources */,
 				96106C9D20C0E5D400DA5308 /* BusyView.swift in Sources */,
 				96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */,
+				96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */,
 				96EDF282209F94DB009496FA /* Controller.swift in Sources */,
 				96EDF29420A0BC6B009496FA /* UIView+Autolayout.swift in Sources */,
 				96EDF280209F94DB009496FA /* Display.swift in Sources */,
 				96EDF27A209F9498009496FA /* CollectionAndTableDisplay.swift in Sources */,
+				96E8CCCF20E1DBDF001C5381 /* OutlettedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9680995320C4D3A8004C6A8A /* MissingCellTests.swift in Sources */,
+				96E8CCD820E1DCDF001C5381 /* FormattedLabelTests.swift in Sources */,
 				96EDF29020A019A5009496FA /* CollectionAndTableModelTests.swift in Sources */,
 				9680994920C21F9C004C6A8A /* ControllerTests.swift in Sources */,
 				96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */,
