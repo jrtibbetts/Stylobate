@@ -148,9 +148,11 @@ class CollectionAndTableDisplayTests: XCTestCase {
 
     // MARK: - Fixtures
 
-    func assert(shown: UIView, hidden: UIView) {
-        XCTAssertFalse(shown.isHidden)
-        XCTAssertTrue(hidden.isHidden)
+    func assert(shown: UIView,
+                hidden: UIView,
+                line: UInt = #line) {
+        XCTAssertFalse(shown.isHidden, line: line)
+        XCTAssertTrue(hidden.isHidden, line: line)
     }
 
 }

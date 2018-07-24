@@ -171,27 +171,35 @@ class BusyViewTests: XCTestCase {
 
     // MARK: Test Fixtures
 
-    func assertPointsEqual(_ p1: CGPoint, _ p2: CGPoint, accuracy: CGFloat, message: String = "") {
-        XCTAssertEqual(p1.x, p2.x, accuracy: 1.0, "points \(p1) and \(p2)'s x values")
-        XCTAssertEqual(p1.y, p2.y, accuracy: 1.0, "points \(p1) and \(p2)'s y values")
+    func assertPointsEqual(_ p1: CGPoint,
+                           _ p2: CGPoint,
+                           accuracy: CGFloat,
+                           message: String = "",
+                           line: UInt = #line) {
+        XCTAssertEqual(p1.x, p2.x, accuracy: 1.0, "points \(p1) and \(p2)'s x values", line: line)
+        XCTAssertEqual(p1.y, p2.y, accuracy: 1.0, "points \(p1) and \(p2)'s y values", line: line)
     }
 
-    func assertSpinnerStarted(spinner: UIActivityIndicatorView) {
-        XCTAssertTrue(spinner.isAnimating)
-        XCTAssertFalse(spinner.isHidden)
+    func assertSpinnerStarted(spinner: UIActivityIndicatorView,
+                              line: UInt = #line) {
+        XCTAssertTrue(spinner.isAnimating, line: line)
+        XCTAssertFalse(spinner.isHidden, line: line)
     }
 
-    func assertSpinnerStopped(spinner: UIActivityIndicatorView) {
-        XCTAssertFalse(spinner.isAnimating)
-        XCTAssertTrue(spinner.isHidden)
+    func assertSpinnerStopped(spinner: UIActivityIndicatorView,
+                              line: UInt = #line) {
+        XCTAssertFalse(spinner.isAnimating, line: line)
+        XCTAssertTrue(spinner.isHidden, line: line)
     }
 
-    func assertProgressViewStarted(_ progressView: UIProgressView) {
-        XCTAssertFalse(progressView.isHidden)
+    func assertProgressViewStarted(_ progressView: UIProgressView,
+                                   line: UInt = #line) {
+        XCTAssertFalse(progressView.isHidden, line: line)
     }
 
-    func assertProgressViewStopped(_ progressView: UIProgressView) {
-        XCTAssertTrue(progressView.isHidden)
+    func assertProgressViewStopped(_ progressView: UIProgressView,
+                                   line: UInt = #line) {
+        XCTAssertTrue(progressView.isHidden, line: line)
     }
 
     // MARK: Dummy Implementations
@@ -221,24 +229,25 @@ class BusyViewTests: XCTestCase {
 
     class DefaultProgressBusyView: UIView, ProgressBusyView {
 
-        var progressView: UIProgressView?
+        var busyIndicator: UIView?
 
     }
 
     class UnaddedCustomProgressBusyView: UIView, ProgressBusyView {
 
-        var progressView: UIProgressView? = UIProgressView(progressViewStyle: .bar)
+        var busyIndicator: UIView? = UIProgressView(progressViewStyle: .bar)
 
     }
 
     class AddedCustomProgressBusyView: UIView, ProgressBusyView {
 
-        lazy var progressView: UIProgressView? = {
-            let progress = UIProgressView(progressViewStyle: .bar)
-            addSubview(progress)
-
-            return progress
-        }()
+        var busyIndicator: UIView? = UIProgressView(progressViewStyle: .bar) {
+            didSet {
+                if let indicator = busyIndicator {
+                    addSubview(indicator)
+                }
+            }
+        }
 
     }
 

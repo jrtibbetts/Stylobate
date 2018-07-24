@@ -34,6 +34,8 @@
 		96EE58F7210432F50099A7B3 /* CollectionAndTableDisplayTests.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96EE58F6210432F50099A7B3 /* CollectionAndTableDisplayTests.xib */; };
 		96EE58F92107830A0099A7B3 /* SpinnerBusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE58F82107830A0099A7B3 /* SpinnerBusyView.swift */; };
 		96EE58FB210783610099A7B3 /* ProgressBusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE58FA210783610099A7B3 /* ProgressBusyView.swift */; };
+		96EE58FD21079F200099A7B3 /* VisualIndicatorBusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE58FC21079F200099A7B3 /* VisualIndicatorBusyView.swift */; };
+		96EE58FF2107A2650099A7B3 /* UIView+Summoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE58FE2107A2650099A7B3 /* UIView+Summoner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		96EE58F6210432F50099A7B3 /* CollectionAndTableDisplayTests.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionAndTableDisplayTests.xib; sourceTree = "<group>"; };
 		96EE58F82107830A0099A7B3 /* SpinnerBusyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerBusyView.swift; sourceTree = "<group>"; };
 		96EE58FA210783610099A7B3 /* ProgressBusyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBusyView.swift; sourceTree = "<group>"; };
+		96EE58FC21079F200099A7B3 /* VisualIndicatorBusyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualIndicatorBusyView.swift; sourceTree = "<group>"; };
+		96EE58FE2107A2650099A7B3 /* UIView+Summoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Summoner.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			children = (
 				96EDF29320A0BC6B009496FA /* UIView+Autolayout.swift */,
 				96EDF283209F9512009496FA /* UIViewController+Alerts.swift */,
+				96EE58FE2107A2650099A7B3 /* UIView+Summoner.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				96EDF28D209FCC4E009496FA /* MissingCell.swift */,
 				96EE58FA210783610099A7B3 /* ProgressBusyView.swift */,
 				96EE58F82107830A0099A7B3 /* SpinnerBusyView.swift */,
+				96EE58FC21079F200099A7B3 /* VisualIndicatorBusyView.swift */,
 			);
 			path = "Views & Displays";
 			sourceTree = "<group>";
@@ -339,11 +345,13 @@
 				96EDF284209F9512009496FA /* UIViewController+Alerts.swift in Sources */,
 				96EDF27B209F9498009496FA /* CollectionAndTableModel.swift in Sources */,
 				96106C9D20C0E5D400DA5308 /* BusyView.swift in Sources */,
+				96EE58FD21079F200099A7B3 /* VisualIndicatorBusyView.swift in Sources */,
 				96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */,
 				96EE58F92107830A0099A7B3 /* SpinnerBusyView.swift in Sources */,
 				96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */,
 				96EDF282209F94DB009496FA /* Controller.swift in Sources */,
 				96EDF29420A0BC6B009496FA /* UIView+Autolayout.swift in Sources */,
+				96EE58FF2107A2650099A7B3 /* UIView+Summoner.swift in Sources */,
 				96EE58FB210783610099A7B3 /* ProgressBusyView.swift in Sources */,
 				96EDF280209F94DB009496FA /* Display.swift in Sources */,
 				96EDF27A209F9498009496FA /* CollectionAndTableDisplay.swift in Sources */,

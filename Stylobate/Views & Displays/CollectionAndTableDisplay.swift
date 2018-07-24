@@ -57,8 +57,8 @@ open class CollectionAndTableDisplay: Display {
     open private(set) var foregroundView: UIView? {
         didSet {
             if foregroundView != nil {
-                hide(oldValue)
-                show(foregroundView)
+                banish(oldValue)
+                summon(foregroundView)
             }
         }
     }
@@ -132,22 +132,6 @@ open class CollectionAndTableDisplay: Display {
             }
         } else {
             // Ignore it.
-        }
-    }
-
-    // MARK: - Private Functions
-    
-    fileprivate func hide(_ view: UIView?) {
-        if let view = view {
-            view.isHidden = true
-            sendSubview(toBack: view)
-        }
-    }
-
-    fileprivate func show(_ view: UIView?) {
-        if let view = view {
-            bringSubview(toFront: view)
-            view.isHidden = false
         }
     }
 
