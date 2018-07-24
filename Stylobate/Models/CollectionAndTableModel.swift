@@ -14,10 +14,6 @@ import UIKit
 open class CollectionAndTableModel: NSObject, Model,
 UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate {
     
-    override public init() {
-        super.init()
-    }
-    
     // MARK: UICollectionViewDataSource
     
     open func collectionView(_ collectionView: UICollectionView,
