@@ -32,6 +32,8 @@
 		96EDF29520A0C248009496FA /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96EDF29120A0A530009496FA /* Test.storyboard */; };
 		96EE58F5210432550099A7B3 /* CollectionAndTableDisplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE58F4210432550099A7B3 /* CollectionAndTableDisplayTests.swift */; };
 		96EE58F7210432F50099A7B3 /* CollectionAndTableDisplayTests.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96EE58F6210432F50099A7B3 /* CollectionAndTableDisplayTests.xib */; };
+		96EE58F92107830A0099A7B3 /* SpinnerBusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE58F82107830A0099A7B3 /* SpinnerBusyView.swift */; };
+		96EE58FB210783610099A7B3 /* ProgressBusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE58FA210783610099A7B3 /* ProgressBusyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		96EDF29320A0BC6B009496FA /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		96EE58F4210432550099A7B3 /* CollectionAndTableDisplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndTableDisplayTests.swift; sourceTree = "<group>"; };
 		96EE58F6210432F50099A7B3 /* CollectionAndTableDisplayTests.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionAndTableDisplayTests.xib; sourceTree = "<group>"; };
+		96EE58F82107830A0099A7B3 /* SpinnerBusyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerBusyView.swift; sourceTree = "<group>"; };
+		96EE58FA210783610099A7B3 /* ProgressBusyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBusyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 				96EDF27D209F94DA009496FA /* Display.swift */,
 				96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */,
 				96EDF28D209FCC4E009496FA /* MissingCell.swift */,
+				96EE58FA210783610099A7B3 /* ProgressBusyView.swift */,
+				96EE58F82107830A0099A7B3 /* SpinnerBusyView.swift */,
 			);
 			path = "Views & Displays";
 			sourceTree = "<group>";
@@ -334,9 +340,11 @@
 				96EDF27B209F9498009496FA /* CollectionAndTableModel.swift in Sources */,
 				96106C9D20C0E5D400DA5308 /* BusyView.swift in Sources */,
 				96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */,
+				96EE58F92107830A0099A7B3 /* SpinnerBusyView.swift in Sources */,
 				96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */,
 				96EDF282209F94DB009496FA /* Controller.swift in Sources */,
 				96EDF29420A0BC6B009496FA /* UIView+Autolayout.swift in Sources */,
+				96EE58FB210783610099A7B3 /* ProgressBusyView.swift in Sources */,
 				96EDF280209F94DB009496FA /* Display.swift in Sources */,
 				96EDF27A209F9498009496FA /* CollectionAndTableDisplay.swift in Sources */,
 				96E8CCCF20E1DBDF001C5381 /* OutlettedController.swift in Sources */,
