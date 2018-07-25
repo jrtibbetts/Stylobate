@@ -241,13 +241,17 @@ class BusyViewTests: XCTestCase {
 
     class AddedCustomProgressBusyView: UIView, ProgressBusyView {
 
-        var busyIndicator: UIView? = UIProgressView(progressViewStyle: .bar) {
-            didSet {
-                if let indicator = busyIndicator {
-                    addSubview(indicator)
-                }
-            }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            busyIndicator = UIProgressView(progressViewStyle: .bar)
+            addSubview(busyIndicator!)
         }
+
+        required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)
+        }
+
+        var busyIndicator: UIView?
 
     }
 
