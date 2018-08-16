@@ -5,7 +5,7 @@ import UIKit
 /// Implemented by views that show a progress bar when an activity is executing.
 /// The default implementation will add a `UIProgressView` if your
 /// implementation doesn't set one.
-public protocol ProgressBusyView: CustomIndicatorBusyView {
+public protocol ProgressBusyView: VisualIndicatorBusyView {
 
     /// The progress view to display. Your implementation must create a property
     /// or outlet for it, but doesn't have to initialize it or connect it in a
