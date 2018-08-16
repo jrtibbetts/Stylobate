@@ -4,13 +4,13 @@ import UIKit
 
 /// Implemented by views that want to show & hide something other than a
 /// spinner or progress view.
-public protocol CustomIndicatorBusyView: BusyView {
+public protocol VisualIndicatorBusyView: BusyView {
 
     var busyIndicator: UIView? { get set }
 
 }
 
-public extension CustomIndicatorBusyView where Self: UIView {
+public extension VisualIndicatorBusyView where Self: UIView {
 
     public func startActivity(completion: BusyView.ActivityCompletion? = nil) {
         summon(busyIndicator)
