@@ -14,7 +14,7 @@ public extension UIView {
             let marginsGuide = superview.layoutMarginsGuide
             let views = ["leading": marginsGuide, "trailing": marginsGuide, "view": self]
             NSLayoutConstraint.constraints(withVisualFormat: "[leading]-[view]-[trailing]",
-                options: NSLayoutFormatOptions.alignAllCenterY,
+                options: NSLayoutConstraint.FormatOptions.alignAllCenterY,
                 metrics: nil,
                 views: views).forEach { (constraint) in
                     constraint.isActive = true

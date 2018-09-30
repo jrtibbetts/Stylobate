@@ -9,13 +9,13 @@ public extension UIView {
     public func banish(_ subview: UIView?) {
         if let subview = subview {
             subview.isHidden = true
-            sendSubview(toBack: subview)
+            sendSubviewToBack(subview)
         }
     }
 
     public func summon(_ subview: UIView?) {
         if let subview = subview {
-            bringSubview(toFront: subview)
+            bringSubviewToFront(subview)
             subview.isHidden = false
         }
     }

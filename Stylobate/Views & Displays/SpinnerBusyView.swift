@@ -25,7 +25,7 @@ public extension SpinnerBusyView where Self: UIView {
     ///             finished starting. (Yes, really.)
     public func startActivity(completion: BusyView.ActivityCompletion? = nil) {
         if spinner == nil {
-            spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+            spinner = UIActivityIndicatorView(style: .whiteLarge)
         }
 
         if let spinner = spinner {

@@ -20,7 +20,7 @@ class BusyViewTests: XCTestCase {
         view.startActivity {
             XCTAssertNotNil(view.spinner)
             XCTAssertEqual(view.spinner!.superview, view)
-            XCTAssertEqual(view.spinner!.activityIndicatorViewStyle, UIActivityIndicatorViewStyle.whiteLarge)
+            XCTAssertEqual(view.spinner!.style, UIActivityIndicatorView.Style.whiteLarge)
             self.assertPointsEqual(view.spinner!.center, view.center, accuracy: 0.3)
 
             self.assertSpinnerStarted(spinner: view.spinner!)
@@ -100,7 +100,7 @@ class BusyViewTests: XCTestCase {
         view.startActivity {
             XCTAssertNotNil(view.progressView)
             XCTAssertEqual(view.progressView!.superview, view)
-            XCTAssertEqual(view.progressView!.progressViewStyle, UIProgressViewStyle.default)
+            XCTAssertEqual(view.progressView!.progressViewStyle, UIProgressView.Style.default)
             self.assertPointsEqual(view.progressView!.center, view.center, accuracy: 0.3)
 
             self.assertProgressViewStarted(view.progressView!)
@@ -212,14 +212,14 @@ class BusyViewTests: XCTestCase {
 
     class UnaddedCustomSpinnerBusyView: UIView, SpinnerBusyView {
 
-        var spinner: UIActivityIndicatorView? = UIActivityIndicatorView(activityIndicatorStyle: .white)
+        var spinner: UIActivityIndicatorView? = UIActivityIndicatorView(style: .white)
 
     }
 
     class AddedCustomSpinnerBusyView: UIView, SpinnerBusyView {
 
         lazy var spinner: UIActivityIndicatorView? = {
-            let spinnerView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            let spinnerView = UIActivityIndicatorView(style: .gray)
             addSubview(spinnerView)
 
             return spinnerView
