@@ -14,6 +14,9 @@
 		9680994F20C37960004C6A8A /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680994E20C37960004C6A8A /* TestUtil.swift */; };
 		9680995120C4D2D4004C6A8A /* MissingCellTests.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9680995020C4D2D4004C6A8A /* MissingCellTests.xib */; };
 		9680995320C4D3A8004C6A8A /* MissingCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680995220C4D3A8004C6A8A /* MissingCellTests.swift */; };
+		96A84A4C21643F740030F0AC /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A84A4B21643F740030F0AC /* JSONUtils.swift */; };
+		96A84A4F21643FAD0030F0AC /* JSONUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */; };
+		96A84A512164400B0030F0AC /* SampleFoo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A84A502164400B0030F0AC /* SampleFoo.json */; };
 		96C656AB212521F60041CAD6 /* ToggleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C656AA212521F60041CAD6 /* ToggleStackView.swift */; };
 		96C656AD212522130041CAD6 /* ToggleStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C656AC212522130041CAD6 /* ToggleStackViewTests.swift */; };
 		96C656AF212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C656AE212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift */; };
@@ -59,6 +62,9 @@
 		9680994E20C37960004C6A8A /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 		9680995020C4D2D4004C6A8A /* MissingCellTests.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MissingCellTests.xib; sourceTree = "<group>"; };
 		9680995220C4D3A8004C6A8A /* MissingCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingCellTests.swift; sourceTree = "<group>"; };
+		96A84A4B21643F740030F0AC /* JSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
+		96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilsTests.swift; sourceTree = "<group>"; };
+		96A84A502164400B0030F0AC /* SampleFoo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleFoo.json; sourceTree = "<group>"; };
 		96C656AA212521F60041CAD6 /* ToggleStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleStackView.swift; sourceTree = "<group>"; };
 		96C656AC212522130041CAD6 /* ToggleStackViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleStackViewTests.swift; sourceTree = "<group>"; };
 		96C656AE212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualIndicatorBusyViewTests.swift; sourceTree = "<group>"; };
@@ -108,6 +114,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96A84A4A21643F4F0030F0AC /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				96A84A4B21643F740030F0AC /* JSONUtils.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		96A84A4D21643F8E0030F0AC /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */,
+				96A84A502164400B0030F0AC /* SampleFoo.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		96E8CCCC20E1DB86001C5381 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +239,7 @@
 				96E8CCD220E1DC53001C5381 /* Controllers */,
 				96E8CCCC20E1DB86001C5381 /* Extensions */,
 				96EDF261209F90B2009496FA /* Info.plist */,
+				96A84A4A21643F4F0030F0AC /* JSON */,
 				96E8CCD120E1DC36001C5381 /* Models */,
 				96EDF260209F90B2009496FA /* Stylobate.h */,
 				96E8CCD320E1DC5E001C5381 /* Views & Displays */,
@@ -229,6 +253,7 @@
 				96E8CCD420E1DC8F001C5381 /* Controllers */,
 				96E8CCCD20E1DB92001C5381 /* Extensions */,
 				96EDF26D209F90B2009496FA /* Info.plist */,
+				96A84A4D21643F8E0030F0AC /* JSON */,
 				96E8CCD620E1DCB1001C5381 /* Models */,
 				96EDF29120A0A530009496FA /* Test.storyboard */,
 				9680994E20C37960004C6A8A /* TestUtil.swift */,
@@ -339,6 +364,7 @@
 			files = (
 				9680995120C4D2D4004C6A8A /* MissingCellTests.xib in Resources */,
 				96E8CCDC20E1E787001C5381 /* FormattedLabelTests.storyboard in Resources */,
+				96A84A512164400B0030F0AC /* SampleFoo.json in Resources */,
 				96EDF29520A0C248009496FA /* Test.storyboard in Resources */,
 				96EE58F7210432F50099A7B3 /* CollectionAndTableDisplayTests.xib in Resources */,
 			);
@@ -360,6 +386,7 @@
 				96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */,
 				96EE58F92107830A0099A7B3 /* SpinnerBusyView.swift in Sources */,
 				96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */,
+				96A84A4C21643F740030F0AC /* JSONUtils.swift in Sources */,
 				96EDF282209F94DB009496FA /* Controller.swift in Sources */,
 				96EDF29420A0BC6B009496FA /* UIView+Autolayout.swift in Sources */,
 				96EE58FF2107A2650099A7B3 /* UIView+Summoner.swift in Sources */,
@@ -377,6 +404,7 @@
 				9680995320C4D3A8004C6A8A /* MissingCellTests.swift in Sources */,
 				96E8CCD820E1DCDF001C5381 /* FormattedLabelTests.swift in Sources */,
 				96EDF29020A019A5009496FA /* CollectionAndTableModelTests.swift in Sources */,
+				96A84A4F21643FAD0030F0AC /* JSONUtilsTests.swift in Sources */,
 				96C656AD212522130041CAD6 /* ToggleStackViewTests.swift in Sources */,
 				9680994920C21F9C004C6A8A /* ControllerTests.swift in Sources */,
 				96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */,
