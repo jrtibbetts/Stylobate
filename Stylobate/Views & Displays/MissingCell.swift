@@ -23,7 +23,7 @@ If you're seeing this, then the developer is using an incorrect
 cell reuse identifier somewhere.
 """,
                                        comment: """
-Informs the user that there's a programming error with cell reuse IDs.
+Inform the user that there's a programming error with cell reuse IDs.
 """)
         label.textAlignment = .center
         label.numberOfLines = 0
