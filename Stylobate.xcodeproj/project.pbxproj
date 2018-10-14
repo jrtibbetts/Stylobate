@@ -20,6 +20,8 @@
 		96C656AB212521F60041CAD6 /* ToggleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C656AA212521F60041CAD6 /* ToggleStackView.swift */; };
 		96C656AD212522130041CAD6 /* ToggleStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C656AC212522130041CAD6 /* ToggleStackViewTests.swift */; };
 		96C656AF212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C656AE212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift */; };
+		96DCE6B02172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DCE6AF2172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift */; };
+		96DCE6B22172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DCE6B12172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift */; };
 		96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */; };
 		96E8CCCF20E1DBDF001C5381 /* OutlettedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8CCCE20E1DBDF001C5381 /* OutlettedController.swift */; };
 		96E8CCD820E1DCDF001C5381 /* FormattedLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */; };
@@ -68,6 +70,8 @@
 		96C656AA212521F60041CAD6 /* ToggleStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleStackView.swift; sourceTree = "<group>"; };
 		96C656AC212522130041CAD6 /* ToggleStackViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleStackViewTests.swift; sourceTree = "<group>"; };
 		96C656AE212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualIndicatorBusyViewTests.swift; sourceTree = "<group>"; };
+		96DCE6AF2172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreesMinutesSecondsFormatter.swift; sourceTree = "<group>"; };
+		96DCE6B12172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreesMinutesSecondsFormatterTests.swift; sourceTree = "<group>"; };
 		96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedLabel.swift; sourceTree = "<group>"; };
 		96E8CCCE20E1DBDF001C5381 /* OutlettedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlettedController.swift; sourceTree = "<group>"; };
 		96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedLabelTests.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 			children = (
 				96106C9C20C0E5D400DA5308 /* BusyView.swift */,
 				96EDF277209F9497009496FA /* CollectionAndTableDisplay.swift */,
+				96DCE6AF2172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift */,
 				96EDF27D209F94DA009496FA /* Display.swift */,
 				96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */,
 				96EDF28D209FCC4E009496FA /* MissingCell.swift */,
@@ -197,6 +202,7 @@
 				96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */,
 				96EE58F4210432550099A7B3 /* CollectionAndTableDisplayTests.swift */,
 				96EE58F6210432F50099A7B3 /* CollectionAndTableDisplayTests.xib */,
+				96DCE6B12172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift */,
 				96E8CCDB20E1E787001C5381 /* FormattedLabelTests.storyboard */,
 				96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */,
 				9680995220C4D3A8004C6A8A /* MissingCellTests.swift */,
@@ -385,6 +391,7 @@
 				96EE58FD21079F200099A7B3 /* VisualIndicatorBusyView.swift in Sources */,
 				96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */,
 				96EE58F92107830A0099A7B3 /* SpinnerBusyView.swift in Sources */,
+				96DCE6B02172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift in Sources */,
 				96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */,
 				96A84A4C21643F740030F0AC /* JSONUtils.swift in Sources */,
 				96EDF282209F94DB009496FA /* Controller.swift in Sources */,
@@ -407,6 +414,7 @@
 				96A84A4F21643FAD0030F0AC /* JSONUtilsTests.swift in Sources */,
 				96C656AD212522130041CAD6 /* ToggleStackViewTests.swift in Sources */,
 				9680994920C21F9C004C6A8A /* ControllerTests.swift in Sources */,
+				96DCE6B22172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift in Sources */,
 				96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */,
 				9680994F20C37960004C6A8A /* TestUtil.swift in Sources */,
 				96C656AF212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift in Sources */,
