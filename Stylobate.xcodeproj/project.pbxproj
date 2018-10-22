@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960B52EE217D7FC2004754A5 /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960B52ED217D7FC2004754A5 /* CustomOperators.swift */; };
+		960B52F1217D7FD5004754A5 /* CustomOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960B52F0217D7FD5004754A5 /* CustomOperatorsTests.swift */; };
 		96106C9D20C0E5D400DA5308 /* BusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96106C9C20C0E5D400DA5308 /* BusyView.swift */; };
 		96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */; };
 		9680994920C21F9C004C6A8A /* ControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680994820C21F9C004C6A8A /* ControllerTests.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		960B52ED217D7FC2004754A5 /* CustomOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperators.swift; sourceTree = "<group>"; };
+		960B52F0217D7FD5004754A5 /* CustomOperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperatorsTests.swift; sourceTree = "<group>"; };
 		96106C9C20C0E5D400DA5308 /* BusyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyView.swift; sourceTree = "<group>"; };
 		96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyViewTests.swift; sourceTree = "<group>"; };
 		9680994820C21F9C004C6A8A /* ControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTests.swift; sourceTree = "<group>"; };
@@ -118,6 +122,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		960B52EC217D7FC2004754A5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				960B52ED217D7FC2004754A5 /* CustomOperators.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		960B52EF217D7FD5004754A5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				960B52F0217D7FD5004754A5 /* CustomOperatorsTests.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		96A84A4A21643F4F0030F0AC /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +268,7 @@
 				96A84A4A21643F4F0030F0AC /* JSON */,
 				96E8CCD120E1DC36001C5381 /* Models */,
 				96EDF260209F90B2009496FA /* Stylobate.h */,
+				960B52EC217D7FC2004754A5 /* Util */,
 				96E8CCD320E1DC5E001C5381 /* Views & Displays */,
 			);
 			path = Stylobate;
@@ -263,6 +284,7 @@
 				96E8CCD620E1DCB1001C5381 /* Models */,
 				96EDF29120A0A530009496FA /* Test.storyboard */,
 				9680994E20C37960004C6A8A /* TestUtil.swift */,
+				960B52EF217D7FD5004754A5 /* Util */,
 				96E8CCD520E1DCA7001C5381 /* Views & Displays */,
 			);
 			path = StylobateTests;
@@ -388,6 +410,7 @@
 				96EDF27B209F9498009496FA /* CollectionAndTableModel.swift in Sources */,
 				96C656AB212521F60041CAD6 /* ToggleStackView.swift in Sources */,
 				96106C9D20C0E5D400DA5308 /* BusyView.swift in Sources */,
+				960B52EE217D7FC2004754A5 /* CustomOperators.swift in Sources */,
 				96EE58FD21079F200099A7B3 /* VisualIndicatorBusyView.swift in Sources */,
 				96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */,
 				96EE58F92107830A0099A7B3 /* SpinnerBusyView.swift in Sources */,
@@ -414,6 +437,7 @@
 				96A84A4F21643FAD0030F0AC /* JSONUtilsTests.swift in Sources */,
 				96C656AD212522130041CAD6 /* ToggleStackViewTests.swift in Sources */,
 				9680994920C21F9C004C6A8A /* ControllerTests.swift in Sources */,
+				960B52F1217D7FD5004754A5 /* CustomOperatorsTests.swift in Sources */,
 				96DCE6B22172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift in Sources */,
 				96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */,
 				9680994F20C37960004C6A8A /* TestUtil.swift in Sources */,
