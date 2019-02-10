@@ -78,67 +78,60 @@ class CollectionAndTableDisplayTests: XCTestCase {
 
     func testCollectionOnlyInitialForegroundModeIsCollection() {
         let view = collectionOnlyView
-        XCTAssertEqual(view.foregroundMode, .collection)
-        XCTAssertNotNil(view.foregroundView)
-        XCTAssertTrue(view.foregroundView === view.collectionView)
-        XCTAssertNil(view.indexPathForSelectedItem)
+        assertSingleViewInitialForegroundMode(view: view,
+                                              expectedForegroundView: view.collectionView!,
+                                              expectedMode: .collection)
         XCTAssertNotNil(view.indexPathsForSelectedItems)
         XCTAssertTrue(view.indexPathsForSelectedItems!.isEmpty)
-        XCTAssertFalse(view.collectionView!.isHidden)
     }
 
     func testCollectionOnlyViewToggleForegroundChangesNothing() {
         let view = collectionOnlyView
-        view.toggleForegroundView()
-        XCTAssertEqual(view.foregroundMode, .collection)
-        XCTAssertTrue(view.foregroundView === view.collectionView)
-        XCTAssertFalse(view.collectionView!.isHidden)
+        assertSingleViewToggleForegroundChangesNothing(view: view,
+                                                       expectedView: view.collectionView!,
+                                                       expectedMode: .collection)
     }
 
     func testCollectionOnlyViewSetForegroundModeDoesNothing() {
         let view = collectionOnlyView
-
-        view.foregroundMode = .collection
-        XCTAssertEqual(view.foregroundMode, .collection)
-        XCTAssertFalse(view.collectionView!.isHidden)
-
-        view.foregroundMode = .table
-        XCTAssertEqual(view.foregroundMode, .collection)
-        XCTAssertFalse(view.collectionView!.isHidden)
+        assertSingleViewSetForegroundModeDoesNothing(view: view,
+                                                     hiddenView: view.collectionView!,
+                                                     expectedMode: .collection)
     }
 
     // MARK: - Table Only
 
     func testTableOnlyInitialForegroundModeIsTable() {
         let view = tableOnlyView
-        XCTAssertEqual(view.foregroundMode, .table)
-        XCTAssertNotNil(view.foregroundView)
-        XCTAssertTrue(view.foregroundView === view.tableView)
-        XCTAssertNil(view.indexPathForSelectedItem)
+        assertSingleViewInitialForegroundMode(view: view,
+                                              expectedForegroundView: view.tableView!,
+                                              expectedMode: .table)
         XCTAssertNil(view.indexPathsForSelectedItems)
-        XCTAssertFalse(view.tableView!.isHidden)
+    }
+
+    func assertSingleViewInitialForegroundMode(view: CollectionAndTableDisplay,
+                                               expectedForegroundView: UIView,
+                                               expectedMode: CollectionAndTableDisplay.ForegroundMode) {
+        XCTAssertEqual(view.foregroundMode, expectedMode)
+        XCTAssertNotNil(view.foregroundView)
+        XCTAssertTrue(view.foregroundView === expectedForegroundView)
+        XCTAssertNil(view.indexPathForSelectedItem)
+        XCTAssertFalse(expectedForegroundView.isHidden)
     }
 
     func testTableOnlyToggleForegroundChangesNothing() {
         let view = tableOnlyView
-        view.toggleForegroundView()
-        XCTAssertEqual(view.foregroundMode, .table)
-        XCTAssertTrue(view.foregroundView === view.tableView)
-        XCTAssertFalse(view.tableView!.isHidden)
+        assertSingleViewToggleForegroundChangesNothing(view: view,
+                                                       expectedView: view.tableView!,
+                                                       expectedMode: .table)
     }
 
     func testTableOnlyViewSetForegroundModeDoesNothing() {
         let view = tableOnlyView
-
-        view.foregroundMode = .collection
-        XCTAssertEqual(view.foregroundMode, .table)
-        XCTAssertFalse(view.tableView!.isHidden)
-
-        view.foregroundMode = .table
-        XCTAssertEqual(view.foregroundMode, .table)
-        XCTAssertFalse(view.tableView!.isHidden)
+        assertSingleViewSetForegroundModeDoesNothing(view: view,
+                                                     hiddenView: view.tableView!,
+                                                     expectedMode: .table)
     }
-
     func testNoOutletViewHasTableForegroundModeAndNilSelectedIndices() {
         let view = noOutletsView
         XCTAssertEqual(view.foregroundMode, .table)
@@ -154,5 +147,27 @@ class CollectionAndTableDisplayTests: XCTestCase {
         XCTAssertFalse(shown.isHidden, line: line)
         XCTAssertTrue(hidden.isHidden, line: line)
     }
+
+    func assertSingleViewToggleForegroundChangesNothing(view: CollectionAndTableDisplay,
+                                                        expectedView: UIView,
+                                                        expectedMode: CollectionAndTableDisplay.ForegroundMode) {
+        view.toggleForegroundView()
+        XCTAssertEqual(view.foregroundMode, expectedMode)
+        XCTAssertTrue(view.foregroundView === expectedView)
+        XCTAssertFalse(expectedView.isHidden)
+    }
+
+    func assertSingleViewSetForegroundModeDoesNothing(view: CollectionAndTableDisplay,
+                                                      hiddenView: UIView,
+                                                      expectedMode: CollectionAndTableDisplay.ForegroundMode) {
+        view.foregroundMode = .collection
+        XCTAssertEqual(view.foregroundMode, expectedMode)
+        XCTAssertFalse(hiddenView.isHidden)
+
+        view.foregroundMode = .table
+        XCTAssertEqual(view.foregroundMode, expectedMode)
+        XCTAssertFalse(hiddenView.isHidden)
+    }
+
 
 }
