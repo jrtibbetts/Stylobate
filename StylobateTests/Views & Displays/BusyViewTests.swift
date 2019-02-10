@@ -22,8 +22,7 @@ class BusyViewTests: XCTestCase {
             XCTAssertEqual(view.spinner!.superview, view)
             XCTAssertEqual(view.spinner!.style, UIActivityIndicatorView.Style.whiteLarge)
             self.assertPointsEqual(view.spinner!.center, view.center, accuracy: 0.3)
-
-            self.assertSpinnerStarted(spinner: view.spinner!)
+            self.assert(spinner: view.spinner!, isSpinning: true)
             startExpectation.fulfill()
         }
 
@@ -32,7 +31,7 @@ class BusyViewTests: XCTestCase {
         let stopExpectation = expectation(description: "SpinnerBusyView stop")
 
         view.stopActivity() {
-            self.assertSpinnerStopped(spinner: view.spinner!)
+            self.assert(spinner: view.spinner!, isSpinning: false)
             stopExpectation.fulfill()
         }
 
@@ -49,7 +48,7 @@ class BusyViewTests: XCTestCase {
         view.startActivity() {
             XCTAssertEqual(view.spinner!.superview, view)
             self.assertPointsEqual(view.spinner!.center, view.center, accuracy: 0.3)
-            self.assertSpinnerStarted(spinner: view.spinner!)
+            self.assert(spinner: view.spinner!, isSpinning: true)
             startExpectation.fulfill()
         }
 
@@ -58,7 +57,7 @@ class BusyViewTests: XCTestCase {
         let stopExpectation = expectation(description: "SpinnerBusyView stop")
 
         view.stopActivity() {
-            self.assertSpinnerStopped(spinner: view.spinner!)
+            self.assert(spinner: view.spinner!, isSpinning: false)
             stopExpectation.fulfill()
         }
 
@@ -73,7 +72,7 @@ class BusyViewTests: XCTestCase {
         let startExpectation = expectation(description: "SpinnerBusyView start")
 
         view.startActivity() {
-            self.assertSpinnerStarted(spinner: view.spinner!)
+            self.assert(spinner: view.spinner!, isSpinning: true)
             startExpectation.fulfill()
         }
 
@@ -82,7 +81,7 @@ class BusyViewTests: XCTestCase {
         let stopExpectation = expectation(description: "SpinnerBusyView stop")
 
         view.stopActivity() {
-            self.assertSpinnerStopped(spinner: view.spinner!)
+            self.assert(spinner: view.spinner!, isSpinning: false)
             stopExpectation.fulfill()
         }
 
@@ -179,16 +178,11 @@ class BusyViewTests: XCTestCase {
         XCTAssertEqual(p1.y, p2.y, accuracy: 1.0, "points \(p1) and \(p2)'s y values", line: line)
     }
 
-    func assertSpinnerStarted(spinner: UIActivityIndicatorView,
-                              line: UInt = #line) {
-        XCTAssertTrue(spinner.isAnimating, line: line)
-        XCTAssertFalse(spinner.isHidden, line: line)
-    }
-
-    func assertSpinnerStopped(spinner: UIActivityIndicatorView,
-                              line: UInt = #line) {
-        XCTAssertFalse(spinner.isAnimating, line: line)
-        XCTAssertTrue(spinner.isHidden, line: line)
+    func assert(spinner: UIActivityIndicatorView,
+                isSpinning: Bool,
+                line: UInt = #line) {
+        XCTAssertEqual(spinner.isAnimating, isSpinning, line: line)
+        XCTAssertEqual(spinner.isHidden, !isSpinning)
     }
 
     func assertProgressViewStarted(_ progressView: UIProgressView,
