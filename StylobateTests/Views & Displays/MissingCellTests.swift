@@ -9,27 +9,18 @@ class MissingCellTests: XCTestCase {
                     bundle: Bundle(for: MissingCellTests.self))
 
     func testMissingTableViewCellAwakeFromNibOk() {
-        guard let cell = nib.instantiate(withOwner: nil, options: nil)[0] as? MissingTableViewCell else {
-            XCTFail("Expected view 0 in the nib to be a MissingTableViewCell")
-            return
-        }
-
-        XCTAssertNotNil(cell.textLabel, "text label")
-
-        // Serialize it out and back in.
-        let data = NSKeyedArchiver.archivedData(withRootObject: cell)
-
-        guard let copy = NSKeyedUnarchiver.unarchiveObject(with: data) as? MissingTableViewCell else {
-            XCTFail("Expected the missing table view cell to be deserialized")
-            return
-        }
-
-        XCTAssertEqual(cell.textLabel?.text, copy.textLabel?.text)
+        assertMissingCell(atIndex: 0)
     }
 
     func testMissingCollectionViewCellAwakeFromNibOk() {
-        guard let cell = nib.instantiate(withOwner: nil, options: nil)[1] as? MissingCollectionViewCell else {
-            XCTFail("Expected view 1 in the nib to be a MissingTableViewCell")
+        assertMissingCell(atIndex: 1)
+    }
+
+    func assertMissingCell(atIndex index: Int,
+                           file: StaticString = #file,
+                           line: UInt = #line) {
+        guard let cell = nib.instantiate(withOwner: nil, options: nil)[index] as? MissingCell else {
+            XCTFail("Expected view \(index) in the nib to be a MissingCell", file: file, line: line)
             return
         }
 
@@ -38,12 +29,12 @@ class MissingCellTests: XCTestCase {
         // Serialize it out and back in.
         let data = NSKeyedArchiver.archivedData(withRootObject: cell)
 
-        guard let copy = NSKeyedUnarchiver.unarchiveObject(with: data) as? MissingCollectionViewCell else {
-            XCTFail("Expected the missing collection view cell to be deserialized")
+        guard let copy = NSKeyedUnarchiver.unarchiveObject(with: data) as? MissingCell else {
+            XCTFail("Expected a MissingCell to be deserialized", file: file, line: line)
             return
         }
 
-        XCTAssertEqual(cell.textLabel?.text, copy.textLabel?.text)
+        XCTAssertEqual(cell.textLabel!.text, copy.textLabel!.text, file: file, line: line)
     }
 
 }

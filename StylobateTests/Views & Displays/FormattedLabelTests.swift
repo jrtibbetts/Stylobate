@@ -6,30 +6,22 @@ import XCTest
 class FormattedLabelTests: XCTestCase {
 
     func testSetTextWithNilFormatLeavesTextAsIs() {
-        let label = FormattedLabel(frame: CGRect())
-        label.text = nil
-        let superview = UIView(frame: CGRect())
-        superview.addSubview(label)
-
-        let newText = "FAGABEFE"
-        label.text = newText
-        XCTAssertEqual(label.text, newText)
+        assertSetText(withInitialText: nil)
     }
 
     func testSetTextWithEmptyFormatIgnoresFormat() {
-        let label = FormattedLabel(frame: CGRect())
-        label.text = ""
-        let superview = UIView(frame: CGRect())
-        superview.addSubview(label)
-
-        let newText = "FAGABEFE"
-        label.text = newText
-        XCTAssertEqual(label.text, newText)
+        assertSetText(withInitialText: "")
     }
 
     func testSetTextWithFormatContainingNoFormattingCharactersIgnoresFormat() {
+        assertSetText(withInitialText: "This initial text has no formatting characters")
+    }
+
+    func assertSetText(withInitialText initialText: String?,
+                       file: StaticString = #file,
+                       line: UInt = #line) {
         let label = FormattedLabel(frame: CGRect())
-        label.text = "This initial text has no formatting characters"
+        label.text = initialText
         let superview = UIView(frame: CGRect())
         superview.addSubview(label)
 
