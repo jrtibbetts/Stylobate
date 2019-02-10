@@ -174,7 +174,6 @@ class BusyViewTests: XCTestCase {
     func assertPointsEqual(_ p1: CGPoint,
                            _ p2: CGPoint,
                            accuracy: CGFloat,
-                           message: String = "",
                            line: UInt = #line) {
         XCTAssertEqual(p1.x, p2.x, accuracy: 1.0, "points \(p1) and \(p2)'s x values", line: line)
         XCTAssertEqual(p1.y, p2.y, accuracy: 1.0, "points \(p1) and \(p2)'s y values", line: line)

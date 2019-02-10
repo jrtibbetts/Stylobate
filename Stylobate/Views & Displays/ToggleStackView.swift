@@ -45,15 +45,10 @@ open class ToggleStackView: UIStackView {
     /// the previously-active one active again. If the previously-active one is
     /// `nil`, then activate the *first* arranged subview.
     open override func removeArrangedSubview(_ view: UIView) {
-        let isActiveView = (view === activeView)
         super.removeArrangedSubview(view)
 
-        if isActiveView {
-            if previousActiveView != nil {
-                activeView = previousActiveView
-            } else {
-                activeView = arrangedSubviews.first
-            }
+        if view === activeView {
+            activeView = previousActiveView ?? arrangedSubviews.first
         }
     }
 

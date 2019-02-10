@@ -16,7 +16,6 @@ open class CollectionAndTableDisplay: Display {
         /// hidden.
         case collection = 0
 
-
         /// Mode where the table view is shown and the collection view is
         /// hidden.
         case table
@@ -124,15 +123,11 @@ open class CollectionAndTableDisplay: Display {
     // MARK: - Public Functions
 
     open func toggleForegroundView() {
-        if tableView != nil && collectionView != nil {
-            if tableView === foregroundView {
-                foregroundView = collectionView
-            } else {
-                foregroundView = tableView
-            }
-        } else {
-            // Ignore it.
+        guard let tableView = tableView, let collectionView = collectionView else {
+            return
         }
+
+        foregroundView = (tableView === foregroundView ? collectionView : tableView)
     }
 
 }
