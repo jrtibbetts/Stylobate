@@ -261,8 +261,8 @@
 		96EDF253209F90B2009496FA = {
 			isa = PBXGroup;
 			children = (
-				96EDF25F209F90B2009496FA /* Stylobate */,
-				96EDF26A209F90B2009496FA /* StylobateTests */,
+				96EDF25F209F90B2009496FA /* Source */,
+				96EDF26A209F90B2009496FA /* Tests */,
 				96EDF25E209F90B2009496FA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -276,7 +276,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		96EDF25F209F90B2009496FA /* Stylobate */ = {
+		96EDF25F209F90B2009496FA /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				96E8CCD220E1DC53001C5381 /* Controllers */,
@@ -287,10 +287,10 @@
 				960B52EC217D7FC2004754A5 /* Util */,
 				96E8CCD320E1DC5E001C5381 /* Views & Displays */,
 			);
-			path = Stylobate;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		96EDF26A209F90B2009496FA /* StylobateTests */ = {
+		96EDF26A209F90B2009496FA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				96E8CCD420E1DC8F001C5381 /* Controllers */,
@@ -303,7 +303,7 @@
 				960B52EF217D7FD5004754A5 /* Util */,
 				96E8CCD520E1DCA7001C5381 /* Views & Displays */,
 			);
-			path = StylobateTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -613,7 +613,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Stylobate/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -641,7 +641,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Stylobate/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -663,7 +663,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
-				INFOPLIST_FILE = StylobateTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -682,7 +682,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
-				INFOPLIST_FILE = StylobateTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
