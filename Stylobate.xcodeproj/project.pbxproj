@@ -16,6 +16,14 @@
 		9680994F20C37960004C6A8A /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680994E20C37960004C6A8A /* TestUtil.swift */; };
 		9680995120C4D2D4004C6A8A /* MissingCellTests.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9680995020C4D2D4004C6A8A /* MissingCellTests.xib */; };
 		9680995320C4D3A8004C6A8A /* MissingCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680995220C4D3A8004C6A8A /* MissingCellTests.swift */; };
+		968C4A80221A8B2E006B51EE /* Date+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A7D221A8B2E006B51EE /* Date+Trigonometry.swift */; };
+		968C4A81221A8B2E006B51EE /* UIBezierPath+Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A7E221A8B2E006B51EE /* UIBezierPath+Pie.swift */; };
+		968C4A82221A8B2E006B51EE /* CALayer+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A7F221A8B2E006B51EE /* CALayer+Geometry.swift */; };
+		968C4A84221A8B64006B51EE /* CLLocationCoordinate2D+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A83221A8B64006B51EE /* CLLocationCoordinate2D+Formatting.swift */; };
+		968C4A86221A8B7F006B51EE /* CLLocationCoordinate2D+FormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A85221A8B7F006B51EE /* CLLocationCoordinate2D+FormattingTests.swift */; };
+		968C4A89221A8B91006B51EE /* Date+TrigonometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A87221A8B91006B51EE /* Date+TrigonometryTests.swift */; };
+		968C4A8A221A8B91006B51EE /* UIBezierPath+PieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A88221A8B91006B51EE /* UIBezierPath+PieTests.swift */; };
+		968C4A8C221A8BE5006B51EE /* CALayer+GeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A8B221A8BE5006B51EE /* CALayer+GeometryTests.swift */; };
 		96A84A4C21643F740030F0AC /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A84A4B21643F740030F0AC /* JSONUtils.swift */; };
 		96A84A4F21643FAD0030F0AC /* JSONUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */; };
 		96A84A512164400B0030F0AC /* SampleFoo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A84A502164400B0030F0AC /* SampleFoo.json */; };
@@ -68,6 +76,14 @@
 		9680994E20C37960004C6A8A /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 		9680995020C4D2D4004C6A8A /* MissingCellTests.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MissingCellTests.xib; sourceTree = "<group>"; };
 		9680995220C4D3A8004C6A8A /* MissingCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingCellTests.swift; sourceTree = "<group>"; };
+		968C4A7D221A8B2E006B51EE /* Date+Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Trigonometry.swift"; sourceTree = "<group>"; };
+		968C4A7E221A8B2E006B51EE /* UIBezierPath+Pie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Pie.swift"; sourceTree = "<group>"; };
+		968C4A7F221A8B2E006B51EE /* CALayer+Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Geometry.swift"; sourceTree = "<group>"; };
+		968C4A83221A8B64006B51EE /* CLLocationCoordinate2D+Formatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Formatting.swift"; sourceTree = "<group>"; };
+		968C4A85221A8B7F006B51EE /* CLLocationCoordinate2D+FormattingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+FormattingTests.swift"; sourceTree = "<group>"; };
+		968C4A87221A8B91006B51EE /* Date+TrigonometryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+TrigonometryTests.swift"; sourceTree = "<group>"; };
+		968C4A88221A8B91006B51EE /* UIBezierPath+PieTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+PieTests.swift"; sourceTree = "<group>"; };
+		968C4A8B221A8BE5006B51EE /* CALayer+GeometryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+GeometryTests.swift"; sourceTree = "<group>"; };
 		96A84A4B21643F740030F0AC /* JSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
 		96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilsTests.swift; sourceTree = "<group>"; };
 		96A84A502164400B0030F0AC /* SampleFoo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleFoo.json; sourceTree = "<group>"; };
@@ -125,7 +141,9 @@
 		960B52EC217D7FC2004754A5 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				968C4A83221A8B64006B51EE /* CLLocationCoordinate2D+Formatting.swift */,
 				960B52ED217D7FC2004754A5 /* CustomOperators.swift */,
+				968C4A7D221A8B2E006B51EE /* Date+Trigonometry.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -133,6 +151,7 @@
 		960B52EF217D7FD5004754A5 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				968C4A85221A8B7F006B51EE /* CLLocationCoordinate2D+FormattingTests.swift */,
 				960B52F0217D7FD5004754A5 /* CustomOperatorsTests.swift */,
 			);
 			path = Util;
@@ -186,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				96106C9C20C0E5D400DA5308 /* BusyView.swift */,
+				968C4A7F221A8B2E006B51EE /* CALayer+Geometry.swift */,
 				96EDF277209F9497009496FA /* CollectionAndTableDisplay.swift */,
 				96DCE6AF2172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift */,
 				96EDF27D209F94DA009496FA /* Display.swift */,
@@ -194,6 +214,7 @@
 				96EE58FA210783610099A7B3 /* ProgressBusyView.swift */,
 				96EE58F82107830A0099A7B3 /* SpinnerBusyView.swift */,
 				96C656AA212521F60041CAD6 /* ToggleStackView.swift */,
+				968C4A7E221A8B2E006B51EE /* UIBezierPath+Pie.swift */,
 				96EDF29320A0BC6B009496FA /* UIView+Autolayout.swift */,
 				96EE58FE2107A2650099A7B3 /* UIView+Summoner.swift */,
 				96EE58FC21079F200099A7B3 /* VisualIndicatorBusyView.swift */,
@@ -213,14 +234,17 @@
 			isa = PBXGroup;
 			children = (
 				96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */,
+				968C4A8B221A8BE5006B51EE /* CALayer+GeometryTests.swift */,
 				96EE58F4210432550099A7B3 /* CollectionAndTableDisplayTests.swift */,
 				96EE58F6210432F50099A7B3 /* CollectionAndTableDisplayTests.xib */,
+				968C4A87221A8B91006B51EE /* Date+TrigonometryTests.swift */,
 				96DCE6B12172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift */,
 				96E8CCDB20E1E787001C5381 /* FormattedLabelTests.storyboard */,
 				96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */,
 				9680995220C4D3A8004C6A8A /* MissingCellTests.swift */,
 				9680995020C4D2D4004C6A8A /* MissingCellTests.xib */,
 				96C656AC212522130041CAD6 /* ToggleStackViewTests.swift */,
+				968C4A88221A8B91006B51EE /* UIBezierPath+PieTests.swift */,
 				96C656AE212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift */,
 			);
 			path = "Views & Displays";
@@ -397,16 +421,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				968C4A81221A8B2E006B51EE /* UIBezierPath+Pie.swift in Sources */,
 				96EDF281209F94DB009496FA /* Model.swift in Sources */,
 				96EDF284209F9512009496FA /* UIViewController+Alerts.swift in Sources */,
 				96EDF27B209F9498009496FA /* CollectionAndTableModel.swift in Sources */,
 				96C656AB212521F60041CAD6 /* ToggleStackView.swift in Sources */,
 				96106C9D20C0E5D400DA5308 /* BusyView.swift in Sources */,
 				960B52EE217D7FC2004754A5 /* CustomOperators.swift in Sources */,
+				968C4A84221A8B64006B51EE /* CLLocationCoordinate2D+Formatting.swift in Sources */,
 				96EE58FD21079F200099A7B3 /* VisualIndicatorBusyView.swift in Sources */,
 				96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */,
 				96EE58F92107830A0099A7B3 /* SpinnerBusyView.swift in Sources */,
 				96DCE6B02172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift in Sources */,
+				968C4A80221A8B2E006B51EE /* Date+Trigonometry.swift in Sources */,
 				96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */,
 				96A84A4C21643F740030F0AC /* JSONUtils.swift in Sources */,
 				96EDF282209F94DB009496FA /* Controller.swift in Sources */,
@@ -414,6 +441,7 @@
 				96EE58FF2107A2650099A7B3 /* UIView+Summoner.swift in Sources */,
 				96EE58FB210783610099A7B3 /* ProgressBusyView.swift in Sources */,
 				96EDF280209F94DB009496FA /* Display.swift in Sources */,
+				968C4A82221A8B2E006B51EE /* CALayer+Geometry.swift in Sources */,
 				96EDF27A209F9498009496FA /* CollectionAndTableDisplay.swift in Sources */,
 				96E8CCCF20E1DBDF001C5381 /* OutlettedController.swift in Sources */,
 			);
@@ -429,12 +457,16 @@
 				96A84A4F21643FAD0030F0AC /* JSONUtilsTests.swift in Sources */,
 				96C656AD212522130041CAD6 /* ToggleStackViewTests.swift in Sources */,
 				9680994920C21F9C004C6A8A /* ControllerTests.swift in Sources */,
+				968C4A86221A8B7F006B51EE /* CLLocationCoordinate2D+FormattingTests.swift in Sources */,
 				960B52F1217D7FD5004754A5 /* CustomOperatorsTests.swift in Sources */,
 				96DCE6B22172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift in Sources */,
+				968C4A89221A8B91006B51EE /* Date+TrigonometryTests.swift in Sources */,
+				968C4A8C221A8BE5006B51EE /* CALayer+GeometryTests.swift in Sources */,
 				96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */,
 				9680994F20C37960004C6A8A /* TestUtil.swift in Sources */,
 				96C656AF212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift in Sources */,
 				9680994B20C370B2004C6A8A /* UIViewController+AlertsTests.swift in Sources */,
+				968C4A8A221A8B91006B51EE /* UIBezierPath+PieTests.swift in Sources */,
 				96EE58F5210432550099A7B3 /* CollectionAndTableDisplayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
