@@ -155,16 +155,6 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
-		96E8CCCC20E1DB86001C5381 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				96EDF29320A0BC6B009496FA /* UIView+Autolayout.swift */,
-				96EE58FE2107A2650099A7B3 /* UIView+Summoner.swift */,
-				96EDF283209F9512009496FA /* UIViewController+Alerts.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		96E8CCCD20E1DB92001C5381 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +177,7 @@
 			children = (
 				96EDF27F209F94DB009496FA /* Controller.swift */,
 				96E8CCCE20E1DBDF001C5381 /* OutlettedController.swift */,
+				96EDF283209F9512009496FA /* UIViewController+Alerts.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,6 +194,8 @@
 				96EE58FA210783610099A7B3 /* ProgressBusyView.swift */,
 				96EE58F82107830A0099A7B3 /* SpinnerBusyView.swift */,
 				96C656AA212521F60041CAD6 /* ToggleStackView.swift */,
+				96EDF29320A0BC6B009496FA /* UIView+Autolayout.swift */,
+				96EE58FE2107A2650099A7B3 /* UIView+Summoner.swift */,
 				96EE58FC21079F200099A7B3 /* VisualIndicatorBusyView.swift */,
 			);
 			path = "Views & Displays";
@@ -263,7 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				96E8CCD220E1DC53001C5381 /* Controllers */,
-				96E8CCCC20E1DB86001C5381 /* Extensions */,
 				96EDF261209F90B2009496FA /* Info.plist */,
 				96A84A4A21643F4F0030F0AC /* JSON */,
 				96E8CCD120E1DC36001C5381 /* Models */,
