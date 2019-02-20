@@ -32,7 +32,7 @@ open class ToggleStackView: UIStackView {
         let alreadyHasArrangedSubviews = !arrangedSubviews.isEmpty
         super.addArrangedSubview(view)
 
-        if activeView != nil  {
+        if activeView != nil {
             view.isHidden = true
         } else if !alreadyHasArrangedSubviews {
             activeView = view

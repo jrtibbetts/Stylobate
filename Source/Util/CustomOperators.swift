@@ -15,7 +15,7 @@ infix operator <~
 ///
 /// - returns: The object that was passed in. It can be ignored if you don't
 ///   need to chain calls to it.
-@discardableResult public func <~ <T>(object: T, function: (T) -> ()) -> T {
+@discardableResult public func <~ <T>(object: T, function: (T) -> Void) -> T {
     function(object)
 
     return object
@@ -26,7 +26,8 @@ infix operator <~
 infix operator =~
 
 /// Determine whether a regular expression pattern matches any part of a string.
-/// Modified from [this StackOverflow answer](http://stackoverflow.com/questions/27880650/swift-extract-regex-matches#27880748).
+/// Modified from [this StackOverflow answer]
+// (http://stackoverflow.com/questions/27880650/swift-extract-regex-matches#27880748).
 ///
 /// - parameter targetString: The string to be searched.
 /// - parameter searchPattern: The regular expression pattern. It is always
@@ -39,7 +40,7 @@ infix operator =~
 /// - throws: An exception if `searchPattern` is not a valid regular expression
 /// pattern.
 public func =~ (targetString: String, searchPattern: String) throws -> Bool {
-    let regex = try! NSRegularExpression(pattern: searchPattern, options: [])
+    let regex = try NSRegularExpression(pattern: searchPattern, options: [])
     let nsString = NSString(string: targetString)
     
     return 0 < regex.numberOfMatches(in: targetString,

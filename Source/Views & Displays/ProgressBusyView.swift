@@ -34,12 +34,18 @@ public extension ProgressBusyView where Self: UIView {
             layoutIfNeeded()
         }
 
-        summon(progressView)
+        if let progressView = progressView {
+            summon(progressView)
+        }
+        
         completion?()
     }
 
     public func stopActivity(completion: BusyView.ActivityCompletion?) {
-        banish(progressView)
+        if let progressView = progressView {
+            banish(progressView)
+        }
+
         completion?()
     }
 

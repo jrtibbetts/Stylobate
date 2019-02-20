@@ -55,8 +55,11 @@ open class CollectionAndTableDisplay: Display {
     /// hidden and the new one to be shown.
     open private(set) var foregroundView: UIView? {
         didSet {
-            if foregroundView != nil {
-                banish(oldValue)
+            if let foregroundView = foregroundView {
+                if let oldValue = oldValue {
+                    banish(oldValue)
+                }
+                
                 summon(foregroundView)
             }
         }

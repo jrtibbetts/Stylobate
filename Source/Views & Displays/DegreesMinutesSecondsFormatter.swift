@@ -5,7 +5,8 @@ import Foundation
 
 /// Represents a decimal latitude or longitude coordinate as a
 /// Degree-Minute-Second (DMV) tuple of `Int`s, or as a string.
-/// See https://stackoverflow.com/questions/35120793/convert-mapkit-latitude-and-longitude-to-dms-format/35120978#35120978
+/// See
+/// https://stackoverflow.com/questions/35120793/convert-mapkit-latitude-and-longitude-to-dms-format/35120978#35120978
 public struct DMSCoordinate: Codable {
 
     /// Get a Degrees-Minutes-Seconds string representation of the coordinate,

@@ -3,22 +3,18 @@
 import UIKit
 
 public extension UIView {
-
-    // MARK: - Private Functions
-
-    public func banish(_ subview: UIView?) {
-        if let subview = subview {
-            subview.isHidden = true
-            sendSubviewToBack(subview)
-        }
+    
+    /// Put a subview behind all of its siblings.
+    ///
+    /// - parameter subview: The view to banish.
+    public func banish(_ subview: UIView) {
+        subview.isHidden = true
+        sendSubviewToBack(subview)
     }
-
-    public func summon(_ subview: UIView?) {
-        if let subview = subview {
-            bringSubviewToFront(subview)
-            subview.isHidden = false
-        }
+    
+    public func summon(_ subview: UIView) {
+        bringSubviewToFront(subview)
+        subview.isHidden = false
     }
-
+    
 }
-

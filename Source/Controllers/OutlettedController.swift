@@ -2,7 +2,6 @@
 
 import UIKit
 
-
 /// A `Controller` that implements its `model` and `display` as `weak`
 /// `IBOutlet`s. It requires the model and display to be non-`nil` before
 /// `viewDidLoad()` is called.
