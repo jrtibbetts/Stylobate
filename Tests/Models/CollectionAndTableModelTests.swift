@@ -41,6 +41,21 @@ class CollectionAndTableModelTests: XCTestCase {
         assertCollectionIsEmptyAndReturnsMissingCell(collectionView: collectionView, model: model)
     }
 
+    // MARK: - Header Titles & Views
+
+    func testHeaderTitleAndViewReturnNilByDefault() {
+        let model = CollectionAndTableModel()
+        let tableView = UITableView(frame: CGRect())
+        XCTAssertNil(model.tableView(tableView, titleForHeaderInSection: 0))
+        XCTAssertNil(model.tableView(tableView, viewForHeaderInSection: 0))
+    }
+
+    func testFooterViewReturnsNilByDefault() {
+        let model = CollectionAndTableModel()
+        let tableView = UITableView(frame: CGRect())
+        XCTAssertNil(model.tableView(tableView, viewForFooterInSection: 0))
+    }
+
     // MARK: Test Fixtures
 
     func assertCollectionIsEmptyAndReturnsMissingCell(collectionView: UICollectionView,

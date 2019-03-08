@@ -50,13 +50,31 @@ UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UIT
                         titleForHeaderInSection section: Int) -> String? {
         return headerTitle(forSection: section)
     }
+
+    open func tableView(_ tableView: UITableView,
+                        viewForFooterInSection section: Int) -> UIView? {
+        return footerView(forSection: section)
+    }
+
+    open func tableView(_ tableView: UITableView,
+                          viewForHeaderInSection section: Int) -> UIView? {
+        return headerView(forSection: section)
+    }
     
     // MARK: Other functions to be overridden by subclasses
+
+    open func footerView(forSection section: Int) -> UIView? {
+        return nil
+    }
     
     open func headerTitle(forSection section: Int) -> String? {
         return nil
     }
-    
+
+    open func headerView(forSection section: Int) -> UIView? {
+        return nil
+    }
+
     open func numberOfItems(inSection section: Int) -> Int {
         return 0
     }

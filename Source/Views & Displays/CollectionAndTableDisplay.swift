@@ -102,7 +102,7 @@ open class CollectionAndTableDisplay: Display {
     }
 
     /// The `UITableView` that's contained in this view. It can be set only by
-    /// connection its outlet.
+    /// connecting its outlet.
     @IBOutlet open private(set) weak var tableView: UITableView? {
         didSet {
             if tableView != nil {
