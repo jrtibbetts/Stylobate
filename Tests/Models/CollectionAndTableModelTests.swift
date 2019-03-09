@@ -48,12 +48,14 @@ class CollectionAndTableModelTests: XCTestCase {
         let tableView = UITableView(frame: CGRect())
         XCTAssertNil(model.tableView(tableView, titleForHeaderInSection: 0))
         XCTAssertNil(model.tableView(tableView, viewForHeaderInSection: 0))
+        XCTAssertEqual(model.tableView(tableView, heightForHeaderInSection: 0), 0)
     }
 
     func testFooterViewReturnsNilByDefault() {
         let model = CollectionAndTableModel()
         let tableView = UITableView(frame: CGRect())
         XCTAssertNil(model.tableView(tableView, viewForFooterInSection: 0))
+        XCTAssertEqual(model.tableView(tableView, heightForFooterInSection: 0), 0)
     }
 
     // MARK: Test Fixtures
