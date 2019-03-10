@@ -100,9 +100,8 @@ open class CollectionAndTableDisplay: Display<CollectionAndTableModel> {
 
     // MARK: - Outlets
 
-    /// The `UICollectionView` that's contained in this view. It can be set
-    /// only by connecting its outlet.
-    @IBOutlet open private(set) weak var collectionView: UICollectionView? {
+    /// The `UICollectionView` that's contained in this view.
+    @IBOutlet open weak var collectionView: UICollectionView? {
         didSet {
             if foregroundView == nil {
                 foregroundView = collectionView
@@ -110,9 +109,8 @@ open class CollectionAndTableDisplay: Display<CollectionAndTableModel> {
         }
     }
 
-    /// The `UITableView` that's contained in this view. It can be set only by
-    /// connecting its outlet.
-    @IBOutlet open private(set) weak var tableView: UITableView? {
+    /// The `UITableView` that's contained in this view.
+    @IBOutlet open weak var tableView: UITableView? {
         didSet {
             if tableView != nil {
                 foregroundView = tableView
