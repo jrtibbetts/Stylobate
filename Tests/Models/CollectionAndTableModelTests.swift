@@ -18,29 +18,6 @@ class CollectionAndTableModelTests: XCTestCase {
         assertTableIsEmptyAndReturnsMissingCell(tableView: tableView, model: model)
     }
 
-    func testTableViewFromStoryboardHasNoRowsOrSections() {
-        let viewController = TestUtil.goodViewController
-        _ = viewController.view  // call viewDidLoad()
-        let controller = viewController as! Controller
-        let model = controller.model as! CollectionAndTableModel
-        let display = controller.display as! CollectionAndTableDisplay
-        let tableView = display.tableView!
-        assertTableIsEmptyAndReturnsMissingCell(tableView: tableView, model: model)
-
-        display.refresh()
-        assertTableIsEmptyAndReturnsMissingCell(tableView: tableView, model: model)
-    }
-
-    func testCollectionViewFromStoryboardHasNoRowsOrSections() {
-        let viewController = TestUtil.goodViewController
-        _ = viewController.view  // call viewDidLoad()
-        let controller = viewController as! Controller
-        let model = controller.model as! CollectionAndTableModel
-        let display = controller.display as! CollectionAndTableDisplay
-        let collectionView = display.collectionView!
-        assertCollectionIsEmptyAndReturnsMissingCell(collectionView: collectionView, model: model)
-    }
-
     // MARK: - Header Titles & Views
 
     func testHeaderTitleAndViewReturnNilByDefault() {

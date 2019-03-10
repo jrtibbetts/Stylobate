@@ -4,7 +4,7 @@ import UIKit
 
 /// A `UIView` that has an associated view model. This is usually, though not
 /// required to be, set as the root view of a view controller.
-open class Display: UIView {
+open class Display<Model: Any>: UIView {
 
     /// The containing view controller's navigation item.
     @IBOutlet open weak var navigationItem: UINavigationItem?

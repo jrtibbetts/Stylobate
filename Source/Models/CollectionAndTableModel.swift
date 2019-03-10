@@ -11,7 +11,7 @@ import UIKit
 /// The model has a generic `data` property which, although it's not used in
 /// this class directly, should be used by model subclasses to determine how
 /// many sections and items in each section there are.
-open class CollectionAndTableModel: NSObject, Model,
+open class CollectionAndTableModel: NSObject,
 UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: UICollectionViewDataSource
