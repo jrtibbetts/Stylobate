@@ -6,11 +6,6 @@ import UIKit
 /// connects them when the view is loaded.
 public protocol Controller: class {
 
-    associatedtype Model
-
-    /// The `Model` object.
-    var model: Model? { get set }
-
     /// The `Display` object that controls the UI. Since this protocol is
     /// designed to be implemented by `UIViewController`s, it's recommended
     /// that view controllers implement this by returning the `view` and
@@ -19,6 +14,6 @@ public protocol Controller: class {
     /// their `view`s replaced programmatically (as far as I can tell), and it
     /// would be too easy to get the `view` and `display` out of sync if
     /// `display` is a settable, stored property, instead of a computed one.
-    var display: Display<Model>? { get }
+    var display: Display? { get }
 
 }

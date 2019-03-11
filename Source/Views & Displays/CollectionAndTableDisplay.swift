@@ -6,7 +6,7 @@ import UIKit
 /// only one of which is displayed at a given time, depending on screen
 /// orientation and size. They can be switched by calling
 /// `toggleForegroundView()` or by setting the `foregroundMode` explicitly.
-open class CollectionAndTableDisplay: Display<CollectionAndTableModel> {
+open class CollectionAndTableDisplay: Display {
 
     /// The possible modes for the foreground view. They should be pretty
     /// self-explanatory.
@@ -89,7 +89,7 @@ open class CollectionAndTableDisplay: Display<CollectionAndTableModel> {
         }
     }
 
-    open override var model: CollectionAndTableModel? {
+    open var model: CollectionAndTableModel? {
         didSet {
             tableView?.dataSource = model
             tableView?.delegate = model

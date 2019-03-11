@@ -6,13 +6,13 @@ open class CollectionAndTableViewController: UIViewController, Controller {
 
     open var model: CollectionAndTableModel?
 
-    open var display: Display<CollectionAndTableModel>? {
+    open var display: Display? {
         return view as? CollectionAndTableDisplay
     }
 
     open override func viewDidLoad() {
         super.viewDidLoad()
-        display?.model = model
+        (display as? CollectionAndTableDisplay)?.model = model
     }
     
 }

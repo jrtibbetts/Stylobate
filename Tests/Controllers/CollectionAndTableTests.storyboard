@@ -69,8 +69,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fRe-FT-0NN"/>
                         <connections>
-                            <outlet property="collectionView" destination="Jn7-K4-bQM" id="Zh7-6y-JX2"/>
-                            <outlet property="tableView" destination="GJW-Jt-QZR" id="31D-Kq-wRF"/>
+                            <outlet property="collectionView" destination="Jn7-K4-bQM" id="sC8-5n-oXh"/>
+                            <outlet property="tableView" destination="GJW-Jt-QZR" id="BXg-Is-2Il"/>
                         </connections>
                     </view>
                 </viewController>
