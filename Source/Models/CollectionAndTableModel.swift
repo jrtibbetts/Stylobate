@@ -21,15 +21,15 @@ UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UIT
         return MissingCollectionViewCell(frame: CGRect())
     }
     
-    open func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return numberOfSections()
-    }
-    
     open func collectionView(_ collectionView: UICollectionView,
                              numberOfItemsInSection section: Int) -> Int {
         return numberOfItems(inSection: section)
     }
-    
+
+    open func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return numberOfSections()
+    }
+
     // MARK: UITableViewDataSource
     
     open func numberOfSections(in tableView: UITableView) -> Int {
