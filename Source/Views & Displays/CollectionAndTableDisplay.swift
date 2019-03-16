@@ -92,9 +92,7 @@ open class CollectionAndTableDisplay: Display {
     open var model: CollectionAndTableModel? {
         didSet {
             tableView?.dataSource = model
-            tableView?.delegate = model
             collectionView?.dataSource = model
-            collectionView?.delegate = model
         }
     }
 

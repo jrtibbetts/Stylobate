@@ -2,17 +2,11 @@
 
 import UIKit
 
-/// A combined `UITableView` and `UICollectionView` data model and delegate. By
-/// default, it assumes that any collection view and table view that it's
-/// attached to will have the same number of sections and items in each section.
-/// Subclasses need only override `collectionView(:cellForItemAt:)`,
+/// A combined `UITableView` and `UICollectionView` data model. Subclasses
+//// need only override `collectionView(:cellForItemAt:)`,
 /// `tableView(:cellForRowAt:)`, `numberOfSections()`,
 /// `numberOfItems(inSection:)`, and, if needed, `headerTitle(forSection:)`.
-/// The model has a generic `data` property which, although it's not used in
-/// this class directly, should be used by model subclasses to determine how
-/// many sections and items in each section there are.
-open class CollectionAndTableModel: NSObject,
-UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate {
+open class CollectionAndTableModel: NSObject, UICollectionViewDataSource, UITableViewDataSource {
     
     // MARK: UICollectionViewDataSource
     
