@@ -6,7 +6,7 @@ import UIKit
 /// only one of which is displayed at a given time, depending on screen
 /// orientation and size. They can be switched by calling
 /// `toggleForegroundView()` or by setting the `foregroundMode` explicitly.
-open class CollectionAndTableDisplay: Display, UITableViewDelegate {
+open class CollectionAndTableDisplay: Display, UICollectionViewDelegate, UITableViewDelegate {
 
     /// The possible modes for the foreground view. They should be pretty
     /// self-explanatory.
@@ -101,6 +101,8 @@ open class CollectionAndTableDisplay: Display, UITableViewDelegate {
     /// The `UICollectionView` that's contained in this view.
     @IBOutlet open weak var collectionView: UICollectionView? {
         didSet {
+            collectionView?.delegate = self
+
             if foregroundView == nil {
                 foregroundView = collectionView
             }
@@ -110,6 +112,8 @@ open class CollectionAndTableDisplay: Display, UITableViewDelegate {
     /// The `UITableView` that's contained in this view.
     @IBOutlet open weak var tableView: UITableView? {
         didSet {
+            tableView?.delegate = self
+            
             if tableView != nil {
                 foregroundView = tableView
             }
