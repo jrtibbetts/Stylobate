@@ -6,7 +6,7 @@ import UIKit
 /// only one of which is displayed at a given time, depending on screen
 /// orientation and size. They can be switched by calling
 /// `toggleForegroundView()` or by setting the `foregroundMode` explicitly.
-open class CollectionAndTableDisplay: Display {
+open class CollectionAndTableDisplay: Display, UITableViewDelegate {
 
     /// The possible modes for the foreground view. They should be pretty
     /// self-explanatory.
