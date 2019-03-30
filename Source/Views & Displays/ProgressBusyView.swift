@@ -18,11 +18,11 @@ public protocol ProgressBusyView: VisualIndicatorBusyView {
 
 public extension ProgressBusyView where Self: UIView {
 
-    public var progressView: UIProgressView? {
+    var progressView: UIProgressView? {
         return busyIndicator as? UIProgressView
     }
     
-    public func startActivity(completion: BusyView.ActivityCompletion? = nil) {
+    func startActivity(completion: BusyView.ActivityCompletion? = nil) {
         if busyIndicator == nil {
             busyIndicator = UIProgressView(progressViewStyle: .default)
         }
@@ -41,7 +41,7 @@ public extension ProgressBusyView where Self: UIView {
         completion?()
     }
 
-    public func stopActivity(completion: BusyView.ActivityCompletion?) {
+    func stopActivity(completion: BusyView.ActivityCompletion?) {
         if let progressView = progressView {
             banish(progressView)
         }

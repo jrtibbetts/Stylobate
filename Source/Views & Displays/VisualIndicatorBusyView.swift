@@ -12,12 +12,12 @@ public protocol VisualIndicatorBusyView: BusyView {
 
 public extension VisualIndicatorBusyView where Self: UIView {
 
-    public func startActivity(completion: BusyView.ActivityCompletion? = nil) {
+    func startActivity(completion: BusyView.ActivityCompletion? = nil) {
         summon(busyIndicator)
         completion?()
     }
 
-    public func stopActivity(completion: BusyView.ActivityCompletion? = nil) {
+    func stopActivity(completion: BusyView.ActivityCompletion? = nil) {
         banish(busyIndicator)
         completion?()
     }

@@ -7,7 +7,7 @@ public extension UIView {
     /// Add constraints to center the view horizontally and vertically in its
     /// superview. Also add constraints to ensure that this view's frame doesn't
     /// extend past any of the superview's margins.
-    public func centerInSuperview() {
+    func centerInSuperview() {
         if let superview = superview {
             translatesAutoresizingMaskIntoConstraints = false
 
