@@ -27,6 +27,10 @@
 		96A84A4C21643F740030F0AC /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A84A4B21643F740030F0AC /* JSONUtils.swift */; };
 		96A84A4F21643FAD0030F0AC /* JSONUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */; };
 		96A84A512164400B0030F0AC /* SampleFoo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A84A502164400B0030F0AC /* SampleFoo.json */; };
+		96BB37FA224FEC8F00806E56 /* Stylobate.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 96BB37F6224FEC8E00806E56 /* Stylobate.podspec */; };
+		96BB37FB224FEC8F00806E56 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 96BB37F7224FEC8E00806E56 /* LICENSE */; };
+		96BB37FC224FEC8F00806E56 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 96BB37F8224FEC8E00806E56 /* README.md */; };
+		96BB37FD224FEC8F00806E56 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 96BB37F9224FEC8F00806E56 /* Cartfile */; };
 		96C656AB212521F60041CAD6 /* ToggleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C656AA212521F60041CAD6 /* ToggleStackView.swift */; };
 		96C656AD212522130041CAD6 /* ToggleStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C656AC212522130041CAD6 /* ToggleStackViewTests.swift */; };
 		96C656AF212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C656AE212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift */; };
@@ -85,6 +89,10 @@
 		96A84A4B21643F740030F0AC /* JSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
 		96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilsTests.swift; sourceTree = "<group>"; };
 		96A84A502164400B0030F0AC /* SampleFoo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleFoo.json; sourceTree = "<group>"; };
+		96BB37F6224FEC8E00806E56 /* Stylobate.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Stylobate.podspec; sourceTree = "<group>"; };
+		96BB37F7224FEC8E00806E56 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		96BB37F8224FEC8E00806E56 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		96BB37F9224FEC8F00806E56 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		96C656AA212521F60041CAD6 /* ToggleStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleStackView.swift; sourceTree = "<group>"; };
 		96C656AC212522130041CAD6 /* ToggleStackViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleStackViewTests.swift; sourceTree = "<group>"; };
 		96C656AE212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualIndicatorBusyViewTests.swift; sourceTree = "<group>"; };
@@ -257,9 +265,13 @@
 		96EDF253209F90B2009496FA = {
 			isa = PBXGroup;
 			children = (
-				96EDF25F209F90B2009496FA /* Source */,
-				96EDF26A209F90B2009496FA /* Tests */,
+				96BB37F9224FEC8F00806E56 /* Cartfile */,
+				96BB37F7224FEC8E00806E56 /* LICENSE */,
 				96EDF25E209F90B2009496FA /* Products */,
+				96BB37F8224FEC8E00806E56 /* README.md */,
+				96EDF25F209F90B2009496FA /* Source */,
+				96BB37F6224FEC8E00806E56 /* Stylobate.podspec */,
+				96EDF26A209F90B2009496FA /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -394,6 +406,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BB37FC224FEC8F00806E56 /* README.md in Resources */,
+				96BB37FB224FEC8F00806E56 /* LICENSE in Resources */,
+				96BB37FD224FEC8F00806E56 /* Cartfile in Resources */,
+				96BB37FA224FEC8F00806E56 /* Stylobate.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,7 +549,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -590,7 +606,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
