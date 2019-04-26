@@ -26,6 +26,8 @@
 		968102002272A1DC003E6D82 /* FetchedResultsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968101FC2272A1AB003E6D82 /* FetchedResultsModelTests.swift */; };
 		968102012272A1DC003E6D82 /* FetchingTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968101F92272A18F003E6D82 /* FetchingTestBase.swift */; };
 		968102042272A221003E6D82 /* StylobateTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 968102022272A221003E6D82 /* StylobateTestModel.xcdatamodeld */; };
+		9681020D2272BD5D003E6D82 /* NSManagedObject+FetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681020C2272BD5D003E6D82 /* NSManagedObject+FetchRequest.swift */; };
+		9681020F2272BDB0003E6D82 /* NSPredicate+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681020E2272BDB0003E6D82 /* NSPredicate+Operators.swift */; };
 		968C4A80221A8B2E006B51EE /* Date+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A7D221A8B2E006B51EE /* Date+Trigonometry.swift */; };
 		968C4A81221A8B2E006B51EE /* UIBezierPath+Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A7E221A8B2E006B51EE /* UIBezierPath+Pie.swift */; };
 		968C4A82221A8B2E006B51EE /* CALayer+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A7F221A8B2E006B51EE /* CALayer+Geometry.swift */; };
@@ -98,6 +100,8 @@
 		968101FB2272A1AB003E6D82 /* FetchedResultsModelTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModelTestBase.swift; sourceTree = "<group>"; };
 		968101FC2272A1AB003E6D82 /* FetchedResultsModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModelTests.swift; sourceTree = "<group>"; };
 		968102032272A221003E6D82 /* StylobateTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StylobateTestModel.xcdatamodel; sourceTree = "<group>"; };
+		9681020C2272BD5D003E6D82 /* NSManagedObject+FetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+FetchRequest.swift"; sourceTree = "<group>"; };
+		9681020E2272BDB0003E6D82 /* NSPredicate+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Operators.swift"; sourceTree = "<group>"; };
 		968C4A7D221A8B2E006B51EE /* Date+Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Trigonometry.swift"; sourceTree = "<group>"; };
 		968C4A7E221A8B2E006B51EE /* UIBezierPath+Pie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Pie.swift"; sourceTree = "<group>"; };
 		968C4A7F221A8B2E006B51EE /* CALayer+Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Geometry.swift"; sourceTree = "<group>"; };
@@ -189,7 +193,9 @@
 				968101EE2272A069003E6D82 /* FetchedResultsProvider.swift */,
 				968101EF2272A06A003E6D82 /* FetchedResultsTableModel.swift */,
 				968101F52272A0EB003E6D82 /* ManagedObjectContextContainer.swift */,
+				9681020C2272BD5D003E6D82 /* NSManagedObject+FetchRequest.swift */,
 				968101F62272A0EB003E6D82 /* NSManagedObjectContext+ObjectCreator.swift */,
+				9681020E2272BDB0003E6D82 /* NSPredicate+Operators.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -492,7 +498,9 @@
 				96DCE6B02172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift in Sources */,
 				968101F22272A06A003E6D82 /* FetchedResultsProvider.swift in Sources */,
 				968C4A80221A8B2E006B51EE /* Date+Trigonometry.swift in Sources */,
+				9681020F2272BDB0003E6D82 /* NSPredicate+Operators.swift in Sources */,
 				96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */,
+				9681020D2272BD5D003E6D82 /* NSManagedObject+FetchRequest.swift in Sources */,
 				96A84A4C21643F740030F0AC /* JSONUtils.swift in Sources */,
 				968101F02272A06A003E6D82 /* FetchedResultsModel.swift in Sources */,
 				96EDF282209F94DB009496FA /* Controller.swift in Sources */,
