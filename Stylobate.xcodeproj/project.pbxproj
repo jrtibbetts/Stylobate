@@ -16,6 +16,16 @@
 		9680994B20C370B2004C6A8A /* UIViewController+AlertsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680994A20C370B2004C6A8A /* UIViewController+AlertsTests.swift */; };
 		9680995120C4D2D4004C6A8A /* MissingCellTests.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9680995020C4D2D4004C6A8A /* MissingCellTests.xib */; };
 		9680995320C4D3A8004C6A8A /* MissingCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680995220C4D3A8004C6A8A /* MissingCellTests.swift */; };
+		968101F02272A06A003E6D82 /* FetchedResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968101EC2272A069003E6D82 /* FetchedResultsModel.swift */; };
+		968101F12272A06A003E6D82 /* FetchedResultsCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968101ED2272A069003E6D82 /* FetchedResultsCollectionModel.swift */; };
+		968101F22272A06A003E6D82 /* FetchedResultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968101EE2272A069003E6D82 /* FetchedResultsProvider.swift */; };
+		968101F32272A06A003E6D82 /* FetchedResultsTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968101EF2272A06A003E6D82 /* FetchedResultsTableModel.swift */; };
+		968101F72272A0EB003E6D82 /* ManagedObjectContextContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968101F52272A0EB003E6D82 /* ManagedObjectContextContainer.swift */; };
+		968101F82272A0EB003E6D82 /* NSManagedObjectContext+ObjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968101F62272A0EB003E6D82 /* NSManagedObjectContext+ObjectCreator.swift */; };
+		968101FF2272A1DC003E6D82 /* FetchedResultsModelTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968101FB2272A1AB003E6D82 /* FetchedResultsModelTestBase.swift */; };
+		968102002272A1DC003E6D82 /* FetchedResultsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968101FC2272A1AB003E6D82 /* FetchedResultsModelTests.swift */; };
+		968102012272A1DC003E6D82 /* FetchingTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968101F92272A18F003E6D82 /* FetchingTestBase.swift */; };
+		968102042272A221003E6D82 /* StylobateTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 968102022272A221003E6D82 /* StylobateTestModel.xcdatamodeld */; };
 		968C4A80221A8B2E006B51EE /* Date+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A7D221A8B2E006B51EE /* Date+Trigonometry.swift */; };
 		968C4A81221A8B2E006B51EE /* UIBezierPath+Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A7E221A8B2E006B51EE /* UIBezierPath+Pie.swift */; };
 		968C4A82221A8B2E006B51EE /* CALayer+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A7F221A8B2E006B51EE /* CALayer+Geometry.swift */; };
@@ -78,6 +88,16 @@
 		9680994A20C370B2004C6A8A /* UIViewController+AlertsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertsTests.swift"; sourceTree = "<group>"; };
 		9680995020C4D2D4004C6A8A /* MissingCellTests.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MissingCellTests.xib; sourceTree = "<group>"; };
 		9680995220C4D3A8004C6A8A /* MissingCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingCellTests.swift; sourceTree = "<group>"; };
+		968101EC2272A069003E6D82 /* FetchedResultsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModel.swift; sourceTree = "<group>"; };
+		968101ED2272A069003E6D82 /* FetchedResultsCollectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsCollectionModel.swift; sourceTree = "<group>"; };
+		968101EE2272A069003E6D82 /* FetchedResultsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsProvider.swift; sourceTree = "<group>"; };
+		968101EF2272A06A003E6D82 /* FetchedResultsTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsTableModel.swift; sourceTree = "<group>"; };
+		968101F52272A0EB003E6D82 /* ManagedObjectContextContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectContextContainer.swift; sourceTree = "<group>"; };
+		968101F62272A0EB003E6D82 /* NSManagedObjectContext+ObjectCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+ObjectCreator.swift"; sourceTree = "<group>"; };
+		968101F92272A18F003E6D82 /* FetchingTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchingTestBase.swift; sourceTree = "<group>"; };
+		968101FB2272A1AB003E6D82 /* FetchedResultsModelTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModelTestBase.swift; sourceTree = "<group>"; };
+		968101FC2272A1AB003E6D82 /* FetchedResultsModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModelTests.swift; sourceTree = "<group>"; };
+		968102032272A221003E6D82 /* StylobateTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StylobateTestModel.xcdatamodel; sourceTree = "<group>"; };
 		968C4A7D221A8B2E006B51EE /* Date+Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Trigonometry.swift"; sourceTree = "<group>"; };
 		968C4A7E221A8B2E006B51EE /* UIBezierPath+Pie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Pie.swift"; sourceTree = "<group>"; };
 		968C4A7F221A8B2E006B51EE /* CALayer+Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Geometry.swift"; sourceTree = "<group>"; };
@@ -159,6 +179,30 @@
 				960B52F0217D7FD5004754A5 /* CustomOperatorsTests.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		968101EB22729C2D003E6D82 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				968101ED2272A069003E6D82 /* FetchedResultsCollectionModel.swift */,
+				968101EC2272A069003E6D82 /* FetchedResultsModel.swift */,
+				968101EE2272A069003E6D82 /* FetchedResultsProvider.swift */,
+				968101EF2272A06A003E6D82 /* FetchedResultsTableModel.swift */,
+				968101F52272A0EB003E6D82 /* ManagedObjectContextContainer.swift */,
+				968101F62272A0EB003E6D82 /* NSManagedObjectContext+ObjectCreator.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		968101F42272A075003E6D82 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				968101FB2272A1AB003E6D82 /* FetchedResultsModelTestBase.swift */,
+				968101FC2272A1AB003E6D82 /* FetchedResultsModelTests.swift */,
+				968101F92272A18F003E6D82 /* FetchingTestBase.swift */,
+				968102022272A221003E6D82 /* StylobateTestModel.xcdatamodeld */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		96A84A4A21643F4F0030F0AC /* JSON */ = {
@@ -288,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				96E8CCD220E1DC53001C5381 /* Controllers */,
+				968101EB22729C2D003E6D82 /* Core Data */,
 				96EDF261209F90B2009496FA /* Info.plist */,
 				96A84A4A21643F4F0030F0AC /* JSON */,
 				96E8CCD120E1DC36001C5381 /* Models */,
@@ -302,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				96E8CCD420E1DC8F001C5381 /* Controllers */,
+				968101F42272A075003E6D82 /* Core Data */,
 				96E8CCCD20E1DB92001C5381 /* Extensions */,
 				96EDF26D209F90B2009496FA /* Info.plist */,
 				96A84A4D21643F8E0030F0AC /* JSON */,
@@ -433,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				968C4A81221A8B2E006B51EE /* UIBezierPath+Pie.swift in Sources */,
+				968101F82272A0EB003E6D82 /* NSManagedObjectContext+ObjectCreator.swift in Sources */,
 				96EDF284209F9512009496FA /* UIViewController+Alerts.swift in Sources */,
 				96EDF27B209F9498009496FA /* CollectionAndTableModel.swift in Sources */,
 				96C656AB212521F60041CAD6 /* ToggleStackView.swift in Sources */,
@@ -443,13 +490,18 @@
 				96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */,
 				96EE58F92107830A0099A7B3 /* SpinnerBusyView.swift in Sources */,
 				96DCE6B02172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift in Sources */,
+				968101F22272A06A003E6D82 /* FetchedResultsProvider.swift in Sources */,
 				968C4A80221A8B2E006B51EE /* Date+Trigonometry.swift in Sources */,
 				96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */,
 				96A84A4C21643F740030F0AC /* JSONUtils.swift in Sources */,
+				968101F02272A06A003E6D82 /* FetchedResultsModel.swift in Sources */,
 				96EDF282209F94DB009496FA /* Controller.swift in Sources */,
+				968101F12272A06A003E6D82 /* FetchedResultsCollectionModel.swift in Sources */,
 				96727FDE2234C920009DACDB /* CollectionAndTableViewController.swift in Sources */,
 				96EDF29420A0BC6B009496FA /* UIView+Autolayout.swift in Sources */,
 				96EE58FF2107A2650099A7B3 /* UIView+Summoner.swift in Sources */,
+				968101F32272A06A003E6D82 /* FetchedResultsTableModel.swift in Sources */,
+				968101F72272A0EB003E6D82 /* ManagedObjectContextContainer.swift in Sources */,
 				96EE58FB210783610099A7B3 /* ProgressBusyView.swift in Sources */,
 				96EDF280209F94DB009496FA /* Display.swift in Sources */,
 				968C4A82221A8B2E006B51EE /* CALayer+Geometry.swift in Sources */,
@@ -469,13 +521,17 @@
 				968C4A86221A8B7F006B51EE /* CLLocationCoordinate2D+FormattingTests.swift in Sources */,
 				960B52F1217D7FD5004754A5 /* CustomOperatorsTests.swift in Sources */,
 				96DCE6B22172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift in Sources */,
+				968102002272A1DC003E6D82 /* FetchedResultsModelTests.swift in Sources */,
 				968C4A89221A8B91006B51EE /* Date+TrigonometryTests.swift in Sources */,
 				968C4A8C221A8BE5006B51EE /* CALayer+GeometryTests.swift in Sources */,
+				968102042272A221003E6D82 /* StylobateTestModel.xcdatamodeld in Sources */,
 				96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */,
 				96C656AF212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift in Sources */,
 				9680994B20C370B2004C6A8A /* UIViewController+AlertsTests.swift in Sources */,
 				968C4A8A221A8B91006B51EE /* UIBezierPath+PieTests.swift in Sources */,
 				96EE58F5210432550099A7B3 /* CollectionAndTableDisplayTests.swift in Sources */,
+				968102012272A1DC003E6D82 /* FetchingTestBase.swift in Sources */,
+				968101FF2272A1DC003E6D82 /* FetchedResultsModelTestBase.swift in Sources */,
 				96727FE02234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -735,6 +791,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		968102022272A221003E6D82 /* StylobateTestModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				968102032272A221003E6D82 /* StylobateTestModel.xcdatamodel */,
+			);
+			currentVersion = 968102032272A221003E6D82 /* StylobateTestModel.xcdatamodel */;
+			path = StylobateTestModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 96EDF254209F90B2009496FA /* Project object */;
 }

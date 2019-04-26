@@ -1,10 +1,4 @@
-//
-//  CollectionAndTableDisplayTests.swift
-//  StylobateTests
-//
-//  Created by Jason R Tibbetts on 7/21/18.
 //  Copyright © 2018 Poikile Creations. All rights reserved.
-//
 
 @testable import Stylobate
 import XCTest
