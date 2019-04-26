@@ -3,7 +3,7 @@
 import CoreData
 import Foundation
 
-extension NSManagedObject {
+public extension NSManagedObject {
 
     class func fetchRequest<T: NSManagedObject>(sortDescriptors: [NSSortDescriptor],
                                                 predicate: NSPredicate?) -> NSFetchRequest<T> {
