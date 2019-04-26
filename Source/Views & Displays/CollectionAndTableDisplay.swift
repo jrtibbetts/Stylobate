@@ -101,7 +101,11 @@ open class CollectionAndTableDisplay: Display, UICollectionViewDelegate, UITable
     /// The `UICollectionView` that's contained in this view.
     @IBOutlet open weak var collectionView: UICollectionView? {
         didSet {
-            collectionView?.delegate = self
+            guard let collectionView = collectionView else {
+                return
+            }
+
+            collectionView.delegate = self
 
             if foregroundView == nil {
                 foregroundView = collectionView
@@ -112,11 +116,14 @@ open class CollectionAndTableDisplay: Display, UICollectionViewDelegate, UITable
     /// The `UITableView` that's contained in this view.
     @IBOutlet open weak var tableView: UITableView? {
         didSet {
-            tableView?.delegate = self
-            
-            if tableView != nil {
-                foregroundView = tableView
+            guard let tableView = tableView else {
+                return
             }
+
+            // Unlike the collectionView's didSet(), setting the tableView to
+            // non-nil ALWAYS puts it in the foreground.
+            tableView.delegate = self
+            foregroundView = tableView
         }
     }
 
