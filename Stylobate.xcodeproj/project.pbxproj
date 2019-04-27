@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		960B52EE217D7FC2004754A5 /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960B52ED217D7FC2004754A5 /* CustomOperators.swift */; };
 		960B52F1217D7FD5004754A5 /* CustomOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960B52F0217D7FD5004754A5 /* CustomOperatorsTests.swift */; };
+		960EE14622740D7200870B7A /* NSPredicate+OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960EE14522740D7200870B7A /* NSPredicate+OperatorsTests.swift */; };
 		96106C9D20C0E5D400DA5308 /* BusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96106C9C20C0E5D400DA5308 /* BusyView.swift */; };
 		96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */; };
 		96727FDE2234C920009DACDB /* CollectionAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96727FDD2234C920009DACDB /* CollectionAndTableViewController.swift */; };
@@ -83,6 +84,7 @@
 /* Begin PBXFileReference section */
 		960B52ED217D7FC2004754A5 /* CustomOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperators.swift; sourceTree = "<group>"; };
 		960B52F0217D7FD5004754A5 /* CustomOperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperatorsTests.swift; sourceTree = "<group>"; };
+		960EE14522740D7200870B7A /* NSPredicate+OperatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+OperatorsTests.swift"; sourceTree = "<group>"; };
 		96106C9C20C0E5D400DA5308 /* BusyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyView.swift; sourceTree = "<group>"; };
 		96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyViewTests.swift; sourceTree = "<group>"; };
 		96727FDD2234C920009DACDB /* CollectionAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndTableViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				968101FC2272A1AB003E6D82 /* FetchedResultsModelTests.swift */,
 				968101F92272A18F003E6D82 /* FetchingTestBase.swift */,
 				968102022272A221003E6D82 /* StylobateTestModel.xcdatamodeld */,
+				960EE14522740D7200870B7A /* NSPredicate+OperatorsTests.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				96EE58F5210432550099A7B3 /* CollectionAndTableDisplayTests.swift in Sources */,
 				968102012272A1DC003E6D82 /* FetchingTestBase.swift in Sources */,
 				968101FF2272A1DC003E6D82 /* FetchedResultsModelTestBase.swift in Sources */,
+				960EE14622740D7200870B7A /* NSPredicate+OperatorsTests.swift in Sources */,
 				96727FE02234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
