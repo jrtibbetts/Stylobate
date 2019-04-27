@@ -13,10 +13,16 @@ public extension NSManagedObjectContext {
     ///   in.
     /// - parameter initialize: A block that's called to create a new managed
     ///   object if no matching one was found.
-    func fetchOrCreateManagedObject<T: NSManagedObject>(with request: NSFetchRequest<T>,
-                                                        initialize: (NSManagedObjectContext) -> T) throws -> T {
+    func fetchOrCreate<T: NSManagedObject>(with request: NSFetchRequest<T>,
+                                           initialize: (NSManagedObjectContext) -> T) throws -> T {
         // Fetch.................................or create.
         return try fetch(request).first ?? initialize(self)
+    }
+
+    @available(*, deprecated, renamed: "fetchOrCreate")
+    func fetchOrCreateManagedObject<T: NSManagedObject>(with request: NSFetchRequest<T>,
+                                                        initialize: (NSManagedObjectContext) -> T) throws -> T {
+        return try fetchOrCreate(with: request, initialize: initialize)
     }
 
 }

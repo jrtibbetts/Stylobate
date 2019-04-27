@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		960B52EE217D7FC2004754A5 /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960B52ED217D7FC2004754A5 /* CustomOperators.swift */; };
 		960B52F1217D7FD5004754A5 /* CustomOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960B52F0217D7FD5004754A5 /* CustomOperatorsTests.swift */; };
+		960EE142227409C500870B7A /* NSManagedObjectContext+ObjectCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960EE141227409C500870B7A /* NSManagedObjectContext+ObjectCreatorTests.swift */; };
 		960EE14422740B7500870B7A /* KeyPath+SortDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960EE14322740B7500870B7A /* KeyPath+SortDescriptor.swift */; };
 		960EE14622740D7200870B7A /* NSPredicate+OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960EE14522740D7200870B7A /* NSPredicate+OperatorsTests.swift */; };
 		96106C9D20C0E5D400DA5308 /* BusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96106C9C20C0E5D400DA5308 /* BusyView.swift */; };
@@ -85,6 +86,7 @@
 /* Begin PBXFileReference section */
 		960B52ED217D7FC2004754A5 /* CustomOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperators.swift; sourceTree = "<group>"; };
 		960B52F0217D7FD5004754A5 /* CustomOperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperatorsTests.swift; sourceTree = "<group>"; };
+		960EE141227409C500870B7A /* NSManagedObjectContext+ObjectCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+ObjectCreatorTests.swift"; sourceTree = "<group>"; };
 		960EE14322740B7500870B7A /* KeyPath+SortDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyPath+SortDescriptor.swift"; sourceTree = "<group>"; };
 		960EE14522740D7200870B7A /* NSPredicate+OperatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+OperatorsTests.swift"; sourceTree = "<group>"; };
 		96106C9C20C0E5D400DA5308 /* BusyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyView.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				968101FC2272A1AB003E6D82 /* FetchedResultsModelTests.swift */,
 				968101F92272A18F003E6D82 /* FetchingTestBase.swift */,
 				968102022272A221003E6D82 /* StylobateTestModel.xcdatamodeld */,
+				960EE141227409C500870B7A /* NSManagedObjectContext+ObjectCreatorTests.swift */,
 				960EE14522740D7200870B7A /* NSPredicate+OperatorsTests.swift */,
 			);
 			path = "Core Data";
@@ -539,6 +542,7 @@
 				968102002272A1DC003E6D82 /* FetchedResultsModelTests.swift in Sources */,
 				968C4A89221A8B91006B51EE /* Date+TrigonometryTests.swift in Sources */,
 				968C4A8C221A8BE5006B51EE /* CALayer+GeometryTests.swift in Sources */,
+				960EE142227409C500870B7A /* NSManagedObjectContext+ObjectCreatorTests.swift in Sources */,
 				968102042272A221003E6D82 /* StylobateTestModel.xcdatamodeld in Sources */,
 				96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */,
 				96C656AF212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift in Sources */,
