@@ -6,16 +6,6 @@ import XCTest
 
 class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
 
-    func importTestData() {
-        (0..<14).forEach { (index) in
-            let person = Person(context: testingContext!)
-            person.name = "Person \(index)"
-            person.sortName = "Sorted Person \(index)"
-        }
-
-        try! testingContext?.save()
-    }
-
     // MARK: - FetchedResultsProvider
 
     typealias ManagedObjectType = Person

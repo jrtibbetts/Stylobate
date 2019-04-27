@@ -6,18 +6,25 @@ import XCTest
 
 class FetchingTestBase: XCTestCase, ManagedObjectContextContainer {
 
-    override func setUp() {
-        super.setUp()
-        let model = NSManagedObjectModel.mergedModel(from: [Bundle(for: FetchingTestBase.self)])!
-        testingContainer = NSPersistentContainer(name: "StylobateTestModel", managedObjectModel: model)
-        try! testingContainer.persistentStoreCoordinator.addPersistentStore(ofType: NSInMemoryStoreType,
+    // MARK: - Properties
+    
+    var moContext: NSManagedObjectContext?
+
+    /// The core data test model. This has to be static, because if each
+    /// `FetchingTestBase` subclass instantiates its own model from the same
+    /// model scheme, there will be numerous warnings to the effect that
+    /// "Multiple NSEntityDescriptions Claim NSManagedObject Subclass".
+    static let model = NSManagedObjectModel.mergedModel(from: [Bundle(for: FetchingTestBase.self)])!
+
+    lazy var testingContainer: NSPersistentContainer! = {
+        let container = NSPersistentContainer(name: "StylobateTestModel", managedObjectModel: FetchingTestBase.model)
+        try! container.persistentStoreCoordinator.addPersistentStore(ofType: NSInMemoryStoreType,
                                                                             configurationName: nil,
                                                                             at: nil,
                                                                             options: nil)
-        moContext = testingContext
-    }
 
-    var testingContainer: NSPersistentContainer!
+        return container
+    }()
 
     var testingCoordinator: NSPersistentStoreCoordinator! {
         return testingContainer.persistentStoreCoordinator
@@ -27,28 +34,23 @@ class FetchingTestBase: XCTestCase, ManagedObjectContextContainer {
         return testingContainer.viewContext
     }
 
-    var moContext: NSManagedObjectContext?
+    // MARK: - XCTestCase
 
-//    /// An `NSManagedObjectContext` backed by an in-memory store to make it
-//    /// suitable for unit testing. Based on an idea by
-//    /// https://www.andrewcbancroft.com/2015/01/13/unit-testing-model-layer-core-data-swift/
-//    static var testingContext: NSManagedObjectContext = {
-//        let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-//
-//        let model = NSManagedObjectModel.mergedModel(from: [Bundle(for: FetchingTestBase.self)])!
-//        let stoordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
-//
-//        do {
-//            try stoordinator.addPersistentStore(ofType: NSInMemoryStoreType,
-//                                                configurationName: nil,
-//                                                at: nil,
-//                                                options: nil)
-//            moc.persistentStoreCoordinator = stoordinator
-//        } catch {
-//            preconditionFailure("The FetchingTestBase couldn't set up a persistent in-memory store")
-//        }
-//
-//        return moc
-//    }()
+    override func setUp() {
+        super.setUp()
+        moContext = testingContext
+    }
+
+    // MARK: - Functions
+
+    func importTestData() {
+        (0..<14).forEach { (index) in
+            let person = Person(context: testingContext!)
+            person.name = "Person \(index)"
+            person.sortName = "Sorted Person \(index)"
+        }
+
+        try! testingContext?.save()
+    }
 
 }
