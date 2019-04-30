@@ -2,6 +2,6 @@
 
 import Foundation
 
-func + (predicateA: NSPredicate, predicateB: NSPredicate) -> NSCompoundPredicate {
+public func + (predicateA: NSPredicate, predicateB: NSPredicate) -> NSCompoundPredicate {
     return NSCompoundPredicate(andPredicateWithSubpredicates: [predicateA, predicateB])
 }
