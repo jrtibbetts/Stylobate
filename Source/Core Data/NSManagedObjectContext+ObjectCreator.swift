@@ -19,6 +19,15 @@ public extension NSManagedObjectContext {
         return try fetch(request).first ?? initialize(self)
     }
 
+    func fetchOrCreate<T: NSManagedObject>(with request: NSFetchRequest<T>,
+                                           updateWith update: (T) -> Void) throws -> T {
+        // Fetch.................................or create.
+        let object = try fetch(request).first ?? T.init(context: self)
+        update(object)
+
+        return object
+    }
+
     @available(*, deprecated, renamed: "fetchOrCreate")
     func fetchOrCreateManagedObject<T: NSManagedObject>(with request: NSFetchRequest<T>,
                                                         initialize: (NSManagedObjectContext) -> T) throws -> T {
