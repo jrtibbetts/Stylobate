@@ -6,6 +6,7 @@ import XCTest
 
 class NSManagedObjectContext_FetchOrCreate: FetchingTestBase {
 
+    // MARK: - fetchOrCreate(with:initialize:)
     func testFetchOrCreateTwiceReturnsSameValue() throws {
         let request = Person.fetchRequest(sortDescriptors: [sortByName],
                                           predicate: NSPredicate(format: "name == \"Frank Abberline\""))
@@ -22,7 +23,6 @@ class NSManagedObjectContext_FetchOrCreate: FetchingTestBase {
                                           predicate: NSPredicate(format: "name == \"Sir William Gull\""))
         let person1 = try testingContext.fetchOrCreate(with: request,
                                                        initialize: initializePerson)
-
         let person2 = try testingContext.fetchOrCreate(with: request,
                                                        initialize: initializePerson)
 
@@ -33,10 +33,13 @@ class NSManagedObjectContext_FetchOrCreate: FetchingTestBase {
 
     func initializePerson(_ context: NSManagedObjectContext) -> Person {
         let person = Person(context: context)
+        updatePerson(person)
+        return person
+    }
+
+    func updatePerson(_ person: Person) {
         person.name = "Frank Abberline"
         person.sortName = "Abberline, Frank"
-
-        return person
     }
 
 }
