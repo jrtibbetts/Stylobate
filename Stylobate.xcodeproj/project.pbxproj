@@ -42,6 +42,9 @@
 		968C4A89221A8B91006B51EE /* Date+TrigonometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A87221A8B91006B51EE /* Date+TrigonometryTests.swift */; };
 		968C4A8A221A8B91006B51EE /* UIBezierPath+PieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A88221A8B91006B51EE /* UIBezierPath+PieTests.swift */; };
 		968C4A8C221A8BE5006B51EE /* CALayer+GeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A8B221A8BE5006B51EE /* CALayer+GeometryTests.swift */; };
+		9693FE50228736D0009A3CB4 /* Codable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FE4F228736D0009A3CB4 /* Codable+Utils.swift */; };
+		9693FE5222874241009A3CB4 /* Codable_UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FE5122874241009A3CB4 /* Codable_UtilsTests.swift */; };
+		9693FE5422876253009A3CB4 /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FE5322876253009A3CB4 /* Foo.swift */; };
 		96A84A4C21643F740030F0AC /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A84A4B21643F740030F0AC /* JSONUtils.swift */; };
 		96A84A4F21643FAD0030F0AC /* JSONUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */; };
 		96A84A512164400B0030F0AC /* SampleFoo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A84A502164400B0030F0AC /* SampleFoo.json */; };
@@ -122,6 +125,9 @@
 		968C4A87221A8B91006B51EE /* Date+TrigonometryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+TrigonometryTests.swift"; sourceTree = "<group>"; };
 		968C4A88221A8B91006B51EE /* UIBezierPath+PieTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+PieTests.swift"; sourceTree = "<group>"; };
 		968C4A8B221A8BE5006B51EE /* CALayer+GeometryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+GeometryTests.swift"; sourceTree = "<group>"; };
+		9693FE4F228736D0009A3CB4 /* Codable+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Utils.swift"; sourceTree = "<group>"; };
+		9693FE5122874241009A3CB4 /* Codable_UtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable_UtilsTests.swift; sourceTree = "<group>"; };
+		9693FE5322876253009A3CB4 /* Foo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foo.swift; sourceTree = "<group>"; };
 		96A84A4B21643F740030F0AC /* JSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
 		96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilsTests.swift; sourceTree = "<group>"; };
 		96A84A502164400B0030F0AC /* SampleFoo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleFoo.json; sourceTree = "<group>"; };
@@ -232,6 +238,7 @@
 		96A84A4A21643F4F0030F0AC /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				9693FE4F228736D0009A3CB4 /* Codable+Utils.swift */,
 				96A84A4B21643F740030F0AC /* JSONUtils.swift */,
 			);
 			path = JSON;
@@ -240,6 +247,8 @@
 		96A84A4D21643F8E0030F0AC /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				9693FE5122874241009A3CB4 /* Codable_UtilsTests.swift */,
+				9693FE5322876253009A3CB4 /* Foo.swift */,
 				96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */,
 				96A84A502164400B0030F0AC /* SampleFoo.json */,
 			);
@@ -502,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9693FE5422876253009A3CB4 /* Foo.swift in Sources */,
 				968C4A81221A8B2E006B51EE /* UIBezierPath+Pie.swift in Sources */,
 				968101F82272A0EB003E6D82 /* NSManagedObjectContext+ObjectCreator.swift in Sources */,
 				96EDF284209F9512009496FA /* UIViewController+Alerts.swift in Sources */,
@@ -511,6 +521,7 @@
 				960B52EE217D7FC2004754A5 /* CustomOperators.swift in Sources */,
 				968C4A84221A8B64006B51EE /* CLLocationCoordinate2D+Formatting.swift in Sources */,
 				960701FF227F22F200685AD9 /* Int+Rubyish.swift in Sources */,
+				9693FE50228736D0009A3CB4 /* Codable+Utils.swift in Sources */,
 				96EE58FD21079F200099A7B3 /* VisualIndicatorBusyView.swift in Sources */,
 				96EDF28E209FCC4E009496FA /* MissingCell.swift in Sources */,
 				96EE58F92107830A0099A7B3 /* SpinnerBusyView.swift in Sources */,
@@ -565,6 +576,7 @@
 				968101FF2272A1DC003E6D82 /* FetchedResultsModelTestBase.swift in Sources */,
 				960EE14622740D7200870B7A /* NSPredicate+OperatorsTests.swift in Sources */,
 				96727FE02234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift in Sources */,
+				9693FE5222874241009A3CB4 /* Codable_UtilsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

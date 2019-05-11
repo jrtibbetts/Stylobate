@@ -6,9 +6,9 @@ import XCTest
 class JSONUtilsTests: XCTestCase {
     
     func testJsonDataEncodeAndDecode() throws {
-        let foo = Foo(foo: 99, bar: "Huzzah!")
+        let foo = Foo(optionalInt: nil, optionalString: nil, requiredInt: 999, requiredString: "Huzzah!")
         
-        let fooData = try JSONUtils.jsonData(forObject: foo)
+        let fooData = try JSONEncoder().encode(foo)
         let otherFoo: Foo = try JSONUtils.jsonObject(data: fooData)
         XCTAssertEqual(foo, otherFoo)
     }
@@ -26,15 +26,8 @@ class JSONUtilsTests: XCTestCase {
         let foo: Foo = try JSONUtils.jsonObject(forFileNamed: "SampleFoo",
                                                 ofType: "json",
                                                 inBundle: Bundle(for: type(of: self)))
-        XCTAssertEqual(foo.foo, 9)
-        XCTAssertEqual(foo.bar, "ninety-nine")
-    }
-    
-    struct Foo: Codable, Equatable {
-                
-        var foo: Int
-        var bar: String?
-        
+        XCTAssertEqual(foo.requiredInt, 99)
+        XCTAssertEqual(foo.requiredString, "a required string")
     }
     
 }

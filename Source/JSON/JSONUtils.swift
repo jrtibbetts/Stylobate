@@ -25,23 +25,6 @@ public struct JSONUtils {
         return decoder
     }()
 
-    /// The encoder that all encoding functions use. It uses the default
-    /// encoding strategies.
-    fileprivate static let encoder = JSONEncoder()
-
-    // MARK: - Encoding functions
-
-    /// Encode an object into JSON data.
-    ///
-    /// - parameter object: The `Encodable` object.
-    ///
-    /// - throws:   An error if the object couldn't be encoded properly.
-    ///
-    /// - returns:  The JSON `Data` for the encodable object.
-    public static func jsonData<T: Encodable>(forObject object: T) throws -> Data {
-        return try encoder.encode(object)
-    }
-
     // MARK: - Decoding functions
 
     /// Decode JSON data. This is really just a shortcut that calls
@@ -55,7 +38,7 @@ public struct JSONUtils {
     ///
     /// - returns:  The `Codable` object parsed from the JSON data.
     public static func jsonObject<T: Decodable>(data: Data) throws -> T {
-        return try decoder.decode(T.self, from: data)
+        return try T.decode(fromJSONData: data)
     }
 
     /// Decode the JSON data at a specified URL.
@@ -67,7 +50,7 @@ public struct JSONUtils {
     ///
     /// - returns:  The `Codable` object parsed from the JSON data.
     public static func jsonObject<T: Decodable>(atUrl jsonUrl: URL) throws -> T {
-        return try jsonObject(data: Data(contentsOf: jsonUrl))
+        return try T.decode(fromURL: jsonUrl)
     }
 
     /// Decode the JSON data in a specified local file.
