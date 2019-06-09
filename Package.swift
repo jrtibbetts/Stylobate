@@ -7,7 +7,7 @@ pkg.products = [
 ]
 
 let stylobate: Target = .target(name: "Stylobate")
-stylobate.path = "Sources"
+stylobate.path = "Source"
 stylobate.exclude = [
 ]
 pkg.swiftLanguageVersions = [.v4, .v4_2]
