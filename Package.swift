@@ -13,4 +13,6 @@ stylobate.exclude = [
 pkg.swiftLanguageVersions = [.v4, .v4_2]
 pkg.targets = [
     stylobate,
-    .testTarget(name: "StylobateTests", dependencies: ["Stylobate"]), 
+    .testTarget(name: "StylobateTests", dependencies: ["Stylobate"])
+]
+
