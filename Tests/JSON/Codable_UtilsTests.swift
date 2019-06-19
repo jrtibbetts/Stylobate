@@ -47,7 +47,7 @@ class Codable_UtilsTests: XCTestCase {
         // When running unit tests, Bundle.main is the Simulator's bundle, not
         // the testing bundle.
         let bundle = Bundle(for: type(of: self))
-        var foo: Foo? = try! Foo.decode(fromJSONFileNamed: "A file that doesn't exist", inBundle: bundle)
+        let foo: Foo? = try! Foo.decode(fromJSONFileNamed: "A file that doesn't exist", inBundle: bundle)
         XCTAssertNil(foo)
     }
 
