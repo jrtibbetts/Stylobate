@@ -10,13 +10,20 @@ open class ToggleStackView: UIStackView {
     // MARK: - Public Properties
 
     /// The arranged subview that will be visible. All others will be hidden.
+    /// If it's set to `nil`, however, _all_ subviews will be unhidden again.
     open var activeView: UIView? {
         didSet {
             if oldValue != activeView {
                 previousActiveView = oldValue
 
-                arrangedSubviews.forEach { (subview) in
-                    subview.isHidden = (activeView !== subview)
+                if activeView != nil {
+                    arrangedSubviews.forEach { (subview) in
+                        subview.isHidden = (activeView !== subview)
+                    }
+                } else {
+                    arrangedSubviews.forEach { (subview) in
+                        subview.isHidden = false
+                    }
                 }
             }
         }

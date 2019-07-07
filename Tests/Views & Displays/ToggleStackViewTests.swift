@@ -13,6 +13,7 @@ class ToggleStackViewTests: XCTestCase {
             stack.addArrangedSubview(subview)
         }
     }
+
     func testSetActiveViewHidesAllOtherSubviews() {
         let stack = stack10
         let activeSubview = UIView()
@@ -26,6 +27,19 @@ class ToggleStackViewTests: XCTestCase {
             } else {
                 XCTAssertFalse(subview.isHidden)
             }
+        }
+    }
+
+    func testSetActiveViewToNilUnhidesAllSubviews() {
+        let stack = stack10
+        let activeSubview = UIView()
+        stack.addArrangedSubview(activeSubview)
+
+        stack.activeView = activeSubview
+        stack.activeView = nil
+
+        stack.arrangedSubviews.forEach { (subview) in
+            XCTAssertFalse(subview.isHidden)
         }
     }
 
