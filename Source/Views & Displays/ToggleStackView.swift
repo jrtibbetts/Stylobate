@@ -29,6 +29,17 @@ open class ToggleStackView: UIStackView {
         }
     }
 
+    /// When set to `true`, the rendered stack in the storyboard includes *all*
+    /// subviews, not just the active one. This is useful for preventing
+    /// constraints errors.
+    @IBInspectable open var showsAllViewsInStoryboard: Bool = false {
+        didSet {
+            if showsAllViewsInStoryboard {
+                activeView = nil
+            }
+        }
+    }
+
     /// The arranged subview that was active before the current active one was
     /// activated.
     open var previousActiveView: UIView?
