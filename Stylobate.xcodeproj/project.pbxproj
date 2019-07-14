@@ -327,10 +327,10 @@
 				96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */,
 				9680995220C4D3A8004C6A8A /* MissingCellTests.swift */,
 				9680995020C4D2D4004C6A8A /* MissingCellTests.xib */,
+				96115B0322DAC9E3006B2894 /* ToggleButtonStackViewTests.swift */,
 				96C656AC212522130041CAD6 /* ToggleStackViewTests.swift */,
 				968C4A88221A8B91006B51EE /* UIBezierPath+PieTests.swift */,
 				96C656AE212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift */,
-				96115B0322DAC9E3006B2894 /* ToggleButtonStackViewTests.swift */,
 			);
 			path = "Views & Displays";
 			sourceTree = "<group>";

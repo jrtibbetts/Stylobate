@@ -12,9 +12,7 @@ class ToggleButtonStackView: ToggleStackView {
     /// current `activeView` (if any) and set its `isSelected` to `false`.
     override var activeView: UIView? {
         didSet {
-            if let activeView = activeView as? UIButton {
-                activeView.isSelected = true
-            }
+            (activeView as? UIButton)?.isSelected = true
 
             arrangedSubviews.filter({ $0 != activeView }).forEach { (subview) in
                 (subview as? UIButton)?.isSelected = false
