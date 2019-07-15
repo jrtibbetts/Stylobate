@@ -50,6 +50,8 @@
 		96A84A4C21643F740030F0AC /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A84A4B21643F740030F0AC /* JSONUtils.swift */; };
 		96A84A4F21643FAD0030F0AC /* JSONUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */; };
 		96A84A512164400B0030F0AC /* SampleFoo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A84A502164400B0030F0AC /* SampleFoo.json */; };
+		96B0849822DCFCE600FD069C /* HidingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0849722DCFCE600FD069C /* HidingLabel.swift */; };
+		96B0849B22DCFD0500FD069C /* HidingLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0849922DCFCF600FD069C /* HidingLabelTests.swift */; };
 		96BB37FA224FEC8F00806E56 /* Stylobate.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 96BB37F6224FEC8E00806E56 /* Stylobate.podspec */; };
 		96BB37FB224FEC8F00806E56 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 96BB37F7224FEC8E00806E56 /* LICENSE */; };
 		96BB37FC224FEC8F00806E56 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 96BB37F8224FEC8E00806E56 /* README.md */; };
@@ -134,6 +136,8 @@
 		96A84A4B21643F740030F0AC /* JSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
 		96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilsTests.swift; sourceTree = "<group>"; };
 		96A84A502164400B0030F0AC /* SampleFoo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleFoo.json; sourceTree = "<group>"; };
+		96B0849722DCFCE600FD069C /* HidingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HidingLabel.swift; sourceTree = "<group>"; };
+		96B0849922DCFCF600FD069C /* HidingLabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HidingLabelTests.swift; sourceTree = "<group>"; };
 		96BB37F6224FEC8E00806E56 /* Stylobate.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Stylobate.podspec; sourceTree = "<group>"; };
 		96BB37F7224FEC8E00806E56 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		96BB37F8224FEC8E00806E56 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -292,6 +296,7 @@
 				96DCE6AF2172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift */,
 				96EDF27D209F94DA009496FA /* Display.swift */,
 				96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */,
+				96B0849722DCFCE600FD069C /* HidingLabel.swift */,
 				96EDF28D209FCC4E009496FA /* MissingCell.swift */,
 				96EE58FA210783610099A7B3 /* ProgressBusyView.swift */,
 				96EE58F82107830A0099A7B3 /* SpinnerBusyView.swift */,
@@ -325,6 +330,7 @@
 				96DCE6B12172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift */,
 				96E8CCDB20E1E787001C5381 /* FormattedLabelTests.storyboard */,
 				96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */,
+				96B0849922DCFCF600FD069C /* HidingLabelTests.swift */,
 				9680995220C4D3A8004C6A8A /* MissingCellTests.swift */,
 				9680995020C4D2D4004C6A8A /* MissingCellTests.xib */,
 				96115B0322DAC9E3006B2894 /* ToggleButtonStackViewTests.swift */,
@@ -520,6 +526,7 @@
 				96EDF27B209F9498009496FA /* CollectionAndTableModel.swift in Sources */,
 				96C656AB212521F60041CAD6 /* ToggleStackView.swift in Sources */,
 				96106C9D20C0E5D400DA5308 /* BusyView.swift in Sources */,
+				96B0849822DCFCE600FD069C /* HidingLabel.swift in Sources */,
 				960B52EE217D7FC2004754A5 /* CustomOperators.swift in Sources */,
 				968C4A84221A8B64006B51EE /* CLLocationCoordinate2D+Formatting.swift in Sources */,
 				960701FF227F22F200685AD9 /* Int+Rubyish.swift in Sources */,
@@ -578,6 +585,7 @@
 				968102012272A1DC003E6D82 /* FetchingTestBase.swift in Sources */,
 				968101FF2272A1DC003E6D82 /* FetchedResultsModelTestBase.swift in Sources */,
 				960EE14622740D7200870B7A /* NSPredicate+OperatorsTests.swift in Sources */,
+				96B0849B22DCFD0500FD069C /* HidingLabelTests.swift in Sources */,
 				96727FE02234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift in Sources */,
 				96115B0422DAC9E3006B2894 /* ToggleButtonStackViewTests.swift in Sources */,
 				9693FE5222874241009A3CB4 /* Codable_UtilsTests.swift in Sources */,
