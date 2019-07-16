@@ -2,16 +2,26 @@
 
 import UIKit
 
+/// A `UILabel` that sets its `isHidden` flag to `false` if its `text` or
+/// `attributedText` fail to meet certain criteria--by default, these criteria
+/// are
+///  - if both are `nil`, and
+///  - if both are empty strings (but _not_ strings consisting only of
+///    whitespace)
+///
+/// The `shouldHideAttributedText` and `shouldHideText` properties can be set
+/// to some other predicates, if desired.
 @IBDesignable open class HidingLabel: UILabel {
 
     // MARK: - Typealiases
 
-    public typealias TextHidingPredicate = (String?) -> Bool
-
     public typealias AttributeTextHidingPredicate = (NSAttributedString?) -> Bool
+
+    public typealias TextHidingPredicate = (String?) -> Bool
 
     // MARK: - Properties
 
+    /// The predicate that determines whether the `attri
     open var shouldHideAttributedText: AttributeTextHidingPredicate = { (attributedString) in
         return attributedString == nil || attributedString?.string.isEmpty ?? false
     }
