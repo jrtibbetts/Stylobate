@@ -15,21 +15,32 @@ import UIKit
 
     // MARK: - Typealiases
 
+    /// Signature for functions or blocks that determine whether the
+    /// `attributedText` is valid.
     public typealias AttributeTextHidingPredicate = (NSAttributedString?) -> Bool
 
+    /// Signature for functions or blocks that determine whether the
+    /// `text` is valid.
     public typealias TextHidingPredicate = (String?) -> Bool
 
     // MARK: - Properties
 
-    /// The predicate that determines whether the `attri
+    /// The predicate that determines whether the `attributedText` meets the
+    /// criteria for hiding the label. By default, this will return `true` if
+    /// it's `nil` or empty.
     open var shouldHideAttributedText: AttributeTextHidingPredicate = { (attributedString) in
-        return attributedString == nil || attributedString?.string.isEmpty ?? false
+        return attributedString == nil || attributedString!.string.isEmpty
     }
 
+    /// The predicate that determines whether the `text` meets the criteria for
+    /// hiding the label. By default, this will return `true` if it's `nil` or
+    /// empty.
     open var shouldHideText: TextHidingPredicate = { (string) in
-        return string == nil || string?.isEmpty ?? false
+        return string == nil || string!.isEmpty
     }
 
+    /// Hide the label if both `shouldHideText()` and
+    /// `shouldHideAttributedText()` are `true`.
     open func hideIfMatchesPredicates() {
         isHidden = shouldHideText(text) && shouldHideAttributedText(attributedText)
     }
