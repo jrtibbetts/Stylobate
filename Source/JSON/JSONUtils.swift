@@ -14,17 +14,6 @@ public enum JSONFileLoadingError: Error {
 /// data.
 public struct JSONUtils {
 
-    // MARK: - Private properties
-
-    /// The decoder that all decoding functions use. It uses the default
-    /// decoding strategies.
-    fileprivate static let decoder: JSONDecoder = {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-
-        return decoder
-    }()
-
     // MARK: - Decoding functions
 
     /// Decode JSON data. This is really just a shortcut that calls
