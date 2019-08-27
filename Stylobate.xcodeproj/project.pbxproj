@@ -62,6 +62,7 @@
 		96C656AF212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C656AE212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift */; };
 		96D9581323148D6F0029B80C /* VideoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D9581223148D6F0029B80C /* VideoPreview.swift */; };
 		96D9581523148DF90029B80C /* VideoPreviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D9581423148DF90029B80C /* VideoPreviewTests.swift */; };
+		96D9581A2314D7650029B80C /* LifecycleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D958192314D7640029B80C /* LifecycleError.swift */; };
 		96DCE6B02172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DCE6AF2172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift */; };
 		96DCE6B22172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DCE6B12172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift */; };
 		96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */; };
@@ -152,6 +153,7 @@
 		96C656AE212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualIndicatorBusyViewTests.swift; sourceTree = "<group>"; };
 		96D9581223148D6F0029B80C /* VideoPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPreview.swift; sourceTree = "<group>"; };
 		96D9581423148DF90029B80C /* VideoPreviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewTests.swift; sourceTree = "<group>"; };
+		96D958192314D7640029B80C /* LifecycleError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifecycleError.swift; sourceTree = "<group>"; };
 		96DCE6AF2172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreesMinutesSecondsFormatter.swift; sourceTree = "<group>"; };
 		96DCE6B12172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreesMinutesSecondsFormatterTests.swift; sourceTree = "<group>"; };
 		96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedLabel.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				960B52ED217D7FC2004754A5 /* CustomOperators.swift */,
 				968C4A7D221A8B2E006B51EE /* Date+Trigonometry.swift */,
 				960701FE227F22F200685AD9 /* Int+Rubyish.swift */,
+				96D958192314D7640029B80C /* LifecycleError.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				968101F72272A0EB003E6D82 /* ManagedObjectContextContainer.swift in Sources */,
 				96EE58FB210783610099A7B3 /* ProgressBusyView.swift in Sources */,
 				960EE14422740B7500870B7A /* KeyPath+SortDescriptor.swift in Sources */,
+				96D9581A2314D7650029B80C /* LifecycleError.swift in Sources */,
 				96EDF280209F94DB009496FA /* Display.swift in Sources */,
 				968C4A82221A8B2E006B51EE /* CALayer+Geometry.swift in Sources */,
 				96EDF27A209F9498009496FA /* CollectionAndTableDisplay.swift in Sources */,
