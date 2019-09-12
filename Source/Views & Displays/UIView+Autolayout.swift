@@ -25,3 +25,17 @@ public extension UIView {
     }
 
 }
+
+public extension Array where Element: NSLayoutConstraint {
+
+    /// Activate all the constraints in the array.
+    func activate() {
+        NSLayoutConstraint.activate(self)
+    }
+
+    /// Deactivate all the constraints in the array.
+    func deactivate() {
+        NSLayoutConstraint.deactivate(self)
+    }
+
+}
