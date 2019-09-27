@@ -26,7 +26,7 @@ class BusyViewTests: XCTestCase {
             startExpectation.fulfill()
         }
 
-        wait(for: [startExpectation], timeout: 2.0)
+        waitForExpectations(timeout: 2.0)
 
         let stopExpectation = expectation(description: "SpinnerBusyView stop")
 
@@ -35,7 +35,7 @@ class BusyViewTests: XCTestCase {
             stopExpectation.fulfill()
         }
 
-        wait(for: [stopExpectation], timeout: 2.0)
+        waitForExpectations(timeout: 2.0)
     }
 
     func testSpinnerBusyViewWithUnaddedSpinnerAddsSpinner() {
@@ -52,7 +52,7 @@ class BusyViewTests: XCTestCase {
             startExpectation.fulfill()
         }
 
-        wait(for: [startExpectation], timeout: 2.0)
+        waitForExpectations(timeout: 2.0)
 
         let stopExpectation = expectation(description: "SpinnerBusyView stop")
 
@@ -61,7 +61,7 @@ class BusyViewTests: XCTestCase {
             stopExpectation.fulfill()
         }
 
-        wait(for: [stopExpectation], timeout: 2.0)
+        waitForExpectations(timeout: 2.0)
     }
 
     func testSpinnerBusyViewWithSpinnerAlreadyAddedOk() {
@@ -76,7 +76,7 @@ class BusyViewTests: XCTestCase {
             startExpectation.fulfill()
         }
 
-        wait(for: [startExpectation], timeout: 2.0)
+        waitForExpectations(timeout: 2.0)
 
         let stopExpectation = expectation(description: "SpinnerBusyView stop")
 
@@ -85,7 +85,7 @@ class BusyViewTests: XCTestCase {
             stopExpectation.fulfill()
         }
 
-        wait(for: [stopExpectation], timeout: 2.0)
+        waitForExpectations(timeout: 2.0)
     }
 
     // MARK: ProgressBusyView Tests
@@ -106,7 +106,7 @@ class BusyViewTests: XCTestCase {
             startExpectation.fulfill()
         }
 
-        wait(for: [startExpectation], timeout: 2.0)
+        waitForExpectations(timeout: 2.0)
 
         let stopExpectation = expectation(description: "ProgressBusyView stop")
 
@@ -115,7 +115,7 @@ class BusyViewTests: XCTestCase {
             stopExpectation.fulfill()
         }
 
-        wait(for: [stopExpectation], timeout: 2.0)
+        waitForExpectations(timeout: 2.0)
     }
 
     func testProgressBusyViewWithUnaddedSpinnerAddsSpinner() {
@@ -132,7 +132,7 @@ class BusyViewTests: XCTestCase {
             startExpectation.fulfill()
         }
 
-        wait(for: [startExpectation], timeout: 2.0)
+        waitForExpectations(timeout: 2.0)
 
         let stopExpectation = expectation(description: "ProgressBusyView stop")
 
@@ -141,7 +141,7 @@ class BusyViewTests: XCTestCase {
             stopExpectation.fulfill()
         }
 
-        wait(for: [stopExpectation], timeout: 2.0)
+        waitForExpectations(timeout: 2.0)
     }
 
     func testProgressBusyViewWithSpinnerAlreadyAddedOk() {
@@ -156,7 +156,7 @@ class BusyViewTests: XCTestCase {
             startExpectation.fulfill()
         }
 
-        wait(for: [startExpectation], timeout: 2.0)
+        waitForExpectations(timeout: 2.0)
 
         let stopExpectation = expectation(description: "ProgressBusyView stop")
 
@@ -165,7 +165,7 @@ class BusyViewTests: XCTestCase {
             stopExpectation.fulfill()
         }
 
-        wait(for: [stopExpectation], timeout: 2.0)
+        waitForExpectations(timeout: 2.0)
     }
 
     // MARK: Test Fixtures
