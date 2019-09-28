@@ -26,8 +26,9 @@ public struct JSONUtils {
     ///             or if the data couldn't be decoded into a valid object.
     ///
     /// - returns:  The `Codable` object parsed from the JSON data.
-    public static func jsonObject<T: Decodable>(data: Data) throws -> T {
-        return try T.decode(fromJSONData: data)
+    public static func jsonObject<T: Decodable>(data: Data,
+                                                decoder: JSONDecoder = JSONDecoder()) throws -> T {
+        return try T.decode(fromJSONData: data, withDecoder: decoder)
     }
 
     /// Decode the JSON data at a specified URL.
@@ -38,8 +39,9 @@ public struct JSONUtils {
     ///             or if the data couldn't be decoded into a valid object.
     ///
     /// - returns:  The `Codable` object parsed from the JSON data.
-    public static func jsonObject<T: Decodable>(atUrl jsonUrl: URL) throws -> T {
-        return try T.decode(fromURL: jsonUrl)
+    public static func jsonObject<T: Decodable>(atUrl jsonUrl: URL,
+                                                decoder: JSONDecoder = JSONDecoder()) throws -> T {
+        return try T.decode(fromURL: jsonUrl, withDecoder: decoder)
     }
 
     /// Decode the JSON data in a specified local file.
@@ -53,8 +55,10 @@ public struct JSONUtils {
     /// - returns:  The `Codable` object parsed from the JSON data.
     public static func jsonObject<T: Decodable>(forFileNamed fileName: String,
                                                 ofType fileType: String = "json",
-                                                inBundle bundle: Bundle = Bundle.main) throws -> T {
-        return try jsonObject(atUrl: url(forFileNamed: fileName, ofType: fileType, inBundle: bundle))
+                                                inBundle bundle: Bundle = Bundle.main,
+                                                decoder: JSONDecoder = JSONDecoder()) throws -> T {
+        return try jsonObject(atUrl: url(forFileNamed: fileName, ofType: fileType, inBundle: bundle),
+                              decoder: decoder)
     }
 
     /// Get a local URL for a file of a specified type in a bundle.
