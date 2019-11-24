@@ -18,6 +18,7 @@
 		96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */; };
 		96115B0222DAC9B6006B2894 /* ToggleButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96115B0122DAC9B6006B2894 /* ToggleButtonStackView.swift */; };
 		96115B0422DAC9E3006B2894 /* ToggleButtonStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96115B0322DAC9E3006B2894 /* ToggleButtonStackViewTests.swift */; };
+		9625FDA9238A333500EA194C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625FDA8238A333500EA194C /* Settings.swift */; };
 		96727FDE2234C920009DACDB /* CollectionAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96727FDD2234C920009DACDB /* CollectionAndTableViewController.swift */; };
 		96727FE02234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96727FDF2234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift */; };
 		9680994B20C370B2004C6A8A /* UIViewController+AlertsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680994A20C370B2004C6A8A /* UIViewController+AlertsTests.swift */; };
@@ -109,6 +110,7 @@
 		96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyViewTests.swift; sourceTree = "<group>"; };
 		96115B0122DAC9B6006B2894 /* ToggleButtonStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButtonStackView.swift; sourceTree = "<group>"; };
 		96115B0322DAC9E3006B2894 /* ToggleButtonStackViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonStackViewTests.swift; sourceTree = "<group>"; };
+		9625FDA8238A333500EA194C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		96727FDD2234C920009DACDB /* CollectionAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndTableViewController.swift; sourceTree = "<group>"; };
 		96727FDF2234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndTableViewControllerTests.swift; sourceTree = "<group>"; };
 		9680994A20C370B2004C6A8A /* UIViewController+AlertsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertsTests.swift"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				968C4A7D221A8B2E006B51EE /* Date+Trigonometry.swift */,
 				960701FE227F22F200685AD9 /* Int+Rubyish.swift */,
 				96D958192314D7640029B80C /* LifecycleError.swift */,
+				9625FDA8238A333500EA194C /* Settings.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				968101F32272A06A003E6D82 /* FetchedResultsTableModel.swift in Sources */,
 				968101F72272A0EB003E6D82 /* ManagedObjectContextContainer.swift in Sources */,
 				96EE58FB210783610099A7B3 /* ProgressBusyView.swift in Sources */,
+				9625FDA9238A333500EA194C /* Settings.swift in Sources */,
 				960EE14422740B7500870B7A /* KeyPath+SortDescriptor.swift in Sources */,
 				96D9581A2314D7650029B80C /* LifecycleError.swift in Sources */,
 				96EDF280209F94DB009496FA /* Display.swift in Sources */,
