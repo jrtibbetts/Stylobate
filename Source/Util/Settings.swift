@@ -23,7 +23,11 @@ public struct Settings {
     public static var defaults: UserDefaults = UserDefaults.standard
 
     public static func get<T>(key: String, defaultValue: T) -> T {
-        return Settings.defaults.value(forKey: key) as? T ?? defaultValue
+        // This was a one-liner, but breaking it out makes it easier to debug.
+        let value = Settings.defaults.value(forKey: key)
+        let typedValue = value as? T
+
+        return typedValue ?? defaultValue
     }
 
     public static func set<T>(_ value: T, forKey key: String) {

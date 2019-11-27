@@ -19,6 +19,7 @@
 		96115B0222DAC9B6006B2894 /* ToggleButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96115B0122DAC9B6006B2894 /* ToggleButtonStackView.swift */; };
 		96115B0422DAC9E3006B2894 /* ToggleButtonStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96115B0322DAC9E3006B2894 /* ToggleButtonStackViewTests.swift */; };
 		9625FDA9238A333500EA194C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625FDA8238A333500EA194C /* Settings.swift */; };
+		9625FDAB238A36C800EA194C /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625FDAA238A36C800EA194C /* SettingsTests.swift */; };
 		96727FDE2234C920009DACDB /* CollectionAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96727FDD2234C920009DACDB /* CollectionAndTableViewController.swift */; };
 		96727FE02234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96727FDF2234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift */; };
 		9680994B20C370B2004C6A8A /* UIViewController+AlertsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680994A20C370B2004C6A8A /* UIViewController+AlertsTests.swift */; };
@@ -111,6 +112,7 @@
 		96115B0122DAC9B6006B2894 /* ToggleButtonStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButtonStackView.swift; sourceTree = "<group>"; };
 		96115B0322DAC9E3006B2894 /* ToggleButtonStackViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonStackViewTests.swift; sourceTree = "<group>"; };
 		9625FDA8238A333500EA194C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		9625FDAA238A36C800EA194C /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		96727FDD2234C920009DACDB /* CollectionAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndTableViewController.swift; sourceTree = "<group>"; };
 		96727FDF2234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndTableViewControllerTests.swift; sourceTree = "<group>"; };
 		9680994A20C370B2004C6A8A /* UIViewController+AlertsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertsTests.swift"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				968C4A85221A8B7F006B51EE /* CLLocationCoordinate2D+FormattingTests.swift */,
 				960B52F0217D7FD5004754A5 /* CustomOperatorsTests.swift */,
 				96070200227F233600685AD9 /* Int+RubyishTests.swift */,
+				9625FDAA238A36C800EA194C /* SettingsTests.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */,
 				96C656AF212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift in Sources */,
 				9681021422738822003E6D82 /* NSManagedObject+FetchRequestTests.swift in Sources */,
+				9625FDAB238A36C800EA194C /* SettingsTests.swift in Sources */,
 				96070201227F233600685AD9 /* Int+RubyishTests.swift in Sources */,
 				9680994B20C370B2004C6A8A /* UIViewController+AlertsTests.swift in Sources */,
 				968C4A8A221A8B91006B51EE /* UIBezierPath+PieTests.swift in Sources */,
