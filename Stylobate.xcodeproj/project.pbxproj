@@ -379,6 +379,7 @@
 				96EDF25F209F90B2009496FA /* Source */,
 				96BB37F6224FEC8E00806E56 /* Stylobate.podspec */,
 				96EDF26A209F90B2009496FA /* Tests */,
+				97D8763C0C1EABD9DF0AE447 /* Dependencies */,
 			);
 			sourceTree = "<group>";
 		};
@@ -419,6 +420,13 @@
 				96E8CCD520E1DCA7001C5381 /* Views & Displays */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		97D8763C0C1EABD9DF0AE447 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -759,6 +767,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -772,9 +781,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.20.3;
 				PRODUCT_BUNDLE_IDENTIFIER = net.poikile.Stylobate;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -787,6 +798,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -800,9 +812,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.20.3;
 				PRODUCT_BUNDLE_IDENTIFIER = net.poikile.Stylobate;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
