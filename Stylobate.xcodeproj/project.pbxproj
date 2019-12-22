@@ -374,12 +374,12 @@
 			isa = PBXGroup;
 			children = (
 				96BB37F7224FEC8E00806E56 /* LICENSE */,
-				96EDF25E209F90B2009496FA /* Products */,
 				96BB37F8224FEC8E00806E56 /* README.md */,
-				96EDF25F209F90B2009496FA /* Source */,
 				96BB37F6224FEC8E00806E56 /* Stylobate.podspec */,
-				96EDF26A209F90B2009496FA /* Tests */,
 				97D8763C0C1EABD9DF0AE447 /* Dependencies */,
+				96EDF25E209F90B2009496FA /* Products */,
+				96EDF25F209F90B2009496FA /* Source */,
+				96EDF26A209F90B2009496FA /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
