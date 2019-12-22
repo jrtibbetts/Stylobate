@@ -29,5 +29,5 @@ let pkg = Package(
       exclude = [ ]
     )
   ]
-]
+)
 
