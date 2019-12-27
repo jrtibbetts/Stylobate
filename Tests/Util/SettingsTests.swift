@@ -30,7 +30,10 @@ extension Settings {
 class SettingsTests: XCTestCase {
 
     override func setUp() {
-        Settings.defaults = UserDefaults()
+        // Ensure that we're getting a brand new UserDefaults object every
+        // time. If we don't specify a unique suiteName, we'll get pre-existing
+        // defaults, and our tests will fail.
+        Settings.defaults = UserDefaults(suiteName: "\(Date.timeIntervalSinceReferenceDate)")!
     }
 
     func testBooleanSetting() {
