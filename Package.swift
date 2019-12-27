@@ -4,7 +4,7 @@ import PackageDescription
 let pkg = Package(
   name: "Stylobate",
 
-  swiftLanguageVersions = [.v4, .v4_2],
+//  swiftLanguageVersions = [.v4, .v4_2],
 
   products: [
     .library(
@@ -18,15 +18,12 @@ let pkg = Package(
   targets: [
     .target(
       name: "Stylobate",
-      dependencies: ["UIKit"],
-      path: "Source",
-      exclude = [ ]
+      path: "Source"
     ),
     .testTarget(
       name: "StylobateTests",
       dependencies: ["Stylobate"],
-      path: "Tests",
-      exclude = [ ]
+      path: "Tests"
     )
   ]
 )
