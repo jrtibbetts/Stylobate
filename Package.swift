@@ -2,29 +2,26 @@
 import PackageDescription
 
 let pkg = Package(
-  name: "Stylobate",
+    name: "Stylobate",
 
-//  swiftLanguageVersions = [.v4, .v4_2],
+    platforms: [
+        .iOS(.v10)
+    ],
 
-  products: [
-    .library(
-      name: "Stylobate",
-      targets: ["Stylobate"]
-    )
-  ],
+    products: [
+        .library(
+            name: "Stylobate",
+            targets: ["Stylobate"]
+        )
+    ],
 
-  dependencies: [ ],
+    dependencies: [ ],
 
-  targets: [
-    .target(
-      name: "Stylobate",
-      path: "Source"
-    ),
-    .testTarget(
-      name: "StylobateTests",
-      dependencies: ["Stylobate"],
-      path: "Tests"
-    )
-  ]
+    targets: [
+        .target(
+            name: "Stylobate",
+            path: "Source"
+        )
+    ]
 )
 
