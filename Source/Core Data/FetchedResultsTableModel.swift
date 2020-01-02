@@ -9,8 +9,17 @@ open class FetchedResultsTableModel: FetchedResultsModel,
                                      UITableViewDelegate,
                                      NSFetchedResultsControllerDelegate {
 
+    // MARK: - Properties
+
+    /// `true` if the section index should be shown on the right edge of the
+    /// table. This can be overridden to return dynamic values depending on the
+    /// sorting criteria, etc.
+    public var showSectionIndex: Bool = true
+
     /// The table view for which this model is a delegate and data source.
     let tableView: UITableView
+
+    // MARK: - Initialization
 
     /// Construct a model for a specific table view.
     ///
@@ -32,7 +41,11 @@ open class FetchedResultsTableModel: FetchedResultsModel,
     // MARK: - UITableViewDataSource & UITableViewDelegate
 
     open func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return fetchedResultsController.sectionIndexTitles
+        if showSectionIndex {
+            return fetchedResultsController.sectionIndexTitles
+        } else {
+            return nil
+        }
     }
 
     /// Get the number of sections from the fetched results controller.

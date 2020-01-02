@@ -43,6 +43,22 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
         _ = model.tableView(tableView, cellForRowAt: path)
     }
 
+    func testShowSectionIndex() throws {
+        importTestData()
+
+        let (tableView, model) = try tableAndModel()
+        model.showSectionIndex = true
+        XCTAssertNotNil(model.sectionIndexTitles(for: tableView))
+    }
+
+    func testHideSectionIndex() throws {
+        importTestData()
+
+        let (tableView, model) = try tableAndModel()
+        model.showSectionIndex = false
+        XCTAssertNil(model.sectionIndexTitles(for: tableView))
+    }
+
     func tableAndModel() throws -> (UITableView, FetchedResultsTableModel) {
         let tableView = UITableView(frame: CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
         let fetchRequest = NSFetchRequest<Person>(entityName: "Person")
