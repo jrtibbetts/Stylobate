@@ -20,7 +20,13 @@ class BusyViewTests: XCTestCase {
         view.startActivity {
             XCTAssertNotNil(view.spinner)
             XCTAssertEqual(view.spinner!.superview, view)
-            XCTAssertEqual(view.spinner!.style, UIActivityIndicatorView.Style.whiteLarge)
+            
+            if #available(iOS 13, *) {
+                XCTAssertEqual(view.spinner!.style, UIActivityIndicatorView.Style.large)
+            } else {
+                XCTAssertEqual(view.spinner!.style, UIActivityIndicatorView.Style.whiteLarge)
+            }
+
             self.assertPointsEqual(view.spinner!.center, view.center, accuracy: 0.3)
             self.assert(spinner: view.spinner!, isSpinning: true)
             startExpectation.fulfill()
