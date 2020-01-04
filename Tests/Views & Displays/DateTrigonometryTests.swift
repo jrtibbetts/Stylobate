@@ -3,7 +3,7 @@
 @testable import Stylobate
 import XCTest
 
-class Date_TrigonometryTests: XCTestCase {
+class DateTrigonometryTests: XCTestCase {
 
     let midnight = Calendar.current.startOfDay(for: Date())
 

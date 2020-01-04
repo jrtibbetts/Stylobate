@@ -4,7 +4,7 @@
 import CoreLocation
 import XCTest
 
-class CLLocationCoordinate2D_FormattingTests: XCTestCase {
+class CLLocationCoordinate2DFormattingTests: XCTestCase {
 
     func testFormattedWithFloatPatternRoundsOk() {
         let coordinate = CLLocationCoordinate2D(latitude: -45.12345, longitude: 125.12345)

@@ -3,15 +3,15 @@
 import CoreLocation
 
 public extension CLLocationCoordinate2D {
-    
+
     /// A type that contains latitude and longitude strings.
     typealias CoordinateStrings = (latitude: String, longitude: String)
-    
+
     /// The *string* representations of the coordinate's latitude and longitude.
     var strings: CoordinateStrings {
         return strings()
     }
-    
+
     /// Get the latitude and longitude values as *strings*, formatted according
     /// to the specified pattern.
     ///
@@ -24,5 +24,5 @@ public extension CLLocationCoordinate2D {
         return (String(format: pattern, latitude),
                 String(format: pattern, longitude))
     }
-    
+
 }

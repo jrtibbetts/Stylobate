@@ -26,18 +26,23 @@ public struct DMSCoordinate: Codable {
     /// The minutes of the decimal degree, expressed as a number from 0 to 60,
     /// rounded to the nearest whole number.
     public var minutes: Int {
+        // swiftlint:disable identifier_name
         let x = (decimalDegrees * 3600.0)
         let y = x.truncatingRemainder(dividingBy: 3600.0).rounded()
         let z = y / 60.0
+        // swiftlint:enable identifier_name
+
         return abs(Int(z))
     }
 
     /// The seconds of the decimal degree, expressed as a number from 0 to 60,
     /// rounded to the nearest whole number.
     public var seconds: Int {
+        // swiftlint:disable identifier_name
         let x = (decimalDegrees * 3600.0)
         let y = x.truncatingRemainder(dividingBy: 3600.0)
         let z = y.truncatingRemainder(dividingBy: 60.0).rounded()
+        // swiftlint:enable identifier_name
 
         return abs(Int(z))
     }
@@ -74,5 +79,5 @@ extension CLLocationCoordinate2D {
         return ("\(dms.latitude.asString) " + (latitude >= 0 ? "N" : "S"),
                 "\(dms.longitude.asString) " + (longitude >= 0 ? "E" : "W"))
     }
-    
+
 }

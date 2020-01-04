@@ -3,7 +3,7 @@
 @testable import Stylobate
 import XCTest
 
-class NSPredicate_OperatorsTests: XCTestCase {
+class NSPredicateOperatorsTests: XCTestCase {
 
     func testAnd2PredicatesOk() {
         let predicate1 = NSPredicate(format: "something = \"something else\"")

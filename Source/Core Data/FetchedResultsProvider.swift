@@ -4,9 +4,9 @@ import CoreData
 
 /// Implemented by objects that have an `NSFetchedResultsController`.
 public protocol FetchedResultsProvider: ManagedObjectContextContainer, NSFetchedResultsControllerDelegate {
-    
+
     associatedtype ManagedObjectType: NSManagedObject
-    
+
     /// Set up the fetched results controller. This has a default
     /// implementation, so implementers of this protocol usually don't need to
     /// provide their own implementation.
@@ -14,11 +14,11 @@ public protocol FetchedResultsProvider: ManagedObjectContextContainer, NSFetched
                                   sectionNameKeyPath: String?,
                                   cacheName: String?) throws
         -> NSFetchedResultsController<ManagedObjectType>?
-    
+
 }
 
 extension FetchedResultsProvider {
-    
+
     /// Configure the fetched results controller with a fetch request, then
     /// perform a fetch on it.
     ///
@@ -43,8 +43,8 @@ extension FetchedResultsProvider {
                                                                   cacheName: cacheName)
         fetchedResultsController.delegate = self
         try fetchedResultsController.performFetch()
-        
+
         return fetchedResultsController
     }
-    
+
 }

@@ -21,7 +21,7 @@ public extension ProgressBusyView where Self: UIView {
     var progressView: UIProgressView? {
         return busyIndicator as? UIProgressView
     }
-    
+
     func startActivity(completion: BusyView.ActivityCompletion? = nil) {
         if busyIndicator == nil {
             busyIndicator = UIProgressView(progressViewStyle: .default)
@@ -37,7 +37,7 @@ public extension ProgressBusyView where Self: UIView {
         if let progressView = progressView {
             summon(progressView)
         }
-        
+
         completion?()
     }
 

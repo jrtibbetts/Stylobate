@@ -3,6 +3,8 @@
 @testable import Stylobate
 import XCTest
 
+// swiftlint:disable force_cast
+
 class FormattedLabelTests: XCTestCase {
 
     func testSetTextWithNilFormatLeavesTextAsIs() {
@@ -47,7 +49,7 @@ class FormattedLabelTests: XCTestCase {
         let superview = UIView(frame: CGRect())
         superview.addSubview(label)
 
-        let attributedText = NSAttributedString(string: "Inconsequential", attributes: [.backgroundColor : #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)])
+        let attributedText = NSAttributedString(string: "Inconsequential", attributes: [.backgroundColor: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)])
         label.attributedText = attributedText
         XCTAssertEqual(label.attributedText, attributedText)
     }
@@ -72,3 +74,5 @@ class FormattedLabelTestsView: UIView {
     @IBOutlet weak var labelWithoutFormat: FormattedLabel!
 
 }
+
+// swiftlint:enable force_cast

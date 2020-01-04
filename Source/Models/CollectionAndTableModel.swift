@@ -7,14 +7,14 @@ import UIKit
 /// `tableView(:cellForRowAt:)`, `numberOfSections()`,
 /// `numberOfItems(inSection:)`, and, if needed, `headerTitle(forSection:)`.
 open class CollectionAndTableModel: NSObject, UICollectionViewDataSource, UITableViewDataSource {
-    
+
     // MARK: UICollectionViewDataSource
-    
+
     open func collectionView(_ collectionView: UICollectionView,
                              cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return MissingCollectionViewCell(frame: CGRect())
     }
-    
+
     open func collectionView(_ collectionView: UICollectionView,
                              numberOfItemsInSection section: Int) -> Int {
         return numberOfItems(inSection: section)
@@ -25,11 +25,11 @@ open class CollectionAndTableModel: NSObject, UICollectionViewDataSource, UITabl
     }
 
     // MARK: UITableViewDataSource
-    
+
     open func numberOfSections(in tableView: UITableView) -> Int {
         return numberOfSections()
     }
-    
+
     open func tableView(_ tableView: UITableView,
                         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return MissingTableViewCell()
@@ -39,7 +39,7 @@ open class CollectionAndTableModel: NSObject, UICollectionViewDataSource, UITabl
                         numberOfRowsInSection section: Int) -> Int {
         return numberOfItems(inSection: section)
     }
-    
+
     open func tableView(_ tableView: UITableView,
                         titleForHeaderInSection section: Int) -> String? {
         return headerTitle(forSection: section)
@@ -54,9 +54,9 @@ open class CollectionAndTableModel: NSObject, UICollectionViewDataSource, UITabl
     open func numberOfItems(inSection section: Int) -> Int {
         return 0
     }
-    
+
     open func numberOfSections() -> Int {
         return 0
     }
-    
+
 }

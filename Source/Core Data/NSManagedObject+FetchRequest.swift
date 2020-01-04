@@ -6,14 +6,16 @@ import Foundation
 public extension NSManagedObject {
 
     class func all<T: NSManagedObject>(inContext context: NSManagedObjectContext,
-                                        sortedBy sortCriteria: [NSSortDescriptor] = []) throws -> [T] {
+                                       sortedBy sortCriteria: [NSSortDescriptor] = []) throws -> [T] {
         return try context.fetch(fetchRequestForAll(sortedBy: sortCriteria))
     }
 
     class func deleteAll(fromCoordinator coordinator: NSPersistentStoreCoordinator,
                          context: NSManagedObjectContext) throws {
         let allRequest = fetchRequestForAll(sortedBy: [])
+        // swiftlint:disable force_cast
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: allRequest as! NSFetchRequest<NSFetchRequestResult>)
+        // swiftlint:enable force_cast
 
         try coordinator.execute(deleteRequest, with: context)
     }
@@ -28,7 +30,8 @@ public extension NSManagedObject {
         return request
     }
 
-    class func fetchRequestForAll<T: NSManagedObject>(sortedBy sortCriteria: [NSSortDescriptor] = []) -> NSFetchRequest<T> {
+    class func fetchRequestForAll<T: NSManagedObject>(
+        sortedBy sortCriteria: [NSSortDescriptor] = []) -> NSFetchRequest<T> {
         return fetchRequest(sortDescriptors: sortCriteria)
     }
 

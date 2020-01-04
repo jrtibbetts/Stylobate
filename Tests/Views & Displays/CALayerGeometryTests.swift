@@ -2,7 +2,7 @@
 
 import XCTest
 
-class CALayer_GeometryTests: XCTestCase {
+class CALayerGeometryTests: XCTestCase {
 
     func testCenterAtPointWithNonnegativePointOk() {
         let layer = CALayer()

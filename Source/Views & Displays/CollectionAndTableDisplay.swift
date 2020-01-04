@@ -59,7 +59,7 @@ open class CollectionAndTableDisplay: Display, UICollectionViewDelegate, UITable
                 if let oldValue = oldValue {
                     banish(oldValue)
                 }
-                
+
                 summon(foregroundView)
             }
         }
@@ -128,13 +128,13 @@ open class CollectionAndTableDisplay: Display, UICollectionViewDelegate, UITable
     }
 
     // MARK: - Display
-    
+
     /// Reload the data in the collection and table views. Subclasses should
     /// override this to update their models, and then call this superclass
     /// method.
     override open func refresh() {
         super.refresh()
-        
+
         collectionView?.reloadData()
         tableView?.reloadData()
     }

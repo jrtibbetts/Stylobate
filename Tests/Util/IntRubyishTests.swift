@@ -3,7 +3,7 @@
 @testable import Stylobate
 import XCTest
 
-class Int_RubyishTests: XCTestCase {
+class IntRubyishTests: XCTestCase {
 
     // MARK: - times (property)
 
@@ -29,13 +29,13 @@ class Int_RubyishTests: XCTestCase {
     // MARK: - times()
 
     func testTimesFunctionWhenSelfIsNegativeNeverRunsTheBlock() {
-        (-898).times { (index) in
+        (-898).times { _ in
             XCTFail("This block should never be executed because the range is empty.")
         }
     }
 
     func testTimesFunctionWhenSelfIsZeroNeverRunsTheBlock() {
-        (0).times { (index) in
+        (0).times { _ in
             XCTFail("This block should never be executed because the range is empty.")
         }
     }
@@ -43,7 +43,7 @@ class Int_RubyishTests: XCTestCase {
     func testTimesFunctionWhenSelfIsPositiveRunsTheBlockThatManyTimes() {
         var numberOfBlockExecutions = 0
 
-        1564.times { (index) in
+        1564.times { _ in
             numberOfBlockExecutions += 1
         }
 

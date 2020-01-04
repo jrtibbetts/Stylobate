@@ -2,7 +2,7 @@
 
 import XCTest
 
-class UIViewController_AlertsTests: XCTestCase {
+class UIViewControllerAlertsTests: XCTestCase {
 
     func testPresentAlertWithNoMessageOk() {
         let error = NSError(domain: "StylobateTests", code: 0, userInfo: nil)
@@ -10,5 +10,5 @@ class UIViewController_AlertsTests: XCTestCase {
         let viewController = UIViewController()
         viewController.presentAlert(for: error, title: message)
     }
-    
+
 }

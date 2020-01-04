@@ -3,6 +3,8 @@
 @testable import Stylobate
 import XCTest
 
+// swiftlint:disable force_cast
+
 class ToggleButtonStackViewTests: XCTestCase {
 
     func testSetActiveViewOnEmptyStackDoesNothing() {
@@ -50,3 +52,5 @@ class ToggleButtonStackViewTests: XCTestCase {
     }
 
 }
+
+// swiftlint:enable force_cast

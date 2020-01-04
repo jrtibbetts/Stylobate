@@ -3,6 +3,8 @@
 @testable import Stylobate
 import XCTest
 
+// swiftlint:disable force_cast
+
 class CollectionAndTableDisplayTests: XCTestCase {
 
     let nib = UINib(nibName: "CollectionAndTableDisplayTests",
@@ -163,5 +165,6 @@ class CollectionAndTableDisplayTests: XCTestCase {
         XCTAssertFalse(hiddenView.isHidden)
     }
 
-
 }
+
+// swiftlint:enable force_cast

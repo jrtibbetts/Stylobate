@@ -6,5 +6,5 @@ import CoreData
 public protocol ManagedObjectContextContainer {
 
     var moContext: NSManagedObjectContext? { get set }
-    
+
 }

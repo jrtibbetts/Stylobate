@@ -3,6 +3,8 @@
 @testable import Stylobate
 import XCTest
 
+// swiftlint:disable force_cast
+
 class CollectionAndTableViewControllerTests: XCTestCase {
 
     lazy var viewController: CollectionAndTableViewController = {
@@ -33,3 +35,5 @@ class TestCollectionAndTableDisplay: CollectionAndTableDisplay {
     }
 
 }
+
+// swiftlint:enable force_cast

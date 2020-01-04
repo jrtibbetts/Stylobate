@@ -4,7 +4,7 @@
 import CoreData
 import XCTest
 
-class NSManagedObjectContext_FetchOrCreate: FetchingTestBase {
+class NSManagedObjectContextFetchOrCreate: FetchingTestBase {
 
     // MARK: - fetchOrCreate(with:initialize:)
 
@@ -33,8 +33,9 @@ class NSManagedObjectContext_FetchOrCreate: FetchingTestBase {
     // MARK: - fetchOrCreate(withRequest:updateWith:)
 
     func testFetchOrCreateUpdateWithTwiceReturnsSameValue() throws {
-        let request: NSFetchRequest<Person> = Person.fetchRequest(sortDescriptors: [sortByName],
-                                                                  predicate: NSPredicate(format: "name == \"Frank Abberline\""))
+        let request: NSFetchRequest<Person>
+            = Person.fetchRequest(sortDescriptors: [sortByName],
+                                  predicate: NSPredicate(format: "name == \"Frank Abberline\""))
 
         let person1 = try testingContext.fetchOrCreate(withRequest: request) { (person) in
             person.name = "Frank Abberline"
@@ -48,8 +49,9 @@ class NSManagedObjectContext_FetchOrCreate: FetchingTestBase {
     }
 
     func testFetchOrCreateUpdateWithDifferentPredicatesReturnsDifferentValues() throws {
-        let request: NSFetchRequest<Person> = Person.fetchRequest(sortDescriptors: [sortByName],
-                                                                  predicate: NSPredicate(format: "name == \"Sir William Gull\""))
+        let request: NSFetchRequest<Person>
+            = Person.fetchRequest(sortDescriptors: [sortByName],
+                                  predicate: NSPredicate(format: "name == \"Sir William Gull\""))
         let person1 = try testingContext.fetchOrCreate(withRequest: request) { (person) in
             person.name = "Frank Abberline"
             person.sortName = "Abberline, Frank"

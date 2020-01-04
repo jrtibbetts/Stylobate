@@ -23,7 +23,9 @@ open class VideoPreview: UIView {
 
     /// The primary layer, force-cast as an `AVCaptureVideoPreviewLayer`.
     final public var videoPreviewLayer: AVCaptureVideoPreviewLayer {
+        // swiftlint:disable force_cast
         return layer as! AVCaptureVideoPreviewLayer
+        // swiftlint:enable force_cast
     }
 
     // MARK: - Initializers

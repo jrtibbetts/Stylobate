@@ -15,7 +15,7 @@ public protocol FetchedResultsModelTestBase: ManagedObjectContextContainer {
 }
 
 public extension FetchedResultsModelTestBase {
-    
+
     func testNumberOfSections() {
         // Populate the testing context.
         let person1 = Person(context: moContext!)
@@ -24,7 +24,7 @@ public extension FetchedResultsModelTestBase {
         let person2 = Person(context: moContext!)
         person2.name = "Pancake Batter"
         person2.sortName = "Batter, Pancake"
-        
+
         // Set up the fetched results controller.
         let testModel = model()
         XCTAssertEqual(testModel.numberOfSections(), 2)

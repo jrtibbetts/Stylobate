@@ -3,6 +3,8 @@
 @testable import Stylobate
 import XCTest
 
+// swiftlint:disable force_try
+
 private let completeFooString = """
 {
     "optionalInt": 9,
@@ -12,7 +14,7 @@ private let completeFooString = """
 }
 """
 
-class Codable_UtilsTests: XCTestCase {
+class CodableUtilsTests: XCTestCase {
 
     func testDecodeFromStringWithAllRequiredValues() {
         let foo: Foo = try! Foo.decode(fromJSONString: completeFooString)!
@@ -72,3 +74,5 @@ class Codable_UtilsTests: XCTestCase {
         }
     }
 }
+
+// swiftlint:enable force_try

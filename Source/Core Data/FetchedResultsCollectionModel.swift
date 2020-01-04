@@ -29,5 +29,5 @@ open class FetchedResultsCollectionModel: FetchedResultsModel,
                              cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return UICollectionViewCell()
     }
-    
+
 }

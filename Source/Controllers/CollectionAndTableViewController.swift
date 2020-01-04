@@ -14,5 +14,5 @@ open class CollectionAndTableViewController: UIViewController, Controller {
         super.viewDidLoad()
         (display as? CollectionAndTableDisplay)?.model = model
     }
-    
+
 }

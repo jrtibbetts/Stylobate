@@ -4,10 +4,12 @@
 import CoreData
 import XCTest
 
+// swiftlint:disable force_try
+
 class FetchingTestBase: XCTestCase, ManagedObjectContextContainer {
 
     // MARK: - Properties
-    
+
     var moContext: NSManagedObjectContext?
 
     /// The core data test model. This has to be static, because if each
@@ -54,3 +56,5 @@ class FetchingTestBase: XCTestCase, ManagedObjectContextContainer {
     }
 
 }
+
+// swiftlint:enable force_try

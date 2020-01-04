@@ -3,7 +3,7 @@
 import UIKit
 
 public extension UIView {
-    
+
     /// Put a subview behind all of its siblings.
     ///
     /// - parameter subview: The view to banish.
@@ -23,5 +23,5 @@ public extension UIView {
             subview.isHidden = false
         }
     }
-    
+
 }

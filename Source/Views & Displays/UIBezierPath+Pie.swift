@@ -1,7 +1,7 @@
 import UIKit
 
 public extension UIBezierPath {
-    
+
     /// Construct a Bézier path that draws a slice of a circle. This simply
     /// calls
     /// `UIBezierPath.init(arcCenter:radius:startAngle:endAngle:clockwise:)`
@@ -27,5 +27,5 @@ public extension UIBezierPath {
         addLine(to: sliceCenter)
         close()
     }
-    
+
 }

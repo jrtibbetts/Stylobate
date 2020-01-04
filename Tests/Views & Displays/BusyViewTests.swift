@@ -20,7 +20,7 @@ class BusyViewTests: XCTestCase {
         view.startActivity {
             XCTAssertNotNil(view.spinner)
             XCTAssertEqual(view.spinner!.superview, view)
-            
+
             if #available(iOS 13, *) {
                 XCTAssertEqual(view.spinner!.style, UIActivityIndicatorView.Style.large)
             } else {
@@ -36,7 +36,7 @@ class BusyViewTests: XCTestCase {
 
         let stopExpectation = expectation(description: "SpinnerBusyView stop")
 
-        view.stopActivity() {
+        view.stopActivity {
             self.assert(spinner: view.spinner!, isSpinning: false)
             stopExpectation.fulfill()
         }
@@ -51,7 +51,7 @@ class BusyViewTests: XCTestCase {
 
         let startExpectation = expectation(description: "SpinnerBusyView start")
 
-        view.startActivity() {
+        view.startActivity {
             XCTAssertEqual(view.spinner!.superview, view)
             self.assertPointsEqual(view.spinner!.center, view.center, accuracy: 0.3)
             self.assert(spinner: view.spinner!, isSpinning: true)
@@ -62,7 +62,7 @@ class BusyViewTests: XCTestCase {
 
         let stopExpectation = expectation(description: "SpinnerBusyView stop")
 
-        view.stopActivity() {
+        view.stopActivity {
             self.assert(spinner: view.spinner!, isSpinning: false)
             stopExpectation.fulfill()
         }
@@ -77,7 +77,7 @@ class BusyViewTests: XCTestCase {
 
         let startExpectation = expectation(description: "SpinnerBusyView start")
 
-        view.startActivity() {
+        view.startActivity {
             self.assert(spinner: view.spinner!, isSpinning: true)
             startExpectation.fulfill()
         }
@@ -86,7 +86,7 @@ class BusyViewTests: XCTestCase {
 
         let stopExpectation = expectation(description: "SpinnerBusyView stop")
 
-        view.stopActivity() {
+        view.stopActivity {
             self.assert(spinner: view.spinner!, isSpinning: false)
             stopExpectation.fulfill()
         }
@@ -116,7 +116,7 @@ class BusyViewTests: XCTestCase {
 
         let stopExpectation = expectation(description: "ProgressBusyView stop")
 
-        view.stopActivity() {
+        view.stopActivity {
             self.assertProgressViewStopped(view.progressView!)
             stopExpectation.fulfill()
         }
@@ -131,7 +131,7 @@ class BusyViewTests: XCTestCase {
 
         let startExpectation = expectation(description: "ProgressBusyView start")
 
-        view.startActivity() {
+        view.startActivity {
             XCTAssertEqual(view.progressView!.superview, view)
             self.assertPointsEqual(view.progressView!.center, view.center, accuracy: 0.3)
             self.assertProgressViewStarted(view.progressView!)
@@ -142,7 +142,7 @@ class BusyViewTests: XCTestCase {
 
         let stopExpectation = expectation(description: "ProgressBusyView stop")
 
-        view.stopActivity() {
+        view.stopActivity {
             self.assertProgressViewStopped(view.progressView!)
             stopExpectation.fulfill()
         }
@@ -157,7 +157,7 @@ class BusyViewTests: XCTestCase {
 
         let startExpectation = expectation(description: "ProgressBusyView start")
 
-        view.startActivity() {
+        view.startActivity {
             self.assertProgressViewStarted(view.progressView!)
             startExpectation.fulfill()
         }
@@ -166,7 +166,7 @@ class BusyViewTests: XCTestCase {
 
         let stopExpectation = expectation(description: "ProgressBusyView stop")
 
-        view.stopActivity() {
+        view.stopActivity {
             self.assertProgressViewStopped(view.progressView!)
             stopExpectation.fulfill()
         }
@@ -176,12 +176,12 @@ class BusyViewTests: XCTestCase {
 
     // MARK: Test Fixtures
 
-    func assertPointsEqual(_ p1: CGPoint,
-                           _ p2: CGPoint,
+    func assertPointsEqual(_ point1: CGPoint,
+                           _ point2: CGPoint,
                            accuracy: CGFloat,
                            line: UInt = #line) {
-        XCTAssertEqual(p1.x, p2.x, accuracy: 1.0, "points \(p1) and \(p2)'s x values", line: line)
-        XCTAssertEqual(p1.y, p2.y, accuracy: 1.0, "points \(p1) and \(p2)'s y values", line: line)
+        XCTAssertEqual(point1.x, point2.x, accuracy: 1.0, "points \(point1) and \(point2)'s x values", line: line)
+        XCTAssertEqual(point1.y, point2.y, accuracy: 1.0, "points \(point1) and \(point2)'s y values", line: line)
     }
 
     func assert(spinner: UIActivityIndicatorView,

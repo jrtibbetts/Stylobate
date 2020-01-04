@@ -4,6 +4,8 @@
 import UIKit
 import XCTest
 
+// swiftlint:disable force_try
+
 class CustomOperatorsTests: XCTestCase {
 
     // MARK: - <~
@@ -44,3 +46,5 @@ class CustomOperatorsTests: XCTestCase {
     }
 
 }
+
+// swiftlint:enable force_try

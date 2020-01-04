@@ -2,7 +2,7 @@
 
 import XCTest
 
-class UIBezierPath_PieTests: XCTestCase {
+class UIBezierPathPieTests: XCTestCase {
 
     func testInitializerOk() {
         let centerPoint = CGPoint(x: 91.0, y: 233.0)

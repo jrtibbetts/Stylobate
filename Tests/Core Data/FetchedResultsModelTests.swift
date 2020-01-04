@@ -4,6 +4,8 @@
 import CoreData
 import XCTest
 
+// swiftlint:disable force_cast
+
 class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
 
     // MARK: - FetchedResultsProvider
@@ -76,7 +78,7 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
 
     func testCollectionModelNumberOfSectionsAndItems() throws {
         importTestData()
-        
+
         let (collectionView, model) = try collectionAndModel()
         XCTAssertTrue(collectionView.dataSource === model)
         XCTAssertEqual(collectionView.numberOfSections, 1)
@@ -106,3 +108,5 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
     }
 
 }
+
+// swiftlint:enable force_cast

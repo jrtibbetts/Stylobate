@@ -42,7 +42,7 @@ infix operator =~
 public func =~ (targetString: String, searchPattern: String) throws -> Bool {
     let regex = try NSRegularExpression(pattern: searchPattern, options: [])
     let nsString = NSString(string: targetString)
-    
+
     return 0 < regex.numberOfMatches(in: targetString,
                                      options: [],
                                      range: NSRange(location: 0,
