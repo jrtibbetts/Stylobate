@@ -15,7 +15,7 @@ open class VideoPreview: UIView {
     // MARK: - Other Properties
 
     /// Pass-through property for the `videoPreviewLayer.session`.
-    public var avCaptureSession: AVCaptureSession? {
+    open var avCaptureSession: AVCaptureSession? {
         get { return videoPreviewLayer.session }
 
         set { videoPreviewLayer.session = newValue }
