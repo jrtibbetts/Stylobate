@@ -3,13 +3,13 @@
 @testable import Stylobate
 import XCTest
 
-// swiftlint:disable force_cast
-
 class CollectionAndTableViewControllerTests: XCTestCase {
 
     lazy var viewController: CollectionAndTableViewController = {
         let storyboard = UIStoryboard(name: "CollectionAndTableTests", bundle: Bundle(for: type(of: self)))
+        // swiftlint:disable force_cast
         let viewController = storyboard.instantiateInitialViewController() as! CollectionAndTableViewController
+        // swiftlint:enable force_cast
         viewController.model = CollectionAndTableModel()
 
         return viewController
@@ -17,7 +17,9 @@ class CollectionAndTableViewControllerTests: XCTestCase {
 
     func testLoadFromStoryboardOk() {
         _ = viewController.view
+        // swiftlint:disable force_cast
         let display = viewController.display as! TestCollectionAndTableDisplay
+        // swiftlint:enable force_cast
         let initialRefreshCount = display.refreshCount
         display.refresh()
         XCTAssertEqual(display.refreshCount, initialRefreshCount + 1)
@@ -35,5 +37,3 @@ class TestCollectionAndTableDisplay: CollectionAndTableDisplay {
     }
 
 }
-
-// swiftlint:enable force_cast

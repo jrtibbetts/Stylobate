@@ -6,9 +6,27 @@ import UIKit
 //// need only override `collectionView(:cellForItemAt:)`,
 /// `tableView(:cellForRowAt:)`, `numberOfSections()`,
 /// `numberOfItems(inSection:)`, and, if needed, `headerTitle(forSection:)`.
-open class CollectionAndTableModel: NSObject, UICollectionViewDataSource, UITableViewDataSource {
+open class CollectionAndTableModel: NSObject {
 
-    // MARK: UICollectionViewDataSource
+    // MARK: Functions to be overridden by subclasses
+
+    open func headerTitle(forSection section: Int) -> String? {
+        return nil
+    }
+
+    open func numberOfItems(inSection section: Int) -> Int {
+        return 0
+    }
+
+    open func numberOfSections() -> Int {
+        return 0
+    }
+
+}
+
+// MARK: UICollectionViewDataSource
+
+extension CollectionAndTableModel: UICollectionViewDataSource {
 
     open func collectionView(_ collectionView: UICollectionView,
                              cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -24,7 +42,11 @@ open class CollectionAndTableModel: NSObject, UICollectionViewDataSource, UITabl
         return numberOfSections()
     }
 
-    // MARK: UITableViewDataSource
+}
+
+// MARK: UITableViewDataSource
+
+extension CollectionAndTableModel: UITableViewDataSource {
 
     open func numberOfSections(in tableView: UITableView) -> Int {
         return numberOfSections()
@@ -44,19 +66,4 @@ open class CollectionAndTableModel: NSObject, UICollectionViewDataSource, UITabl
                         titleForHeaderInSection section: Int) -> String? {
         return headerTitle(forSection: section)
     }
-
-    // MARK: Other functions to be overridden by subclasses
-
-    open func headerTitle(forSection section: Int) -> String? {
-        return nil
-    }
-
-    open func numberOfItems(inSection section: Int) -> Int {
-        return 0
-    }
-
-    open func numberOfSections() -> Int {
-        return 0
-    }
-
 }

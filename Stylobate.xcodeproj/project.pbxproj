@@ -160,6 +160,7 @@
 		96D958192314D7640029B80C /* LifecycleError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifecycleError.swift; sourceTree = "<group>"; };
 		96DCE6AF2172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreesMinutesSecondsFormatter.swift; sourceTree = "<group>"; };
 		96DCE6B12172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreesMinutesSecondsFormatterTests.swift; sourceTree = "<group>"; };
+		96E149942421D1740032A29C /* TextResizingPinchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextResizingPinchGestureRecognizer.swift; sourceTree = "<group>"; };
 		96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedLabel.swift; sourceTree = "<group>"; };
 		96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedLabelTests.swift; sourceTree = "<group>"; };
 		96E8CCDB20E1E787001C5381 /* FormattedLabelTests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FormattedLabelTests.storyboard; sourceTree = "<group>"; };
@@ -318,6 +319,7 @@
 				96EDF28D209FCC4E009496FA /* MissingCell.swift */,
 				96EE58FA210783610099A7B3 /* ProgressBusyView.swift */,
 				96EE58F82107830A0099A7B3 /* SpinnerBusyView.swift */,
+				96E149942421D1740032A29C /* TextResizingPinchGestureRecognizer.swift */,
 				96115B0122DAC9B6006B2894 /* ToggleButtonStackView.swift */,
 				96C656AA212521F60041CAD6 /* ToggleStackView.swift */,
 				968C4A7E221A8B2E006B51EE /* UIBezierPath+Pie.swift */,
@@ -376,10 +378,10 @@
 				96BB37F7224FEC8E00806E56 /* LICENSE */,
 				96BB37F8224FEC8E00806E56 /* README.md */,
 				96BB37F6224FEC8E00806E56 /* Stylobate.podspec */,
-				97D8763C0C1EABD9DF0AE447 /* Dependencies */,
-				96EDF25E209F90B2009496FA /* Products */,
 				96EDF25F209F90B2009496FA /* Source */,
 				96EDF26A209F90B2009496FA /* Tests */,
+				97D8763C0C1EABD9DF0AE447 /* Dependencies */,
+				96EDF25E209F90B2009496FA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
