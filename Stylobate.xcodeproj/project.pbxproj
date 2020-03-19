@@ -48,6 +48,7 @@
 		968C4A8C221A8BE5006B51EE /* CALayerGeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C4A8B221A8BE5006B51EE /* CALayerGeometryTests.swift */; };
 		9693696F2423194C004BC816 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E167CC242312700032A29C /* Strings.strings */; };
 		9693697124231C69004BC816 /* VideoPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9693697024231C69004BC816 /* VideoPreview.xib */; };
+		9693697324231FA6004BC816 /* TextResizingPinchGestureRecognizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693697224231FA6004BC816 /* TextResizingPinchGestureRecognizerTests.swift */; };
 		9693FE50228736D0009A3CB4 /* Codable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FE4F228736D0009A3CB4 /* Codable+Utils.swift */; };
 		9693FE5222874241009A3CB4 /* CodableUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FE5122874241009A3CB4 /* CodableUtilsTests.swift */; };
 		9693FE5422876253009A3CB4 /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FE5322876253009A3CB4 /* Foo.swift */; };
@@ -144,6 +145,7 @@
 		968C4A88221A8B91006B51EE /* UIBezierPathPieTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPathPieTests.swift; sourceTree = "<group>"; };
 		968C4A8B221A8BE5006B51EE /* CALayerGeometryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerGeometryTests.swift; sourceTree = "<group>"; };
 		9693697024231C69004BC816 /* VideoPreview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPreview.xib; sourceTree = "<group>"; };
+		9693697224231FA6004BC816 /* TextResizingPinchGestureRecognizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextResizingPinchGestureRecognizerTests.swift; sourceTree = "<group>"; };
 		9693FE4F228736D0009A3CB4 /* Codable+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Utils.swift"; sourceTree = "<group>"; };
 		9693FE5122874241009A3CB4 /* CodableUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableUtilsTests.swift; sourceTree = "<group>"; };
 		9693FE5322876253009A3CB4 /* Foo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foo.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 				96B0849922DCFCF600FD069C /* HidingLabelTests.swift */,
 				9680995220C4D3A8004C6A8A /* MissingCellTests.swift */,
 				9680995020C4D2D4004C6A8A /* MissingCellTests.xib */,
+				9693697224231FA6004BC816 /* TextResizingPinchGestureRecognizerTests.swift */,
 				96115B0322DAC9E3006B2894 /* ToggleButtonStackViewTests.swift */,
 				96C656AC212522130041CAD6 /* ToggleStackViewTests.swift */,
 				968C4A88221A8B91006B51EE /* UIBezierPathPieTests.swift */,
@@ -669,6 +672,7 @@
 				96A84A4F21643FAD0030F0AC /* JSONUtilsTests.swift in Sources */,
 				96C656AD212522130041CAD6 /* ToggleStackViewTests.swift in Sources */,
 				96B6FC3D22E2C1890065EC3E /* HidingImageViewTests.swift in Sources */,
+				9693697324231FA6004BC816 /* TextResizingPinchGestureRecognizerTests.swift in Sources */,
 				968C4A86221A8B7F006B51EE /* CLLocationCoordinate2DFormattingTests.swift in Sources */,
 				960B52F1217D7FD5004754A5 /* CustomOperatorsTests.swift in Sources */,
 				96DCE6B22172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift in Sources */,

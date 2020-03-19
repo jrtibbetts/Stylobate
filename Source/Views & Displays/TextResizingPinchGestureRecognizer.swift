@@ -35,7 +35,7 @@ open class TextResizingPinchGestureRecognizer: UIPinchGestureRecognizer {
     /// gesture strongly.
     ///
     /// - see: UIView.addGestureRecognizer(:)
-    public private(set) weak var textView: UITextView?
+    public private(set) weak var textView: UITextView!
 
     // MARK: - Private Properties
 
@@ -67,10 +67,6 @@ open class TextResizingPinchGestureRecognizer: UIPinchGestureRecognizer {
     }
 
     private func setUp() {
-        guard let textView = textView else {
-            return
-        }
-
         textView.addSubview(fontSizeBox)
         fontSizeBox.layer.cornerRadius = 4.0
         fontSizeBox.layer.masksToBounds = true
