@@ -3,5 +3,5 @@ strings:
   filter: .+\.strings$
   outputs:
     - templateName: structured-swift4
-      output: Resources/Strings.swift
+      output: Source/Strings.swift
 
