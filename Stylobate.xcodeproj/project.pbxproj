@@ -54,6 +54,7 @@
 		9693FE50228736D0009A3CB4 /* Codable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FE4F228736D0009A3CB4 /* Codable+Utils.swift */; };
 		9693FE5222874241009A3CB4 /* CodableUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FE5122874241009A3CB4 /* CodableUtilsTests.swift */; };
 		9693FE5422876253009A3CB4 /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FE5322876253009A3CB4 /* Foo.swift */; };
+		96A7A6DB243DA93100B3BA75 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A7A6DA243DA93100B3BA75 /* Strings.swift */; };
 		96A84A4C21643F740030F0AC /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A84A4B21643F740030F0AC /* JSONUtils.swift */; };
 		96A84A4F21643FAD0030F0AC /* JSONUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */; };
 		96A84A512164400B0030F0AC /* SampleFoo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A84A502164400B0030F0AC /* SampleFoo.json */; };
@@ -72,7 +73,6 @@
 		96D9581A2314D7650029B80C /* LifecycleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D958192314D7640029B80C /* LifecycleError.swift */; };
 		96DCE6B02172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DCE6AF2172E93900E6A95F /* DegreesMinutesSecondsFormatter.swift */; };
 		96DCE6B22172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DCE6B12172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift */; };
-		96E167F9242313690032A29C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E167F8242313690032A29C /* Strings.swift */; };
 		96E167FA242314CD0032A29C /* TextResizingPinchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E149942421D1740032A29C /* TextResizingPinchGestureRecognizer.swift */; };
 		96E8CCCB20E1D8DA001C5381 /* FormattedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */; };
 		96E8CCD820E1DCDF001C5381 /* FormattedLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */; };
@@ -153,6 +153,7 @@
 		9693FE4F228736D0009A3CB4 /* Codable+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Utils.swift"; sourceTree = "<group>"; };
 		9693FE5122874241009A3CB4 /* CodableUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableUtilsTests.swift; sourceTree = "<group>"; };
 		9693FE5322876253009A3CB4 /* Foo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foo.swift; sourceTree = "<group>"; };
+		96A7A6DA243DA93100B3BA75 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		96A84A4B21643F740030F0AC /* JSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
 		96A84A4E21643FAD0030F0AC /* JSONUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilsTests.swift; sourceTree = "<group>"; };
 		96A84A502164400B0030F0AC /* SampleFoo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleFoo.json; sourceTree = "<group>"; };
@@ -173,7 +174,6 @@
 		96DCE6B12172E96200E6A95F /* DegreesMinutesSecondsFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreesMinutesSecondsFormatterTests.swift; sourceTree = "<group>"; };
 		96E149942421D1740032A29C /* TextResizingPinchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextResizingPinchGestureRecognizer.swift; sourceTree = "<group>"; };
 		96E167CC242312700032A29C /* Strings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Strings.strings; sourceTree = "<group>"; };
-		96E167F8242313690032A29C /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Strings.swift; path = ../Resources/Strings.swift; sourceTree = "<group>"; };
 		96E8CCCA20E1D8DA001C5381 /* FormattedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedLabel.swift; sourceTree = "<group>"; };
 		96E8CCD720E1DCDF001C5381 /* FormattedLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedLabelTests.swift; sourceTree = "<group>"; };
 		96E8CCDB20E1E787001C5381 /* FormattedLabelTests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FormattedLabelTests.storyboard; sourceTree = "<group>"; };
@@ -422,13 +422,13 @@
 		96EDF25F209F90B2009496FA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				96EDF260209F90B2009496FA /* Stylobate.h */,
+				96EDF261209F90B2009496FA /* Info.plist */,
+				96A7A6DA243DA93100B3BA75 /* Strings.swift */,
 				96E8CCD220E1DC53001C5381 /* Controllers */,
 				968101EB22729C2D003E6D82 /* Core Data */,
-				96EDF261209F90B2009496FA /* Info.plist */,
 				96A84A4A21643F4F0030F0AC /* JSON */,
 				96E8CCD120E1DC36001C5381 /* Models */,
-				96E167F8242313690032A29C /* Strings.swift */,
-				96EDF260209F90B2009496FA /* Stylobate.h */,
 				960B52EC217D7FC2004754A5 /* Util */,
 				96E8CCD320E1DC5E001C5381 /* Views & Displays */,
 			);
@@ -656,8 +656,8 @@
 				96B6FC3B22E2C0560065EC3E /* HidingImageView.swift in Sources */,
 				96EE58FF2107A2650099A7B3 /* UIView+Summoner.swift in Sources */,
 				968101F32272A06A003E6D82 /* FetchedResultsTableModel.swift in Sources */,
-				96E167F9242313690032A29C /* Strings.swift in Sources */,
 				968101F72272A0EB003E6D82 /* ManagedObjectContextContainer.swift in Sources */,
+				96A7A6DB243DA93100B3BA75 /* Strings.swift in Sources */,
 				96EE58FB210783610099A7B3 /* ProgressBusyView.swift in Sources */,
 				9625FDA9238A333500EA194C /* Settings.swift in Sources */,
 				960EE14422740B7500870B7A /* KeyPath+SortDescriptor.swift in Sources */,
