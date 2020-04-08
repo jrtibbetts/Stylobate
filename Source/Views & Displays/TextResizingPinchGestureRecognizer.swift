@@ -100,6 +100,7 @@ open class TextResizingPinchGestureRecognizer: UIPinchGestureRecognizer {
         print("selectFont() tapped")
     }
 
+
     @objc func resizeFont() {
         guard let textView = textView, let font = textView.font else {
             return
@@ -107,50 +108,62 @@ open class TextResizingPinchGestureRecognizer: UIPinchGestureRecognizer {
 
         switch state {
         case .began:
-            inProgress = true  // prevent another pinch before this one's done.
-            initialFontSize = font.pointSize
-            fontSizeBox.isHidden = false
-            textView.bringSubviewToFront(fontSizeBox)
-
-            UIView.animate(withDuration: 0.5) { [weak self] in
-                self?.fontSizeBox.alpha = 1.0
-            }
+            beginResizingFont(font)
         case .changed:
-            guard scale != 1.0 else {
-                sizeRevertedToOriginalValue?(initialFontSize)
-                return
-            }
-
-            let newSize = (initialFontSize * scale).rounded(.toNearestOrAwayFromZero)
-
-            // Keep it within certain bounds
-            if 7.0 <= newSize && newSize <= 100.0 {
-                let newFont = font.withSize(newSize)
-                textView.font = newFont
-                fontSizeButton.setTitle(L10n.fontSizeButtonTitle("\(Int(newFont.pointSize))"),
-                                        for: .normal)
-                sizeChanged?(newSize)
-            }
+            changeFontSize(font)
         case .ended:
-            pinchEnded(self)
-
-            UIView.animate(withDuration: 1.0,
-                           delay: 2.0,
-                           animations: { [weak self] in
-                            self?.fontSizeBox.alpha = 0.0
-            },
-                           completion: { [weak self] _ in
-                guard let self = self else { return }
-
-                self.fontSizeBox.isHidden = true
-                textView.sendSubviewToBack(self.fontSizeBox)
-                // re-enable pinches
-                self.inProgress = false
-            })
+            stopResizingFont(font)
         default:
             // Ignore it.
             return
         }
+    }
+
+    private func beginResizingFont(_ font: UIFont) {
+        inProgress = true  // prevent another pinch before this one's done.
+        initialFontSize = font.pointSize
+        fontSizeBox.isHidden = false
+        textView.bringSubviewToFront(fontSizeBox)
+
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.fontSizeBox.alpha = 1.0
+        }
+    }
+
+    private func changeFontSize(_ font: UIFont) {
+        guard scale != 1.0 else {
+            sizeRevertedToOriginalValue?(initialFontSize)
+            return
+        }
+
+        let newSize = (initialFontSize * scale).rounded(.toNearestOrAwayFromZero)
+
+        // Keep it within certain bounds
+        if 7.0 <= newSize && newSize <= 100.0 {
+            let newFont = font.withSize(newSize)
+            textView.font = newFont
+            fontSizeButton.setTitle(L10n.fontSizeButtonTitle("\(Int(newFont.pointSize))"),
+                                    for: .normal)
+            sizeChanged?(newSize)
+        }
+    }
+
+    private func stopResizingFont(_ font: UIFont) {
+        pinchEnded(self)
+
+        UIView.animate(withDuration: 1.0,
+                       delay: 2.0,
+                       animations: { [weak self] in
+                        self?.fontSizeBox.alpha = 0.0
+            },
+                       completion: { [weak self] _ in
+                        guard let self = self else { return }
+
+                        self.fontSizeBox.isHidden = true
+                        self.textView.sendSubviewToBack(self.fontSizeBox)
+                        // re-enable pinches
+                        self.inProgress = false
+        })
     }
 
 }
