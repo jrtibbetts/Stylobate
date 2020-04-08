@@ -79,11 +79,7 @@ open class TextResizingPinchGestureRecognizer: UIPinchGestureRecognizer {
         fontSizeButton.addTarget(self,
                                  action: #selector(selectFont(button:)),
                                  for: .touchUpInside)
-        if #available(iOS 11.0, *) {
-            fontSizeButton.contentHorizontalAlignment = .trailing
-        } else {
-            // Fallback on earlier versions
-        }
+        fontSizeButton.contentHorizontalAlignment = .trailing
         fontSizeButton.tintColor = .white
         fontSizeButton.translatesAutoresizingMaskIntoConstraints = false
 
