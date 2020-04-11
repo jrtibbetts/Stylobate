@@ -100,7 +100,6 @@ open class TextResizingPinchGestureRecognizer: UIPinchGestureRecognizer {
         print("selectFont() tapped")
     }
 
-
     @objc func resizeFont() {
         guard let textView = textView, let font = textView.font else {
             return
