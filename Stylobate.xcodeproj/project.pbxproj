@@ -18,6 +18,7 @@
 		96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */; };
 		96115B0222DAC9B6006B2894 /* ToggleButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96115B0122DAC9B6006B2894 /* ToggleButtonStackView.swift */; };
 		96115B0422DAC9E3006B2894 /* ToggleButtonStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96115B0322DAC9E3006B2894 /* ToggleButtonStackViewTests.swift */; };
+		9622C614244DDBD600646C11 /* MultilineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9622C613244DDBD600646C11 /* MultilineTextView.swift */; };
 		9625FDA9238A333500EA194C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625FDA8238A333500EA194C /* Settings.swift */; };
 		9625FDAB238A36C800EA194C /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625FDAA238A36C800EA194C /* SettingsTests.swift */; };
 		96727FDE2234C920009DACDB /* CollectionAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96727FDD2234C920009DACDB /* CollectionAndTableViewController.swift */; };
@@ -118,6 +119,7 @@
 		96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyViewTests.swift; sourceTree = "<group>"; };
 		96115B0122DAC9B6006B2894 /* ToggleButtonStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButtonStackView.swift; sourceTree = "<group>"; };
 		96115B0322DAC9E3006B2894 /* ToggleButtonStackViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonStackViewTests.swift; sourceTree = "<group>"; };
+		9622C613244DDBD600646C11 /* MultilineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextView.swift; sourceTree = "<group>"; };
 		9625FDA8238A333500EA194C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		9625FDAA238A36C800EA194C /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		96727FDD2234C920009DACDB /* CollectionAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndTableViewController.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				96EE58FE2107A2650099A7B3 /* UIView+Summoner.swift */,
 				96D9581223148D6F0029B80C /* VideoPreview.swift */,
 				96EE58FC21079F200099A7B3 /* VisualIndicatorBusyView.swift */,
+				9622C613244DDBD600646C11 /* MultilineTextView.swift */,
 			);
 			path = "Views & Displays";
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				96B0849822DCFCE600FD069C /* HidingLabel.swift in Sources */,
 				960B52EE217D7FC2004754A5 /* CustomOperators.swift in Sources */,
 				968C4A84221A8B64006B51EE /* CLLocationCoordinate2D+Formatting.swift in Sources */,
+				9622C614244DDBD600646C11 /* MultilineTextView.swift in Sources */,
 				960701FF227F22F200685AD9 /* Int+Rubyish.swift in Sources */,
 				9693FE50228736D0009A3CB4 /* Codable+Utils.swift in Sources */,
 				96EE58FD21079F200099A7B3 /* VisualIndicatorBusyView.swift in Sources */,
