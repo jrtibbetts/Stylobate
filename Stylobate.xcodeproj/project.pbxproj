@@ -18,9 +18,9 @@
 		96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */; };
 		96115B0222DAC9B6006B2894 /* ToggleButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96115B0122DAC9B6006B2894 /* ToggleButtonStackView.swift */; };
 		96115B0422DAC9E3006B2894 /* ToggleButtonStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96115B0322DAC9E3006B2894 /* ToggleButtonStackViewTests.swift */; };
+		9612AD78244EB0D500352A45 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612AD77244EB0D500352A45 /* UserDefault.swift */; };
 		9622C614244DDBD600646C11 /* MultilineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9622C613244DDBD600646C11 /* MultilineTextView.swift */; };
 		9625FDA9238A333500EA194C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625FDA8238A333500EA194C /* Settings.swift */; };
-		9625FDAB238A36C800EA194C /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625FDAA238A36C800EA194C /* SettingsTests.swift */; };
 		96727FDE2234C920009DACDB /* CollectionAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96727FDD2234C920009DACDB /* CollectionAndTableViewController.swift */; };
 		96727FE02234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96727FDF2234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift */; };
 		9680994B20C370B2004C6A8A /* UIViewControllerAlertsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680994A20C370B2004C6A8A /* UIViewControllerAlertsTests.swift */; };
@@ -119,9 +119,9 @@
 		96106C9E20C0FD7800DA5308 /* BusyViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyViewTests.swift; sourceTree = "<group>"; };
 		96115B0122DAC9B6006B2894 /* ToggleButtonStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButtonStackView.swift; sourceTree = "<group>"; };
 		96115B0322DAC9E3006B2894 /* ToggleButtonStackViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonStackViewTests.swift; sourceTree = "<group>"; };
+		9612AD77244EB0D500352A45 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		9622C613244DDBD600646C11 /* MultilineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextView.swift; sourceTree = "<group>"; };
 		9625FDA8238A333500EA194C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		9625FDAA238A36C800EA194C /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		96727FDD2234C920009DACDB /* CollectionAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndTableViewController.swift; sourceTree = "<group>"; };
 		96727FDF2234CE7C009DACDB /* CollectionAndTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndTableViewControllerTests.swift; sourceTree = "<group>"; };
 		9680994A20C370B2004C6A8A /* UIViewControllerAlertsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerAlertsTests.swift; sourceTree = "<group>"; };
@@ -229,6 +229,7 @@
 				960701FE227F22F200685AD9 /* Int+Rubyish.swift */,
 				96D958192314D7640029B80C /* LifecycleError.swift */,
 				9625FDA8238A333500EA194C /* Settings.swift */,
+				9612AD77244EB0D500352A45 /* UserDefault.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -239,7 +240,6 @@
 				968C4A85221A8B7F006B51EE /* CLLocationCoordinate2DFormattingTests.swift */,
 				960B52F0217D7FD5004754A5 /* CustomOperatorsTests.swift */,
 				96070200227F233600685AD9 /* IntRubyishTests.swift */,
-				9625FDAA238A36C800EA194C /* SettingsTests.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -662,6 +662,7 @@
 				968101F32272A06A003E6D82 /* FetchedResultsTableModel.swift in Sources */,
 				968101F72272A0EB003E6D82 /* ManagedObjectContextContainer.swift in Sources */,
 				96A7A6DB243DA93100B3BA75 /* Strings.swift in Sources */,
+				9612AD78244EB0D500352A45 /* UserDefault.swift in Sources */,
 				96EE58FB210783610099A7B3 /* ProgressBusyView.swift in Sources */,
 				9625FDA9238A333500EA194C /* Settings.swift in Sources */,
 				960EE14422740B7500870B7A /* KeyPath+SortDescriptor.swift in Sources */,
@@ -696,7 +697,6 @@
 				96106C9F20C0FD7800DA5308 /* BusyViewTests.swift in Sources */,
 				96C656AF212522FB0041CAD6 /* VisualIndicatorBusyViewTests.swift in Sources */,
 				9681021422738822003E6D82 /* NSManagedObjectFetchRequestTests.swift in Sources */,
-				9625FDAB238A36C800EA194C /* SettingsTests.swift in Sources */,
 				96070201227F233600685AD9 /* IntRubyishTests.swift in Sources */,
 				9693697724232757004BC816 /* UIView+AutolayoutTests.swift in Sources */,
 				9680994B20C370B2004C6A8A /* UIViewControllerAlertsTests.swift in Sources */,
@@ -775,7 +775,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -833,7 +833,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -859,7 +859,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -890,7 +890,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

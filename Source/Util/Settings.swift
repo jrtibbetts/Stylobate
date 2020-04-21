@@ -2,39 +2,6 @@
 
 import Foundation
 
-/// A property wrapper for values stored in `UserDefaults`. To use one,
-/// declare the type:
-///
-/// `@UserDefault(key: "captionSize", defaultValue: 24.0)`
-///
-/// and then declare a property or variable of it:
-///
-/// `var captionSize: CGFloat`
-///
-/// This is mind-blowing.
-///
-/// @see https://www.avanderlee.com/swift/property-wrappers/
-@propertyWrapper
-public struct UserDefault<T> {
-
-    let key: String
-
-    let defaultValue: T
-
-    public var wrappedValue: T {
-
-        get {
-            return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
-        }
-
-        set {
-            UserDefaults.standard.set(newValue, forKey: key)
-        }
-
-    }
-
-}
-
 /// A useful wrapper for the `UserDefaults`. The `defaults` point to the
 /// `UserDefaults.standard` ones, but it can be changed for things like unit
 /// testing. To use it in an app, create an extension with the desired
@@ -51,6 +18,7 @@ public struct UserDefault<T> {
 ///            Settings.set(newValue, forKey: "someSize")
 ///        }
 ///    }
+@available(*, deprecated, message: "Use @UserDefault property wrappers instead")
 public struct Settings {
 
     public static var defaults: UserDefaults = UserDefaults.standard
