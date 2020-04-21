@@ -211,14 +211,14 @@ class BusyViewTests: XCTestCase {
 
     class UnaddedCustomSpinnerBusyView: UIView, SpinnerBusyView {
 
-        var spinner: UIActivityIndicatorView? = UIActivityIndicatorView(style: .white)
+        var spinner: UIActivityIndicatorView? = UIActivityIndicatorView(style: .medium)
 
     }
 
     class AddedCustomSpinnerBusyView: UIView, SpinnerBusyView {
 
         lazy var spinner: UIActivityIndicatorView? = {
-            let spinnerView = UIActivityIndicatorView(style: .gray)
+            let spinnerView = UIActivityIndicatorView(style: .medium)
             addSubview(spinnerView)
 
             return spinnerView
