@@ -5,7 +5,7 @@ let pkg = Package(
     name: "Stylobate",
 
     platforms: [
-        .iOS(.v10)
+        .iOS(.v12)
     ],
 
     products: [
