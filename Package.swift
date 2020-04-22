@@ -1,11 +1,11 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.1
 import PackageDescription
 
 let pkg = Package(
     name: "Stylobate",
 
     platforms: [
-        .iOS(.v13)
+        .iOS(.v12)
     ],
 
     products: [
