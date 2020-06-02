@@ -340,6 +340,7 @@
 				96B6FC3A22E2C0560065EC3E /* HidingImageView.swift */,
 				96B0849722DCFCE600FD069C /* HidingLabel.swift */,
 				96EDF28D209FCC4E009496FA /* MissingCell.swift */,
+				9622C613244DDBD600646C11 /* MultilineTextView.swift */,
 				96EE58FA210783610099A7B3 /* ProgressBusyView.swift */,
 				96EE58F82107830A0099A7B3 /* SpinnerBusyView.swift */,
 				96E149942421D1740032A29C /* TextResizingPinchGestureRecognizer.swift */,
@@ -350,7 +351,6 @@
 				96EE58FE2107A2650099A7B3 /* UIView+Summoner.swift */,
 				96D9581223148D6F0029B80C /* VideoPreview.swift */,
 				96EE58FC21079F200099A7B3 /* VisualIndicatorBusyView.swift */,
-				9622C613244DDBD600646C11 /* MultilineTextView.swift */,
 			);
 			path = "Views & Displays";
 			sourceTree = "<group>";

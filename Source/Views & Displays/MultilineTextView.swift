@@ -91,7 +91,7 @@ private struct UITextViewWrapper: UIViewRepresentable {
 }
 
 @available(iOS 13, *)
-struct MultilineTextField: View {
+public struct MultilineTextField: View {
 
     private var placeholder: String
 
@@ -141,7 +141,7 @@ struct MultilineTextField: View {
 
 #if DEBUG
 @available(iOS 13, *)
-struct MultilineTextFieldPreviews: PreviewProvider {
+public struct MultilineTextFieldPreviews: PreviewProvider {
     static var test: String = "" //some very very very long description string to be initially wider than screen"
     static var testBinding = Binding<String>(
         get: {
