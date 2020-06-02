@@ -3,7 +3,7 @@
 @testable import Stylobate
 import XCTest
 
-class Numeric_TimeIntervalTests: XCTestCase {
+class TimeIntervalExtensionsTests: XCTestCase {
 
     func test14DaysIs2Weeks() {
         XCTAssertEqual(14.days, 2.weeks)
