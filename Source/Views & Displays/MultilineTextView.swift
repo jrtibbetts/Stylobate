@@ -122,7 +122,7 @@ public struct MultilineTextField: View {
         self._showingPlaceholder = State<Bool>(initialValue: self.text.isEmpty)
     }
 
-    var body: some View {
+    public var body: some View {
         UITextViewWrapper(text: self.internalText, calculatedHeight: $dynamicHeight, onDone: onCommit)
             .frame(minHeight: dynamicHeight, maxHeight: dynamicHeight)
             .background(placeholderView, alignment: .topLeading)
@@ -152,7 +152,7 @@ public struct MultilineTextFieldPreviews: PreviewProvider {
         test = $0
     })
 
-    static var previews: some View {
+    public static var previews: some View {
         VStack(alignment: .leading) {
             Text("Description:")
             MultilineTextField("Enter some text here", text: testBinding, onCommit: {
