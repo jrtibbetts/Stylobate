@@ -2,10 +2,11 @@
 
 import Foundation
 
-/// A property wrapper for values stored in `UserDefaults`. To use one,
-/// declare the property with the wrapper like so:
+/// A property wrapper for values stored in `UserDefaults`. Use one by passing
+/// in the key to store it with, along with a default value to be returned if
+/// the value isn't already in `UserDefaults.standard`.
 ///
-/// ```swift
+/// ```
 /// @UserDefault(key: "captionSize", defaultValue: 24.0)
 /// var captionSize: CGFloat
 /// ```
@@ -20,6 +21,11 @@ public struct UserDefault<T> {
 
     let defaultValue: T
 
+    public init(key: String, defaultValue: T) {
+        self.key = key
+        self.defaultValue = defaultValue
+    }
+
     public var wrappedValue: T {
 
         get {
@@ -33,3 +39,4 @@ public struct UserDefault<T> {
     }
 
 }
+
