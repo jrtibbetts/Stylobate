@@ -3,12 +3,13 @@
 import Foundation
 
 public extension Numeric {
-    
+
+    // swiftlint:disable colon
     public var seconds: TimeInterval { return TimeInterval(self) }
     public var minutes: TimeInterval { return  60.0 * seconds }
     public var hours:   TimeInterval { return  60.0 * minutes }
-    public var days:    TimeInterval { return  24.0 * hours }
-    public var weeks:   TimeInterval { return   7.0 * days }
-    public var years:   TimeInterval { return 365.0 * days}
-    
+    public var days:    TimeInterval { return  24.0 * hours   }
+    public var weeks:   TimeInterval { return   7.0 * days    }
+    public var years:   TimeInterval { return 365.0 * days    }
+
 }
