@@ -26,7 +26,10 @@ let pkg = Package(
         ),
         .testTarget(
             name: "StylobateTests",
+            dependencies: ["Stylobate"],
             path: "Tests",
-            exclude: ["Info.plist", "JSON/SampleFoo.json"])
+            exclude: ["Info.plist"],
+            resources: [.copy("JSON/SampleFoo.json")]
+        )
     ]
 )

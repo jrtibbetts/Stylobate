@@ -17,7 +17,7 @@ class MissingCellTests: XCTestCase {
     }
 
     func assertMissingCell(atIndex index: Int,
-                           file: StaticString = #file,
+                           file: StaticString = #filePath,
                            line: UInt = #line) throws {
         guard let cell = nib.instantiate(withOwner: nil, options: nil)[index] as? MissingCell else {
             XCTFail("Expected view \(index) in the nib to be a MissingCell", file: file, line: line)
