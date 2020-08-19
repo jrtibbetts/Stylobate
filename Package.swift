@@ -21,7 +21,12 @@ let pkg = Package(
         .target(
             name: "Stylobate",
             path: "Source",
+            exclude: ["Info.plist"],
             resources: [.copy("Resources")]
-        )
+        ),
+        .testTarget(
+            name: "StylobateTests",
+            path: "Tests",
+            exclude: ["Info.plist", "JSON/SampleFoo.json"])
     ]
 )
