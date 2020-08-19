@@ -1,11 +1,11 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 import PackageDescription
 
 let pkg = Package(
     name: "Stylobate",
 
     platforms: [
-        .iOS(.v12)
+        .iOS(.v13)
     ],
 
     products: [
@@ -20,7 +20,8 @@ let pkg = Package(
     targets: [
         .target(
             name: "Stylobate",
-            path: "Source"
+            path: "Source",
+            resources: [.copy("Resources")]
         )
     ]
 )
