@@ -29,7 +29,7 @@ let pkg = Package(
             dependencies: ["Stylobate"],
             path: "Tests",
             exclude: ["Info.plist"],
-            resources: [.copy("JSON/SampleFoo.json")]
+            resources: [.copy("JSON/SampleFoo.json"), .process("*/*.xib"), .process("*/*.storyboard")]
         )
     ]
 )
