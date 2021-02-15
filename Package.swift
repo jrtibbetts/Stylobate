@@ -5,7 +5,8 @@ let pkg = Package(
     name: "Stylobate",
 
     platforms: [
-        .iOS(.v13)
+        .iOS(.v14),
+        .tvOS(.v14)
     ],
 
     products: [
@@ -22,14 +23,19 @@ let pkg = Package(
             name: "Stylobate",
             path: "Source",
             exclude: ["Info.plist"],
-            resources: [.copy("Resources")]
+            resources: [.copy("Resources"), .process("Strings.strings")]
         ),
         .testTarget(
             name: "StylobateTests",
             dependencies: ["Stylobate"],
             path: "Tests",
             exclude: ["Info.plist"],
-            resources: [.copy("JSON/SampleFoo.json"), .process("*/*.xib"), .process("*/*.storyboard")]
+            resources: [
+                .copy("JSON/SampleFoo.json"),
+                .process("*/*.xcdatamodeld"),
+                .process("*/*.xib"),
+                .process("*/*.storyboard")
+            ]
         )
     ]
 )
