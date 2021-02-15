@@ -23,7 +23,9 @@ let pkg = Package(
             name: "Stylobate",
             path: "Source",
             exclude: ["Info.plist"],
-            resources: [.copy("Resources"), .process("Strings.strings")]
+            resources: [
+                .process("*/*.strings")
+            ]
         ),
         .testTarget(
             name: "StylobateTests",
@@ -38,4 +40,5 @@ let pkg = Package(
             ]
         )
     ]
+
 )

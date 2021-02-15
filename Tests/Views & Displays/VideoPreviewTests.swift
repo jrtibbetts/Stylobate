@@ -21,7 +21,7 @@ class VideoPreviewTests: XCTestCase {
     }
 
     func testLoadFromNib() {
-        let bundle = Bundle(for: type(of: self))
+        let bundle = StylobateTests.resourceBundle
         let nib = UINib(nibName: "VideoPreview", bundle: bundle)
         let views = nib.instantiate(withOwner: nil, options: nil)
         if let view = views.first as? VideoPreview {

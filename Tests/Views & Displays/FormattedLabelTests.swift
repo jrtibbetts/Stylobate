@@ -56,7 +56,7 @@ class FormattedLabelTests: XCTestCase {
 
     func testSetTextWithFormatInStoryboardOk() {
         let storyboard = UIStoryboard(name: "FormattedLabelTests",
-                                      bundle: Bundle(for: FormattedLabelTests.self))
+                                      bundle: StylobateTests.resourceBundle)
         let viewController = storyboard.instantiateInitialViewController()!
         let view = viewController.view as! FormattedLabelTestsView
         let label = view.labelWithFormat!

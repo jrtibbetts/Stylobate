@@ -6,7 +6,7 @@ import XCTest
 class CollectionAndTableViewControllerTests: XCTestCase {
 
     lazy var viewController: CollectionAndTableViewController = {
-        let storyboard = UIStoryboard(name: "CollectionAndTableTests", bundle: Bundle(for: type(of: self)))
+        let storyboard = UIStoryboard(name: "CollectionAndTableTests", bundle: StylobateTests.resourceBundle)
         // swiftlint:disable force_cast
         let viewController = storyboard.instantiateInitialViewController() as! CollectionAndTableViewController
         // swiftlint:enable force_cast

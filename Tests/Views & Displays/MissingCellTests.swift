@@ -6,7 +6,7 @@ import XCTest
 class MissingCellTests: XCTestCase {
 
     let nib = UINib(nibName: "MissingCellTests",
-                    bundle: Bundle(for: MissingCellTests.self))
+                    bundle: StylobateTests.resourceBundle)
 
     func testMissingTableViewCellAwakeFromNibOk() throws {
         try assertMissingCell(atIndex: 0)

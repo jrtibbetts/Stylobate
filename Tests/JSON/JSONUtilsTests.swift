@@ -25,7 +25,7 @@ class JSONUtilsTests: XCTestCase {
     func testJsonDataForLocalFile() throws {
         let foo: Foo = try JSONUtils.jsonObject(forFileNamed: "SampleFoo",
                                                 ofType: "json",
-                                                inBundle: Bundle(for: type(of: self)))
+                                                inBundle: StylobateTests.resourceBundle)
         XCTAssertEqual(foo.requiredInt, 99)
         XCTAssertEqual(foo.requiredString, "a required string")
     }

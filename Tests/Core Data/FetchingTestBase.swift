@@ -16,7 +16,7 @@ class FetchingTestBase: XCTestCase, ManagedObjectContextContainer {
     /// `FetchingTestBase` subclass instantiates its own model from the same
     /// model scheme, there will be numerous warnings to the effect that
     /// "Multiple NSEntityDescriptions Claim NSManagedObject Subclass".
-    static let model = NSManagedObjectModel.mergedModel(from: [Bundle(for: FetchingTestBase.self)])!
+    static let model = NSManagedObjectModel.mergedModel(from: [StylobateTests.resourceBundle])!
 
     lazy var testingContainer: NSPersistentContainer! = {
         let container = NSPersistentContainer(name: "StylobateTestModel", managedObjectModel: FetchingTestBase.model)

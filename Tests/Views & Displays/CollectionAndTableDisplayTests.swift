@@ -8,7 +8,7 @@ import XCTest
 class CollectionAndTableDisplayTests: XCTestCase {
 
     let nib = UINib(nibName: "CollectionAndTableDisplayTests",
-                    bundle: Bundle(for: CollectionAndTableDisplayTests.self))
+                    bundle: StylobateTests.resourceBundle)
 
     var collectionAndTableView: CollectionAndTableDisplay {
         // Get a new instance every time. Tests should grab it once only.
