@@ -9,8 +9,8 @@ class TimeIntervalExtensionsTests: XCTestCase {
         XCTAssertEqual(14.days, 2.weeks)
     }
     
-    func test2YearsIs104Weeks() {
-        XCTAssertEqual(2.years, 104.weeks)
+    func test2YearsIs104WeeksAndTwoDays() {
+        XCTAssertEqual(2.years, 104.weeks + 2.days)
     }
     
 }
