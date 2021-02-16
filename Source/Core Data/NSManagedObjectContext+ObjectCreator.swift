@@ -40,10 +40,4 @@ public extension NSManagedObjectContext {
         return object
     }
 
-    @available(*, deprecated, renamed: "fetchOrCreate")
-    func fetchOrCreateManagedObject<T: NSManagedObject>(with request: NSFetchRequest<T>,
-                                                        initialize: (NSManagedObjectContext) -> T) throws -> T {
-        return try fetchOrCreate(with: request, initialize: initialize)
-    }
-
 }

@@ -9,19 +9,21 @@ public extension NSManagedObject {
                                        sortedBy sortCriteria: [NSSortDescriptor] = []) throws -> [T] {
         return try context.fetch(fetchRequestForAll(sortedBy: sortCriteria))
     }
-
-    class func deleteAll(fromCoordinator coordinator: NSPersistentStoreCoordinator,
-                         context: NSManagedObjectContext) throws {
-        let allRequest = fetchRequestForAll(sortedBy: [])
-        // swiftlint:disable force_cast
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: allRequest as! NSFetchRequest<NSFetchRequestResult>)
-        // swiftlint:enable force_cast
-
-        try coordinator.execute(deleteRequest, with: context)
-    }
+//
+//    class func deleteAll(fromCoordinator coordinator: NSPersistentStoreCoordinator,
+//                         context: NSManagedObjectContext) throws {
+//        let allRequest = Self.fetchRequestForAll()
+//        // swiftlint:disable force_cast
+//        let deleteRequest = NSBatchDeleteRequest(fetchRequest: allRequest as! NSFetchRequest<NSFetchRequestResult>)
+//        // swiftlint:enable force_cast
+//
+//        let error = try coordinator.execute(deleteRequest, with: context) as? Error
+//
+//        print("Failed to delete: \(error?.localizedDescription)")
+//    }
 
     class func fetchRequest<T: NSManagedObject>(sortDescriptors sortCriteria: [NSSortDescriptor],
-                                                predicate: NSPredicate? = nil) -> NSFetchRequest<T> {
+                                                predicate: NSPredicate? = NSPredicate(value: true)) -> NSFetchRequest<T> {
         let entityName = String(describing: self)
         let request: NSFetchRequest<T> = NSFetchRequest(entityName: entityName)
         request.sortDescriptors = sortCriteria

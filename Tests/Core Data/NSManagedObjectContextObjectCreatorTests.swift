@@ -4,7 +4,32 @@
 import CoreData
 import XCTest
 
+// swiftlint:disable force_cast
 class NSManagedObjectContextFetchOrCreate: FetchingTestBase {
+
+    // MARK: - deleteAll()
+
+//    func testDeleteAll() {
+//        let createPersonRequest = Person.fetchRequest(sortDescriptors: [sortByName],
+//                                                      predicate: NSPredicate(format: "name == \"Frank Abberline\""))
+//
+//        do {
+//        _ = try testingContext.fetchOrCreate(with: createPersonRequest,
+//                                             initialize: initializePerson)
+//
+//        let fetchAllRequest = Person.fetchRequest(sortDescriptors: [], predicate: nil)
+//        var people: [Person] = try testingContext.fetch(fetchAllRequest) as! [Person]
+//        XCTAssertEqual(people.count, 1)
+//        try testingContext.save()
+//
+//        try Person.deleteAll(fromCoordinator: testingCoordinator, context: testingContext)
+//        try testingContext.save()
+//        people = try testingContext.fetch(fetchAllRequest) as! [Person]
+//        XCTAssertEqual(people.count, 0)
+//        } catch {
+//            XCTFail("Failed to delete the person: \(error.localizedDescription)")
+//        }
+//    }
 
     // MARK: - fetchOrCreate(with:initialize:)
 
