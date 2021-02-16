@@ -36,10 +36,10 @@ class CodableUtilsTests: XCTestCase {
         }
     }
 
-    func NOtestDecodeFromFile() {
+    func testDecodeFromFile() {
         // When running unit tests, Bundle.main is the Simulator's bundle, not
         // the testing bundle.
-        let bundle = Bundle(for: type(of: self))
+        let bundle = StylobateTests.resourceBundle
         let foo: Foo = try! Foo.decode(fromJSONFileNamed: "SampleFoo", inBundle: bundle)!
         XCTAssertEqual(foo.requiredInt, 99)
         XCTAssertEqual(foo.requiredString, "a required string")
@@ -73,6 +73,19 @@ class CodableUtilsTests: XCTestCase {
             }
         }
     }
+
+    func testJsonString() throws {
+        let bundle = StylobateTests.resourceBundle
+        let firstFoo: Foo = try Foo.decode(fromJSONFileNamed: "SampleFoo", inBundle: bundle)!
+
+        // Create a JSON string
+        let encoder = JSONEncoder()
+        let jsonString = try firstFoo.jsonString(usingEncoder: encoder)!
+
+        let secondFoo: Foo = try Foo.decode(fromJSONString: jsonString)!
+        XCTAssertEqual(firstFoo.requiredString, secondFoo.requiredString)
+    }
+
 }
 
 // swiftlint:enable force_try
