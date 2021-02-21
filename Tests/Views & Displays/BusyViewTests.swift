@@ -20,12 +20,7 @@ class BusyViewTests: XCTestCase {
         view.startActivity {
             XCTAssertNotNil(view.spinner)
             XCTAssertEqual(view.spinner!.superview, view)
-
-            if #available(iOS 13, *) {
-                XCTAssertEqual(view.spinner!.style, UIActivityIndicatorView.Style.large)
-            } else {
-                XCTAssertEqual(view.spinner!.style, UIActivityIndicatorView.Style.whiteLarge)
-            }
+            XCTAssertEqual(view.spinner!.style, UIActivityIndicatorView.Style.large)
 
             self.assertPointsEqual(view.spinner!.center, view.center, accuracy: 0.3)
             self.assert(spinner: view.spinner!, isSpinning: true)
@@ -44,7 +39,6 @@ class BusyViewTests: XCTestCase {
         waitForExpectations(timeout: 2.0)
     }
 
-    @available(iOS 13.0, *)
     func testSpinnerBusyViewWithUnaddedSpinnerAddsSpinner() {
         let view = UnaddedCustomSpinnerBusyView(frame: busyViewFrame)
         XCTAssertNotNil(view.spinner)
@@ -71,7 +65,6 @@ class BusyViewTests: XCTestCase {
         waitForExpectations(timeout: 2.0)
     }
 
-    @available(iOS 13.0, *)
     func testSpinnerBusyViewWithSpinnerAlreadyAddedOk() {
         let view = AddedCustomSpinnerBusyView(frame: busyViewFrame)
         XCTAssertNotNil(view.spinner)
@@ -211,14 +204,12 @@ class BusyViewTests: XCTestCase {
 
     }
 
-    @available(iOS 13.0, *)
     class UnaddedCustomSpinnerBusyView: UIView, SpinnerBusyView {
 
         var spinner: UIActivityIndicatorView? = UIActivityIndicatorView(style: .medium)
 
     }
 
-    @available(iOS 13.0, *)
     class AddedCustomSpinnerBusyView: UIView, SpinnerBusyView {
 
         lazy var spinner: UIActivityIndicatorView? = {

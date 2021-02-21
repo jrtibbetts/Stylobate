@@ -25,11 +25,7 @@ public extension SpinnerBusyView where Self: UIView {
     ///             finished starting. (Yes, really.)
     func startActivity(completion: BusyView.ActivityCompletion? = nil) {
         if spinner == nil {
-            if #available(iOS 13, *) {
-                spinner = UIActivityIndicatorView(style: .large)
-            } else {
-                spinner = UIActivityIndicatorView(style: .whiteLarge)
-            }
+            spinner = UIActivityIndicatorView(style: .large)
         }
 
         if let spinner = spinner {

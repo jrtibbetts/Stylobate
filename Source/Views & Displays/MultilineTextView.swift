@@ -4,7 +4,6 @@ import SwiftUI
 import UIKit
 
 // Taken from https://stackoverflow.com/a/58639072/665456.
-@available(iOS 13, *)
 private struct UITextViewWrapper: UIViewRepresentable {
     typealias UIViewType = UITextView
 
@@ -90,7 +89,6 @@ private struct UITextViewWrapper: UIViewRepresentable {
 
 }
 
-@available(iOS 13, *)
 public struct MultilineTextField: View {
 
     private var placeholder: String
@@ -140,7 +138,6 @@ public struct MultilineTextField: View {
 }
 
 #if DEBUG
-@available(iOS 13, *)
 public struct MultilineTextFieldPreviews: PreviewProvider {
     static var test: String = "" //some very very very long description string to be initially wider than screen"
     static var testBinding = Binding<String>(
