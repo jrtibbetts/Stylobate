@@ -1,5 +1,7 @@
 //  Copyright © 2018 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// A stack view that allows only one of its arranged subviews to be visible at
@@ -71,3 +73,5 @@ open class ToggleStackView: UIStackView {
     }
 
 }
+
+#endif

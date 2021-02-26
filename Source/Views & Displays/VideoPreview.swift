@@ -1,5 +1,7 @@
 //  Copyright © 2019 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import AVFoundation
 import UIKit
 
@@ -49,3 +51,5 @@ open class VideoPreview: UIView {
     }
 
 }
+
+#endif

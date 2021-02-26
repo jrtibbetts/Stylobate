@@ -1,5 +1,7 @@
 //  Copyright © 2018 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// Implemented by views that can indicate when an operation is in progress,
@@ -27,3 +29,5 @@ public protocol BusyView: class {
     func stopActivity(completion: ActivityCompletion?)
 
 }
+
+#endif

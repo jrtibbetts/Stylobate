@@ -1,5 +1,7 @@
 //  Copyright © 2018 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// A `UIView` that has an associated view model. This is usually, though not
@@ -15,3 +17,5 @@ open class Display: UIView {
     }
 
 }
+
+#endif

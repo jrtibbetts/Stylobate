@@ -1,5 +1,7 @@
 //  Copyright © 2019 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 public typealias TextResizingPinchEnded = (TextResizingPinchGestureRecognizer) -> Void
@@ -174,3 +176,5 @@ extension TextResizingPinchGestureRecognizer: UIGestureRecognizerDelegate {
     }
 
 }
+
+#endif

@@ -1,5 +1,7 @@
 //  Copyright © 2018 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 public protocol MissingCell: class {
@@ -78,3 +80,5 @@ Inform the user that there's a programming error with cell reuse IDs.
     }
 
 }
+
+#endif

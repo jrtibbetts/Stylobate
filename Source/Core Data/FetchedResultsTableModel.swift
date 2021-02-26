@@ -1,5 +1,7 @@
 //  Copyright © 2017 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import CoreData
 import UIKit
 
@@ -159,3 +161,5 @@ open class FetchedResultsTableModel: FetchedResultsModel,
     }
 
 }
+
+#endif

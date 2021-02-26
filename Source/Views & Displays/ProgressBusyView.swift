@@ -1,5 +1,7 @@
 //  Copyright © 2018 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// Implemented by views that show a progress bar when an activity is executing.
@@ -50,3 +52,5 @@ public extension ProgressBusyView where Self: UIView {
     }
 
 }
+
+#endif

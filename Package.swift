@@ -6,6 +6,7 @@ let pkg = Package(
 
     platforms: [
         .iOS(.v14),
+        .macOS(.v11),
         .tvOS(.v14)
     ],
 

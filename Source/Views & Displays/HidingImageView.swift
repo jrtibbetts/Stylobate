@@ -1,5 +1,7 @@
 //  Copyright © 2019 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// A `UIImageView` that sets its `isHidden` property to `true` if its `image`
@@ -13,3 +15,5 @@ open class HidingImageView: UIImageView {
     }
 
 }
+
+#endif

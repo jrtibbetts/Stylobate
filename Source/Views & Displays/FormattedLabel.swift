@@ -1,5 +1,7 @@
 //  Copyright © 2018 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// A `UILabel` that uses its initial `text` value (such as one set in a
@@ -48,3 +50,5 @@ import UIKit
     }
 
 }
+
+#endif

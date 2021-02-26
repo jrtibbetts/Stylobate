@@ -1,5 +1,7 @@
 //  Copyright © 2020 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import SwiftUI
 import UIKit
 
@@ -162,4 +164,6 @@ public struct MultilineTextFieldPreviews: PreviewProvider {
         .padding()
     }
 }
+#endif
+
 #endif

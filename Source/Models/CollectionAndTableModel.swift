@@ -1,5 +1,7 @@
 //  Copyright © 2018 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// A combined `UITableView` and `UICollectionView` data model. Subclasses
@@ -67,3 +69,5 @@ extension CollectionAndTableModel: UITableViewDataSource {
         return headerTitle(forSection: section)
     }
 }
+
+#endif

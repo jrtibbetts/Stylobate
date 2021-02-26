@@ -1,5 +1,7 @@
 //  Copyright © 2018 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// Implemented by views that want to show & hide something other than a
@@ -23,3 +25,5 @@ public extension VisualIndicatorBusyView where Self: UIView {
     }
 
 }
+
+#endif

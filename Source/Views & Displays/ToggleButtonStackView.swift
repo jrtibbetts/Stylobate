@@ -1,5 +1,7 @@
 //  Copyright © 2019 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// A `UIStackView` that allows only one button to be selected at a time, and
@@ -21,3 +23,5 @@ class ToggleButtonStackView: ToggleStackView {
     }
 
 }
+
+#endif

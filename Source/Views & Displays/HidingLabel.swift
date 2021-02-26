@@ -1,5 +1,7 @@
 //  Copyright © 2019 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// A `UILabel` that sets its `isHidden` flag to `false` if its `text` or
@@ -60,3 +62,5 @@ import UIKit
     }
 
 }
+
+#endif

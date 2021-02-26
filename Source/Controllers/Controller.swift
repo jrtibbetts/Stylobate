@@ -1,5 +1,7 @@
 //  Copyright © 2018 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// A `UIViewController` that has outlets to a `Model` and a `Display`, and
@@ -17,3 +19,5 @@ public protocol Controller: class {
     var display: Display? { get }
 
 }
+
+#endif

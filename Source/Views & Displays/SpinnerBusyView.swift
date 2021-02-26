@@ -1,5 +1,7 @@
 //  Copyright © 2018 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// Implemented by views that show a spinner when an activity is in progress.
@@ -48,3 +50,5 @@ public extension SpinnerBusyView where Self: UIView {
     }
 
 }
+
+#endif

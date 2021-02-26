@@ -1,5 +1,7 @@
 //  Copyright © 2018 Poikile Creations. All rights reserved.
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 /// A `UIView` that has outlets to an embedded collection view and table view,
@@ -150,3 +152,5 @@ open class CollectionAndTableDisplay: Display, UICollectionViewDelegate, UITable
     }
 
 }
+
+#endif
