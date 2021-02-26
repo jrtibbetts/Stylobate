@@ -20,7 +20,7 @@ public class Stylobate {
                                   Bundle.main.bundleURL]
 
         for path in locationCandidates {
-            if let bundleUrl = path?.appendingPathComponent(resourceBundleName),
+            if let bundleUrl = path?.appendingPathComponent(resourceBundleName + ".bundle"),
                let bundle = Bundle(url: bundleUrl) {
                 return bundle
             }
@@ -29,6 +29,6 @@ public class Stylobate {
         fatalError("Failed to load the resource bundle from \(locationCandidates)")
     }
 
-    public static var resourceBundle: Bundle = Stylobate.resourceBundle(named: "Stylobate_Stylobate.bundle", sourceBundle: Bundle(for: Stylobate.self))
+    public static var resourceBundle: Bundle = Stylobate.resourceBundle(named: "Stylobate_Stylobate", sourceBundle: Bundle(for: Stylobate.self))
 
 }

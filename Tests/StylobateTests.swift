@@ -6,7 +6,7 @@ import XCTest
 
 public class StylobateTests: XCTestCase {
 
-    public static var resourceBundle = Stylobate.resourceBundle(named: "Stylobate_StylobateTests.bundle",
+    public static var resourceBundle = Stylobate.resourceBundle(named: "Stylobate_StylobateTests",
                                                                 sourceBundle: Bundle(for: StylobateTests.self))
 
     func testStylobateResourceBundle() {
