@@ -25,7 +25,7 @@ let pkg = Package(
             path: "Source",
             exclude: ["Info.plist"],
             resources: [
-                .process("*/*.strings")
+                .process("Strings.strings")
             ]
         ),
         .testTarget(
@@ -35,9 +35,12 @@ let pkg = Package(
             exclude: ["Info.plist"],
             resources: [
                 .copy("JSON/SampleFoo.json"),
-                .process("*/*.xcdatamodeld"),
-                .process("*/*.xib"),
-                .process("*/*.storyboard")
+                .process("Controllers/CollectionAndTableTests.storyboard"),
+                .process("Core Data/StylobateTestModel.xcdatamodeld"),
+                .process("Views & Displays/CollectionAndTableDisplayTests.xib"),
+                .process("Views & Displays/FormattedLabelTests.storyboard"),
+                .process("Views & Displays/MissingCellTests.xib"),
+                .process("Views & Displays/VideoPreview.xib")
             ]
         )
     ]
