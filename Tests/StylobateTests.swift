@@ -6,23 +6,8 @@ import XCTest
 
 public class StylobateTests: XCTestCase {
 
-    public static var resourceBundle: Bundle = {
-// For whenever Swift Package Manager unfucks resources in bundles
-        let bundleName = "Stylobate_StylobateTests.bundle"
-
-        let locationCandidates = [Bundle.main.resourceURL,
-                                  Bundle(for: StylobateTests.self).resourceURL,
-                                  Bundle.main.bundleURL]
-
-        for path in locationCandidates {
-            if let bundleUrl = path?.appendingPathComponent(bundleName),
-               let bundle = Bundle(url: bundleUrl) {
-                return bundle
-            }
-        }
-
-        fatalError("Failed to load the resource bundle from \(locationCandidates)")
-    }()
+    public static var resourceBundle = Stylobate.resourceBundle(named: "Stylobate_StylobateTests.bundle",
+                                                                sourceBundle: Bundle(for: StylobateTests.self))
 
     func testStylobateResourceBundle() {
         let stylobateResources = Stylobate.resourceBundle

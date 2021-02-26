@@ -4,22 +4,31 @@ import Foundation
 
 public class Stylobate {
 
-    public static var resourceBundle: Bundle = {
-// For whenever Swift Package Manager unfucks resources in bundles
-        let bundleName = "Stylobate_Stylobate.bundle"
-
+    /// Looks in three potential places for a resource bundle of a specified
+    /// name, and returns the first one it finds, or fatally errors out if none
+    /// are found.
+    ///
+    /// Location | Note
+    /// --- | ---
+    /// `Bundle.main.resourceURL` | If the bundle was built using an Xcode project
+    /// `sourceBundle.resourceURL` | If it was built using Swift Package Manager
+    /// `Bundle.main.bundleURL` | ?
+    public static func resourceBundle(named resourceBundleName: String,
+                                      sourceBundle: Bundle) -> Bundle {
         let locationCandidates = [Bundle.main.resourceURL,
-                                  Bundle(for: Stylobate.self).resourceURL,
+                                  sourceBundle.resourceURL,
                                   Bundle.main.bundleURL]
 
         for path in locationCandidates {
-            if let bundleUrl = path?.appendingPathComponent(bundleName),
+            if let bundleUrl = path?.appendingPathComponent(resourceBundleName),
                let bundle = Bundle(url: bundleUrl) {
                 return bundle
             }
         }
 
         fatalError("Failed to load the resource bundle from \(locationCandidates)")
-    }()
+    }
+
+    public static var resourceBundle: Bundle = Stylobate.resourceBundle(named: "Stylobate_Stylobate.bundle", sourceBundle: Bundle(for: Stylobate.self))
 
 }
