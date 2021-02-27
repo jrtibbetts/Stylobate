@@ -10,9 +10,11 @@ public class Stylobate {
     ///
     /// Location | Note
     /// --- | ---
-    /// `Bundle.main.resourceURL` | If the bundle was built using an Xcode project
-    /// `sourceBundle.resourceURL` | If it was built using Swift Package Manager
-    /// `Bundle.main.bundleURL` | ?
+    /// `Bundle.main.resourceURL` | For bundles linked to an app
+    /// `sourceBundle.resourceURL` | For bundles linked to a framework
+    /// `Bundle.main.bundleURL` | For command-line tool
+    ///
+    /// - seealso https://www.fabrizioduroni.it/2020/10/19/swift-package-manager-resources.html
     public static func resourceBundle(named resourceBundleName: String,
                                       sourceBundle: Bundle) -> Bundle {
         let locationCandidates = [Bundle.main.resourceURL,
