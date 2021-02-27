@@ -29,6 +29,7 @@ public class Stylobate {
         return sourceBundle  // For targets in a .pbxproj
     }
 
-    public static var resourceBundle: Bundle = Stylobate.resourceBundle(named: "Stylobate_Stylobate", sourceBundle: Bundle(for: Stylobate.self))
+    public static var resourceBundle: Bundle = Stylobate.resourceBundle(named: "Stylobate_Stylobate",
+                                                                        sourceBundle: Bundle(for: Stylobate.self))
 
 }
