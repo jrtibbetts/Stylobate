@@ -26,7 +26,7 @@ public class Stylobate {
             }
         }
 
-        fatalError("Failed to load the resource bundle from \(locationCandidates)")
+        return sourceBundle  // For targets in a .pbxproj
     }
 
     public static var resourceBundle: Bundle = Stylobate.resourceBundle(named: "Stylobate_Stylobate", sourceBundle: Bundle(for: Stylobate.self))
