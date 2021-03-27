@@ -2,7 +2,7 @@
 
 import CryptoKit
 
-extension Insecure.MD5Digest {
+public extension Insecure.MD5Digest {
 
     /// Get a base-64 string representation of the digest. (Why doesn't the
     /// framework provide this already?)
