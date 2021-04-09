@@ -5,6 +5,7 @@ import Foundation
 
 public extension NSManagedObjectContext {
 
+    @available(iOS, deprecated)
     func fetchOrCreate<T: NSManagedObject>(with request: NSFetchRequest<T>,
                                            initialize: (NSManagedObjectContext) -> T) throws -> T {
         // Fetch.................................or create.

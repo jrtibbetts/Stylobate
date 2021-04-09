@@ -15,7 +15,7 @@ class NSManagedObjectContextFetchOrCreate: FetchingTestBase {
 //
 //        do {
 //        _ = try testingContext.fetchOrCreate(with: createPersonRequest,
-//                                             initialize: initializePerson)
+//                                             initialize: updatePerson)
 //
 //        let fetchAllRequest = Person.fetchRequest(sortDescriptors: [], predicate: nil)
 //        var people: [Person] = try testingContext.fetch(fetchAllRequest) as! [Person]
@@ -34,23 +34,22 @@ class NSManagedObjectContextFetchOrCreate: FetchingTestBase {
     // MARK: - fetchOrCreate(with:initialize:)
 
     func testFetchOrCreateTwiceReturnsSameValue() throws {
-        let request = Person.fetchRequest(sortDescriptors: [sortByName],
-                                          predicate: NSPredicate(format: "name == \"Frank Abberline\""))
-
-        let person1 = try testingContext.fetchOrCreate(with: request,
-                                                       initialize: initializePerson)
-        let person2 = try testingContext.fetchOrCreate(with: request,
-                                                       initialize: initializePerson)
+        let request: NSFetchRequest<Person> = Person.fetchRequest(sortDescriptors: [sortByName],
+                                                                  predicate: NSPredicate(format: "name == \"Frank Abberline\""))
+        let person1: Person = try testingContext.fetchOrCreate(withRequest: request,
+                                                               updateWith: updatePerson) 
+        let person2: Person = try testingContext.fetchOrCreate(withRequest: request,
+                                                               updateWith: updatePerson) 
         XCTAssertTrue(person1 === person2)
     }
 
     func testFetchOrCreateWithDifferentPredicatesReturnsDifferentValues() throws {
-        let request = Person.fetchRequest(sortDescriptors: [sortByName],
-                                          predicate: NSPredicate(format: "name == \"Sir William Gull\""))
-        let person1 = try testingContext.fetchOrCreate(with: request,
-                                                       initialize: initializePerson)
-        let person2 = try testingContext.fetchOrCreate(with: request,
-                                                       initialize: initializePerson)
+        let request: NSFetchRequest<Person> = Person.fetchRequest(sortDescriptors: [sortByName],
+                                                                  predicate: NSPredicate(format: "name == \"Sir William Gull\""))
+        let person1 = try testingContext.fetchOrCreate(withRequest: request,
+                                                       updateWith: updatePerson) 
+        let person2 = try testingContext.fetchOrCreate(withRequest: request,
+                                                       updateWith: updatePerson)
 
         XCTAssertFalse(person1 === person2)
     }
