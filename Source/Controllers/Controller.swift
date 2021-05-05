@@ -6,7 +6,7 @@ import UIKit
 
 /// A `UIViewController` that has outlets to a `Model` and a `Display`, and
 /// connects them when the view is loaded.
-public protocol Controller: class {
+public protocol Controller: AnyObject {
 
     /// The `Display` object that controls the UI. Since this protocol is
     /// designed to be implemented by `UIViewController`s, it's recommended

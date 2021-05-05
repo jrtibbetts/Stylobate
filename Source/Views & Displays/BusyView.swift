@@ -8,7 +8,7 @@ import UIKit
 /// such as with a spinner or progress bar. However, this protocol doesn't
 /// force the implementation to indicate this with a *view*; the implementation
 /// could just as well play a sound, dim or disable itself, or something else.
-public protocol BusyView: class {
+public protocol BusyView: AnyObject {
 
     /// Signature of a block to execute when an activity is stopped or
     /// started.

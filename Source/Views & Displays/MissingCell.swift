@@ -4,7 +4,7 @@
 
 import UIKit
 
-public protocol MissingCell: class {
+public protocol MissingCell: AnyObject {
 
     var textLabel: UILabel? { get }
 
