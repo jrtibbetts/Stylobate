@@ -12,4 +12,16 @@ public extension TimeInterval {
     var weeks:   TimeInterval { return   7.0 * days    }
     var years:   TimeInterval { return 365.0 * days    }
 
+    var formattedString: String? {
+        return Self.durationFormatter.string(from: self)
+    }
+
+    static var durationFormatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute, .second]
+        formatter.collapsesLargestUnit = true
+
+        return formatter
+    }()
+
 }
