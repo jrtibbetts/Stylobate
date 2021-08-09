@@ -1,4 +1,4 @@
-//  Created by Jason R Tibbetts on 2/14/21.
+//  Copyright © 2021 Poikile Creations. All rights reserved.
 
 @testable import Stylobate
 import Foundation
