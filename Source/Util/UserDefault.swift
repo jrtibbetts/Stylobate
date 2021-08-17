@@ -14,7 +14,7 @@ import Foundation
 ///
 /// This is mind-blowing.
 ///
-/// @see https://www.avanderlee.com/swift/property-wrappers/
+/// - seeAlso: https://www.avanderlee.com/swift/property-wrappers/
 @propertyWrapper
 public struct UserDefault<T> {
 
