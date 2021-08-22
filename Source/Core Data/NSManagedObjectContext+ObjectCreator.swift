@@ -35,7 +35,15 @@ public extension NSManagedObjectContext {
     func fetchOrCreate<T: NSManagedObject>(withRequest request: NSFetchRequest<T>,
                                            updateWith update: (T) -> Void) throws -> T {
         // Fetch.................................or create.
-        let object = try fetch(request).first ?? T.init(context: self)
+        var object: T! = try fetch(request).first
+print("Request: \(request)")
+        if object != nil {
+            print("Found an existing \(T.self)")
+        } else {
+            print("Creating an object")
+            object = T.init(context: self)
+        }
+
         update(object)
 
         return object
