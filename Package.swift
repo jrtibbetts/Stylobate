@@ -1,13 +1,13 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 import PackageDescription
 
 let pkg = Package(
     name: "Stylobate",
 
     platforms: [
-        .iOS(.v14),
-        .macOS(.v11),
-        .tvOS(.v14)
+        .iOS(.v17),
+        .macOS(.v14),
+        .tvOS(.v17)
     ],
 
     products: [
@@ -17,7 +17,7 @@ let pkg = Package(
         )
     ],
 
-    dependencies: [ ],
+    dependencies: [],
 
     targets: [
         .target(
