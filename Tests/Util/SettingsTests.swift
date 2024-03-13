@@ -14,6 +14,21 @@ extension Settings {
 
 class SettingsTests: XCTestCase {
 
+    override func setUp() async throws {
+        try await super.setUp()
+        Settings.defaults = UserDefaults(suiteName: #file)!
+    }
+
+    func testGetSet() {
+        let testString = "testString"
+        Settings.set(testString, forKey: "key")
+        XCTAssertEqual(Settings.get(key: "key", defaultValue: "foo"), testString)
+    }
+
+    func testGetSetForMissingValue() {
+        XCTAssertEqual(Settings.get(key: "non-existent-key", defaultValue: "foo"), "foo")
+    }
+
     func testBooleanSetting() {
         Settings.booleanProperty = false
         XCTAssertFalse(Settings.booleanProperty)

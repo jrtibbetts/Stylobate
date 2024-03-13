@@ -30,6 +30,9 @@ class MissingCellTests: XCTestCase {
         let data = try NSKeyedArchiver.archivedData(withRootObject: cell,
                                                 requiringSecureCoding: false)
 
+        // NB: This is now deprecated in iOS 12, but the replacement requires
+        // the unwrapped type to conform to NSObject, and MissingCell is a
+        // protocol of AnyObject.
         guard let copy = NSKeyedUnarchiver.unarchiveObject(with: data) as? MissingCell else {
             XCTFail("Expected a MissingCell to be deserialized", file: file, line: line)
             return

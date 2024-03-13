@@ -25,17 +25,17 @@ public extension NSManagedObject {
     class func fetchRequest<T: NSManagedObject>(
         sortDescriptors sortCriteria: [NSSortDescriptor],
         predicate: NSPredicate? = NSPredicate(value: true)) -> NSFetchRequest<T> {
-        let entityName = String(describing: self)
-        let request: NSFetchRequest<T> = NSFetchRequest(entityName: entityName)
-        request.sortDescriptors = sortCriteria
-        request.predicate = predicate
+            let entityName = String(describing: self)
+            let request: NSFetchRequest<T> = NSFetchRequest(entityName: entityName)
+            request.sortDescriptors = sortCriteria
+            request.predicate = predicate
 
-        return request
-    }
+            return request
+        }
 
     class func fetchRequestForAll<T: NSManagedObject>(
         sortedBy sortCriteria: [NSSortDescriptor] = []) -> NSFetchRequest<T> {
-        return fetchRequest(sortDescriptors: sortCriteria)
-    }
+            return fetchRequest(sortDescriptors: sortCriteria)
+        }
 
 }
